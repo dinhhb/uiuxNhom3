@@ -8,6 +8,7 @@
     <!--[if lt IE 11]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <![endif]-->
     <!-- Meta -->
     <meta charset="utf-8">
@@ -28,6 +29,7 @@
     <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css">
     <!-- vendor css -->
     <link rel="stylesheet" href="assets/css/style.css">
+
     <style>
         .custom-dropdown .btn {
             background-color: #FFFFFF; /* White background */
@@ -95,6 +97,7 @@
             border-bottom-right-radius: .25rem;
         }
     </style>
+    <script src="quanLyTamVang.js"></script>
 </head>
 
 <body>
@@ -322,93 +325,16 @@
                                                 <th></th>
                                             </tr>
                                             </thead>
-                                            <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>012011234567</td>
-                                                <td>Lê Diễm Liên</td>
-                                                <td>Nữ</td>
-                                                <td>Xã Bắc Phú,
-                                                    Huyện Sóc Sơn, Hà Nội</td>
-                                                <td>
-                                                    <i class="fa fa-trash-o mr-2" style="font-size:20px" aria-hidden="true" ></i>
-                                                    <i class="fa fa-pencil" style="font-size:20px" aria-hidden="true" data-toggle="modal" data-target="#infoModalChange"></i>
+                                            <tbody id="table-body" class="table-body">
 
-                                                </td>
-                                                <td> <button type="button" class="custom-btn" data-toggle="modal" data-target="#infoModal">Xem thêm</button></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>012011234567</td>
-                                                <td>Lê Diễm Liên</td>
-                                                <td>Nữ</td>
-                                                <td>Xã Bắc Phú,
-                                                    Huyện Sóc Sơn, Hà Nội</td>
-                                                <td>
-                                                    <i class="fa fa-trash-o mr-2" style="font-size:20px" aria-hidden="true"></i>
-                                                    <i class="fa fa-pencil" style="font-size:20px" aria-hidden="true"></i>
-
-                                                </td>
-                                                <td> <button type="button" class=" btn custom-btn">Xem thêm</button></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>012011234567</td>
-                                                <td>Lê Diễm Liên</td>
-                                                <td>Nữ</td>
-                                                <td>Xã Bắc Phú,
-                                                    Huyện Sóc Sơn, Hà Nội</td>
-                                                <td>
-                                                    <i class="fa fa-trash-o mr-2" style="font-size:20px" aria-hidden="true"></i>
-                                                    <i class="fa fa-pencil" style="font-size:20px" aria-hidden="true"></i>
-
-                                                </td>
-                                                <td> <button type="button" class="btn  custom-btn">Xem thêm</button></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>012011234567</td>
-                                                <td>Lê Diễm Liên</td>
-                                                <td>Nữ</td>
-                                                <td>Xã Bắc Phú,
-                                                    Huyện Sóc Sơn, Hà Nội</td>
-                                                <td>
-                                                    <i class="fa fa-trash-o mr-2" style="font-size:20px" aria-hidden="true"></i>
-                                                    <i class="fa fa-pencil" style="font-size:20px" aria-hidden="true"></i>
-
-                                                </td>
-                                                <td> <button type="button" class="btn  custom-btn">Xem thêm</button></td>
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                                <td>012011234567</td>
-                                                <td>Lê Diễm Liên</td>
-                                                <td>Nữ</td>
-                                                <td>Xã Bắc Phú,
-                                                    Huyện Sóc Sơn, Hà Nội</td>
-                                                <td>
-                                                    <i class="fa fa-trash-o mr-2" style="font-size:20px" aria-hidden="true"></i>
-                                                    <i class="fa fa-pencil" style="font-size:20px" aria-hidden="true"></i>
-
-                                                </td>
-                                                <td> <button type="button" class="btn custom-btn">Xem thêm</button></td>
-                                            </tr>
 
 
                                             </tbody>
                                         </table>
                                     </div>
                                     <nav aria-label="Page navigation example">
-                                        <ul class="pagination pagination-custom">
-                                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-arrow-left" aria-hidden="true"></i></i></a></li>
-                                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                            <li class="page-item"><span class="page-link">...</span></li>
-                                            <li class="page-item"><a class="page-link" href="#">8</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">9</a></li>
-                                            <li class="page-item"><a class="page-link" href="#">10</a></li>
-                                            <li class="page-item"><a class="page-link" href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>
+                                        <ul class="pagination pagination-custom" id="pagination-wrapper">
+
                                         </ul>
                                     </nav>
                                     <div class="align-left">
@@ -534,7 +460,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="dob1">Ngày sinh</label>
-                            <input type="date" class="form-control" id="dob1" placeholder="18/9/1984" value="18/9/1984">
+                            <input type="date" class="form-control" id="dob1" placeholder="1984/9/18" value="1984/9/18">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="cccd1">CCCD</label>
@@ -565,11 +491,11 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="ngayBatDau1">Ngày bắt đầu </label>
-                            <input type="date" class="form-control" id="ngayBatDau1" placeholder="18/9/1984" value="18/9/1984">
+                            <input type="date" class="form-control" id="ngayBatDau1" placeholder="18/9/1984" value="1984/9/18">
                         </div>
                         <div class="form-group col-md-6">
                             <label for="ngayKetThuc1">Ngày kết thúc  </label>
-                            <input type="date" class="form-control" id="ngayKetThuc1" placeholder="18/9/1984" value="18/9/1984">
+                            <input type="date" class="form-control" id="ngayKetThuc1" placeholder="18/9/1984" value="1984/9/18">
                         </div>
 
                         <div class="form-group  col-md-12">
@@ -617,6 +543,8 @@
         });
     });
 </script>
+<script src="quanLyTamVang.js"></script>
+
 
 </body>
 
