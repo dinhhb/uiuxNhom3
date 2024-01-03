@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dropdown Năm</title>
+</head>
+<body>
+
+<h2>Chọn Năm</h2>
+
+<select id="yearDropdown">
+    <!-- Các tùy chọn năm sẽ được thêm vào đây -->
+</select>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var startYear = 1900; // Năm bắt đầu
+        var endYear = new Date().getFullYear(); // Năm hiện tại
+        var option = '';
+        for (var year = startYear ; year <= endYear; year++){
+            option += '<option value="'+ year +'">'+ year +'</option>';
+        }
+        document.getElementById('yearDropdown').innerHTML = option;
+    });
+
+</script>
+</body>
+</html>
