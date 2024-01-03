@@ -2,7 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>BQL-Xem thống kê</title>
+    <title>BQL-Thống kê dịch vụ
+    </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -88,7 +89,7 @@
                                 <div class="card" style="border-radius: 15px;">
                                     <div class="card-block">
                                         <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
-                                            <p style="font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 36px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Xem thống kê </p>
+                                            <p style="font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 36px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Thống kê dịch vụ </p>
                                         </div>
                                         <div class="mt-3 justify-content-between" >
                                             <br class="d-flex justify-content-between" style="display: flex; align-items: center; justify-content: start; gap: 20px;" action="dangKiTamVang.html">
@@ -114,56 +115,94 @@
                                                     </div>
                                                 </div>
                                             <br>
-<div class="thongke1" style="display: flex;">
-<div class="Thongkecudan" style="background-color:#E8EDF0;display:block;color:#000000;border:none;position:relative;width:600px;margin-left:10px; height:300px;border-radius: 15px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">
-    <div style="position:absolute;top:15px;left:20px;">Thống kê cư dân</div>
-        <ul style="list-style-type: none;position:absolute;top:80px;">
-            <li style="display:flex;"><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="25" height="25" fill="#164863"/>
-                </svg><p style="padding-left:10px;padding-top:3px;">Tạm trú</p></li>
-            <li style="display:flex;"><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="25" height="25" fill="#427D9D"/>
-                </svg><p style="padding-left:10px;padding-top:3px;">Tạm vắng</p></li>
-        </ul>
-        <!-- Biều đồ tròn -->
-        <a href="Thongkecudan.html" style="position:absolute;top:270px; right:35px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem chi tiết >></a>
+                                        </div>
+                                    <div class="toolbar-container d-flex justify-content-between" style="display: flex; align-items: center; justify-content: start; gap: 20px;">
+                                            <div class="btn-group dropdown custom-dropdown">
+                                                <button class="btn btn-third dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Chọn loại dịch vụ</button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#!">Action</a>
+                                                    <a class="dropdown-item" href="#!">Another action</a>
+                                                    <a class="dropdown-item" href="#!">Something else here</a>
+                                                </div>
+                                            </div>
+                                            <div class="btn-group dropdown custom-dropdown">
+                                                <button class="btn btn-third dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Chọn tháng</button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#!">Action</a>
+                                                    <a class="dropdown-item" href="#!">Another action</a>
+                                                    <a class="dropdown-item" href="#!">Something else here</a>
+                                                </div>
+                                            </div>
+                                            <div class="btn-group dropdown custom-dropdown">
+                                                <button class="btn btn-third dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Chọn năm</button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#!">Action</a>
+                                                    <a class="dropdown-item" href="#!">Another action</a>
+                                                    <a class="dropdown-item" href="#!">Something else here</a>
+                                                </div>
+                                            </div>
+                                            <!--                                                <div class="btn-group mb-2 mr-2">-->
+                                            <!--                                                    <button class="btn btn-third dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Chọn chung cư</button>-->
+                                            <!--                                                    <div class="dropdown-menu">-->
+                                            <!--                                                        <a class="dropdown-item" href="#!">Action</a>-->
+                                            <!--                                                        <a class="dropdown-item" href="#!">Another action</a>-->
+                                            <!--                                                        <a class="dropdown-item" href="#!">Something else here</a>-->
+                                            <!--                                                    </div>-->
+                                            <!--                                                </div>-->
+
+                                            <div class="search-container" style="display: flex; align-items: center;">
+                                                <div class="input-group custom-search-input">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
+                                                    </div>
+                                                    <input type="text" id="searchInput" class="form-control" placeholder="Tên dịch vụ, loại dịch vụ..." aria-label="Search" aria-describedby="basic-addon1">
+                                                </div>
+                                            </div>
+                                </div>
+                            </div>
 
 
-</div>
-<div class="Thongketaichinh" style="background-color:#E8EDF0;color:#000000;border:none;margin-left:20px;width:600px;height:300px;position:relative;border-radius: 15px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">
-    <div style="position:absolute;top:15px;left:20px;">Thống kê tài chính</div>
-    <ul style="list-style-type:none;display: flex;padding: 0;">
-        <li style="padding-top:50px;margin-left:15px;"><svg width="27" height="4" viewBox="0 0 27 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.70605 2.10907H24.7158" stroke="#164863" stroke-width="3" stroke-linecap="round"/>
-</svg>
-Thu nhập hàng tháng</li>
-    <li style="padding-top:50px;margin-left:25px;"><svg width="29" height="4" viewBox="0 0 29 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M1.78418 2.35956H26.5196" stroke="#9BBEC8" stroke-width="3" stroke-linecap="round"/>
-</svg>
-Chi phí quản lý</li>
-<li style="padding-top:50px;margin-left:25px;"><svg width="28" height="4" viewBox="0 0 28 4" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M2.31152 2.35956H26.4717" stroke="#427D9D" stroke-width="3" stroke-linecap="round"/>
-</svg>
-Lợi nhuận sơ bộ</li>
-    </ul>
-    <!-- Biểu đồ đường -->
-    <a href="Thongketaichinh.html" style="position:absolute;top:270px; right:35px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem chi tiết >></a>
-</div>
-</div>
-<div class="Thongkedichvu" style="background-color:#E8EDF0;color:#000000;border:none;margin-left:10px;width:full;height:300px;position:relative;border-radius: 15px;margin-top:30px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">
-    <div style="position:absolute;top:15px;left:20px;">Thống kê dịch vụ</div>
-    <!-- Biểu đồ cột -->
-    <ul style="position:absolute;list-style-type:none; top:60px;left:700px;">
-        <li>1. Dịch vụ cơ bản</li>
-        <li>2. Dịch vụ An ninh và Bảo vệ</li>
-        <li>3. Dịch vụ Gửi xe và Đỗ xe</li>
-        <li>4. Dịch vụ Giải trí và Thể thao</li>
-        <li>5. Dịch vụ Bảo hiểm và An toàn</li>
-        <li>6. Dịch vụ Bảo dưỡng và Sửa chữa</li>
-        <li>7. Dịch vụ khác</li>
-        <li>8. Dịch vụ mới</li>
-    </ul>
-    <a href="Thongkedichvu.html" style="position:absolute;top:270px; right:35px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem chi tiết >></a>
-</div>
-</div>
+
+                            <div class="table-responsive" style="margin-left:10px;margin-right:10px;margin-top:10px;color: #667085;font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 12px;line-height: 18px;text-align: center;">
+                                        <table class="table table-hover">
+                                            <thead>
+                                            <tr>
+                                                <th>STT</th>
+                                                <th>Tên dịch vụ</th>
+                                                <th>Loại dịch vụ</th>
+                                                <th>Đơn vị tính</th>
+                                                <th>Số căn sử dụng</th>
+                                                <th>Số người sử dụng</th>
+                                                <th></th>
+                                            </tr>
+                                            </thead>
+                                            <!-- <tbody id="table-body" class="table-body">
+
+
+
+                                            </tbody> -->
+                                        </table>
+                                    </div>
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination pagination-custom" id="pagination-wrapper">
+
+                                        </ul>
+                                    </nav>
+                                    <div class="align-left">
+                                        <a href="Xemthongke.html"><button type="button" class="btn custom-btn d-inline-block ml-4 mb-3" style="padding: 10px 30px; background: #9BBEC8; color: white;">Quay lại</button></a>
+                                    </div>
+                            </div>
+                            
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 
 <!-- Required Js -->
 <script src="assets/js/vendor-all.min.js"></script>
@@ -241,9 +280,6 @@ Lợi nhuận sơ bộ</li>
         letter-spacing: 0.1px;
 
         color: #000000;
-
-
-
     }
     .menu-options-logout{
         height: 18px;
@@ -263,7 +299,90 @@ Lợi nhuận sơ bộ</li>
 
     }
 </style>
-<!-- tạo active cho menu -->
+<style>
+        .custom-dropdown .btn {
+            background-color: #FFFFFF; /* White background */
+            border: 1px solid #D0D5DD; /* Border color */
+            border-radius: 0.5rem;
+            font-family: 'Inter';
+            font-style: normal;
+            color:#667085 /* Rounded corners */
+        }
+
+        /* Optional: if you want to style the dropdown menu */
+        .custom-dropdown .dropdown-menu {
+            border-color: #D0D5DD;
+            border-radius: 0.5rem;
+            font-family: 'Inter';
+            font-style: normal;/* Rounded corners for the dropdown menu */
+        }
+
+        .custom-search-input {
+            border: 1px solid #D0D5DD; /* Border color */
+            border-radius: 0.5rem; /* Rounded corners for the dropdown menu */
+            background-color: #FFFFFF;
+        }
+        .custom-search-input .form-control {
+            border: none;
+            box-shadow: none; /* Remove default box-shadow */
+            background-color: #FFFFFF;
+        }
+        .custom-search-input .input-group-text {
+            background: transparent;
+            border: none;
+        }
+        .custom-btn {
+            background-color: #DDF2FD; /* Light blue background */
+            color: #427D9D; /* Dark blue text color */
+            border: none; /* Optional: removes the default border */
+            padding: 5px 10px; /* Optional: for padding inside the button */
+            border-radius: 0.8rem; /* Optional: if you want rounded corners */
+            cursor: pointer; /* Changes the cursor to a pointer on hover */
+        }
+        .custom-btn:focus {
+            outline: none;
+        }
+
+        .pagination-custom {
+            justify-content: center; /* Center the pagination */
+        }
+
+        .pagination-custom .page-item.active .page-link {
+            background-color: #DDF2FD; /* Light blue background for active page */
+            border-color: #DDF2FD;
+            color: #427D9D; /* Dark blue text color for active page */
+        }
+
+        .pagination-custom .page-link {
+            color: #427D9D; /* Dark blue text color for pages */
+        }
+
+        .pagination-custom .page-item:not(.active) .page-link:hover {
+            background-color: #DDF2FD; /* Light blue background for hover */
+        }
+
+        .pagination-custom .page-item:first-child .page-link {
+            border-top-left-radius: .25rem;
+            border-bottom-left-radius: .25rem;
+        }
+
+        .pagination-custom .page-item:last-child .page-link {
+            border-top-right-radius: .25rem;
+            border-bottom-right-radius: .25rem;
+        }
+        .form-check-label-tttv{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 21px;
+            /* identical to box height, or 150% */
+            letter-spacing: 0.1px;
+            color: #000000;
+
+        }
+    </style>
+    <!-- tạo active cho menu -->
 <style>
     .menu-item.active {
         background-color: #E8EDF0;
