@@ -64,29 +64,14 @@
                                         <div class="card-block">
 
                                             <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
-                                                <h3>Đóng phí </h3>
+                                                <h3>Lịch sử thanh toán </h3>
                                             </div>
                                             <div class="mt-3 justify-content-between">
-                                                <form class="d-flex justify-content-between"
-                                                    style="display: flex; align-items: center; justify-content: start; gap: 20px;"
-                                                    action="dangKiTamVang.html">
-
-
-
-                                                </form>
+                                                
                                             </div>
                                             <div class="toolbar-container d-flex justify-content-between"
                                                 style="display: flex; align-items: center; justify-content: start; gap: 20px;">
-                                                <div class="btn-group dropdown custom-dropdown" id="choice">
-                                                    <button class="btn btn-third dropdown-toggle" type="button"
-                                                        data-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false" id="choiceButton" value="all">Lựa chọn
-                                                    </button>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" value="all">Tất cả</a>
-                                                        <a class="dropdown-item" value="notPay">Phí chưa đóng</a>
-                                                    </div>
-                                                </div>
+                                            
                                                 <div class="btn-group dropdown custom-dropdown" id="month">
                                                     <button class="btn btn-third dropdown-toggle" type="button"
                                                         data-toggle="dropdown" aria-haspopup="true" id="monthButton"
@@ -133,9 +118,10 @@
                                                         <th>STT</th>
                                                         <th>Tên dịch vụ</th>
                                                         <th>Loại dịch vụ</th>
-                                                        <th>Tình trạng </th>
+                                                        <th>Mã giao dịch </th>
                                                         <th>Số tiền </th>
-                                                        <th>Hạn đóng </th>
+                                                        <th>Phương thức thanh toán</th>
+                                                        <th>Thời gian</th>
                                                         <th></th>
                                                         <th></th>
                                                     </tr>
@@ -173,107 +159,6 @@
     <!-- [ Main Content ] end -->
 
 
-
-    <!-- [popup] Thanh toán -->
-    <!-- Modal -->
-    <!-- <div id="paymentModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="modalTitle"
-    aria-hidden="true">
-        <div class="modal-content">
-            <span class="close" onclick="closePaymentModal()">&times;</span>
-            <p>Nội dung trang thanh toán ở đây...</p>
-        </div>
-    </div> -->
-    <div class="modal fade" id="paymentModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitle">Thanh toán</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- Form fields without placeholder and value attributes -->
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="fullName1">Họ và tên</label>
-                                <input type="text" class="form-control" id="fullName1" placeholder="Mai Quốc Bảo"
-                                    value="Mai Quốc Bảo">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="tenDV">Tên dịch vụ</label>
-                                <input type="text" class="form-control" id="tenDV" placeholder="Tên dịch vụ" value="">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="loaiDV">Loại dịch vụ</label>
-                                <input type="text" class="form-control" id="loaiDV" placeholder="Loại dịch vụ" value="">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="soTien">Số tiền</label>
-                                <input type="text" class="form-control" id="soTien" placeholder="Số tiền" value="">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="typePayment">Phương thức thanh toán</label>
-                                <select class="form-control" id="typePayment">
-                                    <option value="nganHang">Ngân hàng</option>
-                                    <option value="momo">MoMo</option>
-                                    <option value="vnPay">VnPay</option>
-                                </select>
-                            </div>
-                        </div>
-
-                </div>
-                <div class="text-right" style="margin-bottom: 30px;"> <!-- Căn phải nút Submit -->
-                    <button type="button" class="btn btn-primary" id="submitBtn" onclick="submitForm()">Xác
-                        nhận</button>
-                </div>
-                </form>
-                <!-- Include other form fields as per your screenshot -->
-            </div>
-        </div>
-    </div>
-    </div>
-
-    <!-- end Thanh toán  -->
-
-
-    <!-- [pop up] Thanh toán thành công -->
-    <!-- Modal Thông Báo Thanh Toán Thành Công -->
-    <div class="modal fade" id="paymentSuccessModal" tabindex="-1" role="dialog"
-        aria-labelledby="paymentSuccessModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="paymentSuccessModalLabel">Thanh toán thành công</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" style="color: black">
-                    <!-- Hiển thị thông tin thanh toán thành công ở đây -->
-                    <p style="color : green; font-size: x-large; font-weight: bold; text-align: center;">
-                        Cảm ơn bạn đã thanh toán!</p>
-                    <br>
-                    <p>Tên cư dân:<span> Mai Quốc Bảo</span></p>
-                    <p>Tên dịch vụ: <span id="paymentSuccessTenDV"></span></p>
-                    <p>Loại dịch vụ: <span id="paymentSuccessLoaiDV"></span></p>
-                    <p>Số tiền: <span id="paymentSuccessSoTien"></span></p>
-                    <p>Phương thức thanh toán: <span id="paymentSuccessPhuongThuc"></span></p>
-                    <p>Mã giao dịch: <span id="paymentSuccessMaGiaoDich"></span></p>
-                    <p>Thời gian: <span id="paymentSuccessThoiGian"></span></p>
-                    <!-- Thêm các thông tin khác nếu cần -->
-                    <div class="text-right" style="margin-bottom: 30px;"> <!-- Căn phải nút Submit -->
-                        <button type="button" class="btn btn-primary" id="okbtn" onclick="location.reload()">
-                            OK</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end Thanh toán thành công -->
-
     <!-- Required Js -->
     <script src="/assets/js/vendor-all.min.js"></script>
     <script src="/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -307,19 +192,10 @@
             })
             .catch(error => console.error('Error fetching negative-menu.html:', error));
     </script>
+    <script src="data.js"></script>
     <script src="Thanhtoan.js"></script>
-    <script>
-        // JavaScript for character counter
-        document.addEventListener('DOMContentLoaded', function () {
-            var reasonTextarea = document.getElementById('reason');
-            var charNumDisplay = document.getElementById('charNum');
 
-            reasonTextarea.addEventListener('input', function () {
-                var currentLength = this.value.length;
-                charNumDisplay.textContent = `${currentLength} / 225`;
-            });
-        });
-    </script>
+
 
 
 

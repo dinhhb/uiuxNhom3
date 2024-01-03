@@ -1,75 +1,617 @@
-// Dữ liệu dưới dạng chuỗi, mỗi dòng cách nhau bằng '\n' và mỗi giá trị cách nhau bằng '\t'.
-const data = `1\tS201\tDịch vụ nước\tDịch Vụ Cơ Bản\tChưa đóng\t800 000\t25/12/2023.						
-2\tS201\tDịch vụ điện\tDịch Vụ Cơ Bản\tChưa đóng\t1 200 000\t14/12/2023.						
-3\tS201\tDịch vụ Internet\tDịch Vụ Cơ Bản\tChưa đóng\t500 000\t22/12/2023.						
-4\tS201\tDịch vụ An ninh\tDịch Vụ An Ninh và Bảo Vệ\tChưa đóng\t700 000\t18/12/2023.						
-5\tS201\tGửi xe máy\tDịch Vụ Gửi Xe và Đỗ Xe\tChưa đóng\t100 000\t15/12/2023.						
-6\tS201\tDịch Vụ Thu Gom Rác\tDịch Vụ Cơ Bản\tChưa đóng\t100 000\t09/12/2023.						
-7\tS201\tDịch Vụ Bảo Vệ\tDịch Vụ An Ninh và Bảo Vệ\tChưa đóng\t560 000\t11/12/2023.						
-8\tS201\tDịch Vụ Gym\tDịch Vụ Giải Trí và Thể Thao\tChưa đóng\t700 000\t15/12/2023.						
-9\tS201\tBảo Hiểm Chung Cư\tDịch Vụ Bảo Hiểm và An Toàn\tChưa đóng\t200 000\t18/12/2023.						
-10\tS201\tBảo Hiểm Cháy Nổ\tDịch Vụ Bảo Hiểm và An Toàn\tĐã đóng\t250 000\t11/12/2023.						
-11\tS201\tBảo Hiểm Tai Nạn\tDịch Vụ Bảo Hiểm và An Toàn\tĐã đóng\t450 000\t28/12/2023.						
-12\tS201\tBảo Hiểm Xe Cộ\tDịch Vụ Bảo Hiểm và An Toàn\tĐã đóng\t320 000\t13/12/2023.						
-13\tS201\tDịch Vụ Sửa Chữa\tDịch Vụ Bảo Dưỡng và Sửa Chữa\tĐã đóng\t120 000\t10/12/2023.						
-14\tS201\tBảo Dưỡng Thang Máy\tDịch Vụ Bảo Dưỡng và Sửa Chữa\tĐã đóng\t100 000\t08/12/2023.						
-15\tS201\tBảo Dưỡng Cảnh Quan\tDịch Vụ Bảo Dưỡng và Sửa Chữa\tĐã đóng\t100 000\t24/12/2023.						
-16\tS201\tBảo Dưỡng Hệ Thống Cấp Nước\tDịch Vụ Bảo Dưỡng và Sửa Chữa\tĐã đóng\t100 000\t05/12/2023.						
-17\tS201\tBảo Dưỡng Hệ Thống Điện\tDịch Vụ Bảo Dưỡng và Sửa Chữa\tĐã đóng\t100 000\t19/12/2023.						
-18\tS201\tDịch vụ nước\tDịch Vụ Cơ Bản\tĐã đóng\t800 000\t29/11/2023.						
-19\tS201\tDịch vụ điện\tDịch Vụ Cơ Bản\tĐã đóng\t1 200 000\t17/11/2023.						
-20\tS201\tDịch vụ Internet\tDịch Vụ Cơ Bản\tĐã đóng\t500 000\t17/11/2023.						
-21\tS201\tDịch vụ An ninh\tDịch Vụ An Ninh và Bảo Vệ\tĐã đóng\t700 000\t17/11/2023.						
-22\tS201\tGửi xe máy\tDịch Vụ Gửi Xe và Đỗ Xe\tĐã đóng\t100 000\t11/11/2023.						
-23\tS201\tDịch Vụ Thu Gom Rác\tDịch Vụ Cơ Bản\tĐã đóng\t100 000\t05/11/2023.						
-24\tS201\tDịch Vụ Bảo Vệ\tDịch Vụ An Ninh và Bảo Vệ\tĐã đóng\t560 000\t30/11/2023.						
-25\tS201\tDịch Vụ Gym\tDịch Vụ Giải Trí và Thể Thao\tĐã đóng\t700 000\t07/11/2023.						
-26\tS201\tBảo Hiểm Chung Cư\tDịch Vụ Bảo Hiểm và An Toàn\tĐã đóng\t200 000\t06/11/2023.						
-27\tS201\tBảo Hiểm Cháy Nổ\tDịch Vụ Bảo Hiểm và An Toàn\tĐã đóng\t250 000\t18/11/2023.						
-28\tS201\tBảo Hiểm Tai Nạn\tDịch Vụ Bảo Hiểm và An Toàn\tĐã đóng\t450 000\t16/11/2023.						
-29\tS201\tBảo Hiểm Xe Cộ\tDịch Vụ Bảo Hiểm và An Toàn\tĐã đóng\t320 000\t20/11/2023.						
-30\tS201\tDịch Vụ Sửa Chữa\tDịch Vụ Bảo Dưỡng và Sửa Chữa\tĐã đóng\t120 000\t16/11/2023.						
-31\tS201\tBảo Dưỡng Thang Máy\tDịch Vụ Bảo Dưỡng và Sửa Chữa\tĐã đóng\t100 000\t18/11/2023.						
-32\tS201\tBảo Dưỡng Cảnh Quan\tDịch Vụ Bảo Dưỡng và Sửa Chữa\tĐã đóng\t100 000\t03/11/2023.						
-33\tS201\tBảo Dưỡng Hệ Thống Cấp Nước\tDịch Vụ Bảo Dưỡng và Sửa Chữa\tĐã đóng\t100 000\t03/11/2023.						
-34\tS201\tBảo Dưỡng Hệ Thống Điện\tDịch Vụ Bảo Dưỡng và Sửa Chữa\tĐã đóng\t100 000\t24/11/2023.						
-35\tS201\tDịch vụ nước\tDịch Vụ Cơ Bản\tĐã đóng\t800 000\t20/10/2023.						
-36\tS201\tDịch vụ điện\tDịch Vụ Cơ Bản\tĐã đóng\t1 200 000\t23/10/2023.						
-37\tS201\tDịch vụ Internet\tDịch Vụ Cơ Bản\tĐã đóng\t500 000\t28/10/2023.						
-38\tS201\tDịch vụ An ninh\tDịch Vụ An Ninh và Bảo Vệ\tĐã đóng\t700 000\t03/10/2023.						
-39\tS201\tGửi xe máy\tDịch Vụ Gửi Xe và Đỗ Xe\tĐã đóng\t100 000\t17/10/2023.						
-40\tS201\tDịch Vụ Thu Gom Rác\tDịch Vụ Cơ Bản\tĐã đóng\t100 000\t20/10/2023.						
-41\tS201\tDịch Vụ Bảo Vệ\tDịch Vụ An Ninh và Bảo Vệ\tĐã đóng\t560 000\t17/10/2023.						
-42\tS201\tDịch Vụ Gym\tDịch Vụ Giải Trí và Thể Thao\tĐã đóng\t700 000\t23/10/2023.						
-43\tS201\tBảo Hiểm Chung Cư\tDịch Vụ Bảo Hiểm và An Toàn\tĐã đóng\t200 000\t31/10/2023.						
-44\tS201\tBảo Hiểm Cháy Nổ\tDịch Vụ Bảo Hiểm và An Toàn\tĐã đóng\t250 000\t01/10/2023.						
-45\tS201\tBảo Hiểm Tai Nạn\tDịch Vụ Bảo Hiểm và An Toàn\tĐã đóng\t450 000\t06/10/2023.						
-46\tS201\tBảo Hiểm Xe Cộ\tDịch Vụ Bảo Hiểm và An Toàn\tĐã đóng\t320 000\t23/10/2023.						
-47\tS201\tDịch Vụ Sửa Chữa\tDịch Vụ Bảo Dưỡng và Sửa Chữa\tĐã đóng\t120 000\t29/10/2023.						
-48\tS201\tBảo Dưỡng Thang Máy\tDịch Vụ Bảo Dưỡng và Sửa Chữa\tĐã đóng\t100 000\t04/10/2023.						
-49\tS201\tBảo Dưỡng Cảnh Quan\tDịch Vụ Bảo Dưỡng và Sửa Chữa\tĐã đóng\t100 000\t29/10/2023.						
-50\tS201\tBảo Dưỡng Hệ Thống Cấp Nước\tDịch Vụ Bảo Dưỡng và Sửa Chữa\tĐã đóng\t100 000\t23/10/2023.						
-51\tS201\tBảo Dưỡng Hệ Thống Điện\tDịch Vụ Bảo Dưỡng và Sửa Chữa\tĐã đóng\t100 000\t23/10/2023.`;
 
-// Chia dữ liệu thành một mảng các dòng.
-const lines = data.trim().split('\n');
-
-// Xử lý từng dòng và chuyển đổi chúng thành đối tượng.
-const result = lines.map(line => {
-    const [id, idHome, tenDichVu, loaiDichVu, trangThai, soTien, hanDong] = line.split('\t');
-    return {
-        id: Number(id),
-        idHome,
-        tenDichVu,
-        loaiDichVu,
-        trangThai,
-        soTien,
-        hanDong
-    };
-});
-
-// Chuyển đổi mảng đối tượng thành chuỗi JSON.
-const json = JSON.stringify(result, null, 2); // 'null' và '2' để định dạng JSON cho dễ đọc.
-
-// In ra hoặc sử dụng chuỗi JSON.
-console.log(json);
+var tableData = JSON.parse(localStorage.getItem('tableData')) ||
+    [
+        {
+            "id": 1,
+            "idHome": "S201",
+            "tenDichVu": "Dịch vụ nước",
+            "loaiDichVu": "Dịch Vụ Cơ Bản",
+            "trangThai": "Chưa đóng",
+            "soTien": "800 000",
+            "hanDong": "25/12/2023",
+            "maGiaoDich": "",
+            "phuongThucThanhToan": "",
+            "thoiGian": ""
+        },
+        {
+            "id": 2,
+            "idHome": "S201",
+            "tenDichVu": "Dịch vụ điện",
+            "loaiDichVu": "Dịch Vụ Cơ Bản",
+            "trangThai": "Chưa đóng",
+            "soTien": "1 200 000",
+            "hanDong": "14/12/2023",
+            "maGiaoDich": "",
+            "phuongThucThanhToan": "",
+            "thoiGian": ""
+        },
+        {
+            "id": 3,
+            "idHome": "S201",
+            "tenDichVu": "Dịch vụ Internet",
+            "loaiDichVu": "Dịch Vụ Cơ Bản",
+            "trangThai": "Chưa đóng",
+            "soTien": "500 000",
+            "hanDong": "02/12/2023",
+            "maGiaoDich": "",
+            "phuongThucThanhToan": "",
+            "thoiGian": ""
+        },
+        {
+            "id": 4,
+            "idHome": "S201",
+            "tenDichVu": "Dịch vụ An ninh",
+            "loaiDichVu": "Dịch Vụ An Ninh và Bảo Vệ",
+            "trangThai": "Chưa đóng",
+            "soTien": "700 000",
+            "hanDong": "25/12/2023",
+            "maGiaoDich": "",
+            "phuongThucThanhToan": "",
+            "thoiGian": ""
+        },
+        {
+            "id": 5,
+            "idHome": "S201",
+            "tenDichVu": "Gửi xe máy",
+            "loaiDichVu": "Dịch Vụ Gửi Xe và Đỗ Xe",
+            "trangThai": "Chưa đóng",
+            "soTien": "100 000",
+            "hanDong": "13/12/2023",
+            "maGiaoDich": "",
+            "phuongThucThanhToan": "",
+            "thoiGian": ""
+        },
+        {
+            "id": 6,
+            "idHome": "S201",
+            "tenDichVu": "Dịch Vụ Thu Gom Rác",
+            "loaiDichVu": "Dịch Vụ Cơ Bản",
+            "trangThai": "Chưa đóng",
+            "soTien": "100 000",
+            "hanDong": "13/12/2023",
+            "maGiaoDich": "",
+            "phuongThucThanhToan": "",
+            "thoiGian": ""
+        },
+        {
+            "id": 7,
+            "idHome": "S201",
+            "tenDichVu": "Dịch Vụ Bảo Vệ",
+            "loaiDichVu": "Dịch Vụ An Ninh và Bảo Vệ",
+            "trangThai": "Chưa đóng",
+            "soTien": "560 000",
+            "hanDong": "06/12/2023",
+            "maGiaoDich": "",
+            "phuongThucThanhToan": "",
+            "thoiGian": ""
+        },
+        {
+            "id": 8,
+            "idHome": "S201",
+            "tenDichVu": "Dịch Vụ Gym",
+            "loaiDichVu": "Dịch Vụ Giải Trí và Thể Thao",
+            "trangThai": "Chưa đóng",
+            "soTien": "700 000",
+            "hanDong": "19/12/2023",
+            "maGiaoDich": "",
+            "phuongThucThanhToan": "",
+            "thoiGian": ""
+        },
+        {
+            "id": 9,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Hiểm Chung Cư",
+            "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
+            "trangThai": "Chưa đóng",
+            "soTien": "200 000",
+            "hanDong": "06/12/2023",
+            "maGiaoDich": "",
+            "phuongThucThanhToan": "",
+            "thoiGian": ""
+        },
+        {
+            "id": 10,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Hiểm Cháy Nổ",
+            "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
+            "trangThai": "Đã đóng",
+            "soTien": "250 000",
+            "hanDong": "02/12/2023",
+            "maGiaoDich": "4LHH7LY5HT",
+            "phuongThucThanhToan": "Ngân hàng",
+            "thoiGian": "02/12/2023 11:10"
+        },
+        {
+            "id": 11,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Hiểm Tai Nạn",
+            "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
+            "trangThai": "Đã đóng",
+            "soTien": "450 000",
+            "hanDong": "20/12/2023",
+            "maGiaoDich": "4QLA0RE9ZR",
+            "phuongThucThanhToan": "VnPay",
+            "thoiGian": "20/12/2023 18:48"
+        },
+        {
+            "id": 12,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Hiểm Xe Cộ",
+            "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
+            "trangThai": "Đã đóng",
+            "soTien": "320 000",
+            "hanDong": "10/12/2023",
+            "maGiaoDich": "5XMX6FH8HP",
+            "phuongThucThanhToan": "VnPay",
+            "thoiGian": "10/12/2023 10:06"
+        },
+        {
+            "id": 13,
+            "idHome": "S201",
+            "tenDichVu": "Dịch Vụ Sửa Chữa",
+            "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
+            "trangThai": "Đã đóng",
+            "soTien": "120 000",
+            "hanDong": "31/12/2023",
+            "maGiaoDich": "4NPB8AV7DF",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "31/12/2023 17:22"
+        },
+        {
+            "id": 14,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Dưỡng Thang Máy",
+            "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
+            "trangThai": "Đã đóng",
+            "soTien": "100 000",
+            "hanDong": "23/12/2023",
+            "maGiaoDich": "2BXF0RU1TK",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "23/12/2023 14:06"
+        },
+        {
+            "id": 15,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Dưỡng Cảnh Quan",
+            "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
+            "trangThai": "Đã đóng",
+            "soTien": "100 000",
+            "hanDong": "07/12/2023",
+            "maGiaoDich": "5XMN9WG3JZ",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "07/12/2023 09:06"
+        },
+        {
+            "id": 16,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Dưỡng Hệ Thống Cấp Nước",
+            "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
+            "trangThai": "Đã đóng",
+            "soTien": "100 000",
+            "hanDong": "11/12/2023",
+            "maGiaoDich": "1GLF5QP6AJ",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "11/12/2023 17:42"
+        },
+        {
+            "id": 17,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Dưỡng Hệ Thống Điện",
+            "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
+            "trangThai": "Đã đóng",
+            "soTien": "100 000",
+            "hanDong": "05/12/2023",
+            "maGiaoDich": "3WID4YD2WX",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "05/12/2023 17:22"
+        },
+        {
+            "id": 18,
+            "idHome": "S201",
+            "tenDichVu": "Dịch vụ nước",
+            "loaiDichVu": "Dịch Vụ Cơ Bản",
+            "trangThai": "Đã đóng",
+            "soTien": "800 000",
+            "hanDong": "22/11/2023",
+            "maGiaoDich": "3DHR1IT9GK",
+            "phuongThucThanhToan": "Ngân hàng",
+            "thoiGian": "22/11/2023 06:58"
+        },
+        {
+            "id": 19,
+            "idHome": "S201",
+            "tenDichVu": "Dịch vụ điện",
+            "loaiDichVu": "Dịch Vụ Cơ Bản",
+            "trangThai": "Đã đóng",
+            "soTien": "1 200 000",
+            "hanDong": "19/11/2023",
+            "maGiaoDich": "9FQZ5LE1CM",
+            "phuongThucThanhToan": "VnPay",
+            "thoiGian": "19/11/2023 24:15"
+        },
+        {
+            "id": 20,
+            "idHome": "S201",
+            "tenDichVu": "Dịch vụ Internet",
+            "loaiDichVu": "Dịch Vụ Cơ Bản",
+            "trangThai": "Đã đóng",
+            "soTien": "500 000",
+            "hanDong": "25/11/2023",
+            "maGiaoDich": "1XJQ8VX4VK",
+            "phuongThucThanhToan": "Ngân hàng",
+            "thoiGian": "25/11/2023 15:51"
+        },
+        {
+            "id": 21,
+            "idHome": "S201",
+            "tenDichVu": "Dịch vụ An ninh",
+            "loaiDichVu": "Dịch Vụ An Ninh và Bảo Vệ",
+            "trangThai": "Đã đóng",
+            "soTien": "700 000",
+            "hanDong": "26/11/2023",
+            "maGiaoDich": "2QRB2QF6KD",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "26/11/2023 09:34"
+        },
+        {
+            "id": 22,
+            "idHome": "S201",
+            "tenDichVu": "Gửi xe máy",
+            "loaiDichVu": "Dịch Vụ Gửi Xe và Đỗ Xe",
+            "trangThai": "Đã đóng",
+            "soTien": "100 000",
+            "hanDong": "26/11/2023",
+            "maGiaoDich": "0BKG0EQ7ZN",
+            "phuongThucThanhToan": "Ngân hàng",
+            "thoiGian": "26/11/2023 07:46"
+        },
+        {
+            "id": 23,
+            "idHome": "S201",
+            "tenDichVu": "Dịch Vụ Thu Gom Rác",
+            "loaiDichVu": "Dịch Vụ Cơ Bản",
+            "trangThai": "Đã đóng",
+            "soTien": "100 000",
+            "hanDong": "16/11/2023",
+            "maGiaoDich": "6ZVE4VT6CL",
+            "phuongThucThanhToan": "Ngân hàng",
+            "thoiGian": "16/11/2023 02:40"
+        },
+        {
+            "id": 24,
+            "idHome": "S201",
+            "tenDichVu": "Dịch Vụ Bảo Vệ",
+            "loaiDichVu": "Dịch Vụ An Ninh và Bảo Vệ",
+            "trangThai": "Đã đóng",
+            "soTien": "560 000",
+            "hanDong": "10/11/2023",
+            "maGiaoDich": "5ALQ5TF1SB",
+            "phuongThucThanhToan": "VnPay",
+            "thoiGian": "10/11/2023 24:25"
+        },
+        {
+            "id": 25,
+            "idHome": "S201",
+            "tenDichVu": "Dịch Vụ Gym",
+            "loaiDichVu": "Dịch Vụ Giải Trí và Thể Thao",
+            "trangThai": "Đã đóng",
+            "soTien": "700 000",
+            "hanDong": "30/11/2023",
+            "maGiaoDich": "1WOP9UH9KP",
+            "phuongThucThanhToan": "Ngân hàng",
+            "thoiGian": "30/11/2023 22:28"
+        },
+        {
+            "id": 26,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Hiểm Chung Cư",
+            "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
+            "trangThai": "Đã đóng",
+            "soTien": "200 000",
+            "hanDong": "30/11/2023",
+            "maGiaoDich": "2HKK2YB9LB",
+            "phuongThucThanhToan": "VnPay",
+            "thoiGian": "30/11/2023 22:54"
+        },
+        {
+            "id": 27,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Hiểm Cháy Nổ",
+            "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
+            "trangThai": "Đã đóng",
+            "soTien": "250 000",
+            "hanDong": "01/12/2023",
+            "maGiaoDich": "5VBA3YO8LS",
+            "phuongThucThanhToan": "Ngân hàng",
+            "thoiGian": "01/12/2023 22:41"
+        },
+        {
+            "id": 28,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Hiểm Tai Nạn",
+            "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
+            "trangThai": "Đã đóng",
+            "soTien": "450 000",
+            "hanDong": "14/11/2023",
+            "maGiaoDich": "5FOY7NF2DY",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "14/11/2023 02:26"
+        },
+        {
+            "id": 29,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Hiểm Xe Cộ",
+            "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
+            "trangThai": "Đã đóng",
+            "soTien": "320 000",
+            "hanDong": "09/11/2023",
+            "maGiaoDich": "8SAZ3MI8VR",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "09/11/2023 19:24"
+        },
+        {
+            "id": 30,
+            "idHome": "S201",
+            "tenDichVu": "Dịch Vụ Sửa Chữa",
+            "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
+            "trangThai": "Đã đóng",
+            "soTien": "120 000",
+            "hanDong": "18/11/2023",
+            "maGiaoDich": "8BUH7AD4WV",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "18/11/2023 02:56"
+        },
+        {
+            "id": 31,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Dưỡng Thang Máy",
+            "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
+            "trangThai": "Đã đóng",
+            "soTien": "100 000",
+            "hanDong": "20/11/2023",
+            "maGiaoDich": "2LVO7JT8SY",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "20/11/2023 22:59"
+        },
+        {
+            "id": 32,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Dưỡng Cảnh Quan",
+            "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
+            "trangThai": "Đã đóng",
+            "soTien": "100 000",
+            "hanDong": "19/11/2023",
+            "maGiaoDich": "6WDW4EE4NY",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "19/11/2023 03:40"
+        },
+        {
+            "id": 33,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Dưỡng Hệ Thống Cấp Nước",
+            "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
+            "trangThai": "Đã đóng",
+            "soTien": "100 000",
+            "hanDong": "03/11/2023",
+            "maGiaoDich": "7HDM7ZD1AU",
+            "phuongThucThanhToan": "VnPay",
+            "thoiGian": "03/11/2023 01:49"
+        },
+        {
+            "id": 34,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Dưỡng Hệ Thống Điện",
+            "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
+            "trangThai": "Đã đóng",
+            "soTien": "100 000",
+            "hanDong": "30/11/2023",
+            "maGiaoDich": "2ICW0TD0EP",
+            "phuongThucThanhToan": "Ngân hàng",
+            "thoiGian": "30/11/2023 15:53"
+        },
+        {
+            "id": 35,
+            "idHome": "S201",
+            "tenDichVu": "Dịch vụ nước",
+            "loaiDichVu": "Dịch Vụ Cơ Bản",
+            "trangThai": "Đã đóng",
+            "soTien": "800 000",
+            "hanDong": "16/10/2023",
+            "maGiaoDich": "6TSJ0RO7LJ",
+            "phuongThucThanhToan": "VnPay",
+            "thoiGian": "16/10/2023 23:26"
+        },
+        {
+            "id": 36,
+            "idHome": "S201",
+            "tenDichVu": "Dịch vụ điện",
+            "loaiDichVu": "Dịch Vụ Cơ Bản",
+            "trangThai": "Đã đóng",
+            "soTien": "1 200 000",
+            "hanDong": "22/10/2023",
+            "maGiaoDich": "4EKX6SY5GN",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "22/10/2023 22:07"
+        },
+        {
+            "id": 37,
+            "idHome": "S201",
+            "tenDichVu": "Dịch vụ Internet",
+            "loaiDichVu": "Dịch Vụ Cơ Bản",
+            "trangThai": "Đã đóng",
+            "soTien": "500 000",
+            "hanDong": "24/10/2023",
+            "maGiaoDich": "1MZM1GW4GA",
+            "phuongThucThanhToan": "VnPay",
+            "thoiGian": "24/10/2023 17:22"
+        },
+        {
+            "id": 38,
+            "idHome": "S201",
+            "tenDichVu": "Dịch vụ An ninh",
+            "loaiDichVu": "Dịch Vụ An Ninh và Bảo Vệ",
+            "trangThai": "Đã đóng",
+            "soTien": "700 000",
+            "hanDong": "10/10/2023",
+            "maGiaoDich": "8YSF1UN7UF",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "10/10/2023 08:42"
+        },
+        {
+            "id": 39,
+            "idHome": "S201",
+            "tenDichVu": "Gửi xe máy",
+            "loaiDichVu": "Dịch Vụ Gửi Xe và Đỗ Xe",
+            "trangThai": "Đã đóng",
+            "soTien": "100 000",
+            "hanDong": "10/10/2023",
+            "maGiaoDich": "4HYL7HV8DT",
+            "phuongThucThanhToan": "VnPay",
+            "thoiGian": "10/10/2023 22:50"
+        },
+        {
+            "id": 40,
+            "idHome": "S201",
+            "tenDichVu": "Dịch Vụ Thu Gom Rác",
+            "loaiDichVu": "Dịch Vụ Cơ Bản",
+            "trangThai": "Đã đóng",
+            "soTien": "100 000",
+            "hanDong": "04/10/2023",
+            "maGiaoDich": "5ORE9ZV4DS",
+            "phuongThucThanhToan": "VnPay",
+            "thoiGian": "04/10/2023 09:04"
+        },
+        {
+            "id": 41,
+            "idHome": "S201",
+            "tenDichVu": "Dịch Vụ Bảo Vệ",
+            "loaiDichVu": "Dịch Vụ An Ninh và Bảo Vệ",
+            "trangThai": "Đã đóng",
+            "soTien": "560 000",
+            "hanDong": "10/10/2023",
+            "maGiaoDich": "3ONO8US4ZE",
+            "phuongThucThanhToan": "VnPay",
+            "thoiGian": "10/10/2023 01:59"
+        },
+        {
+            "id": 42,
+            "idHome": "S201",
+            "tenDichVu": "Dịch Vụ Gym",
+            "loaiDichVu": "Dịch Vụ Giải Trí và Thể Thao",
+            "trangThai": "Đã đóng",
+            "soTien": "700 000",
+            "hanDong": "30/10/2023",
+            "maGiaoDich": "5WDL0NT2XR",
+            "phuongThucThanhToan": "VnPay",
+            "thoiGian": "30/10/2023 10:24"
+        },
+        {
+            "id": 43,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Hiểm Chung Cư",
+            "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
+            "trangThai": "Đã đóng",
+            "soTien": "200 000",
+            "hanDong": "01/10/2023",
+            "maGiaoDich": "6SLW2NJ2SR",
+            "phuongThucThanhToan": "VnPay",
+            "thoiGian": "01/10/2023 16:38"
+        },
+        {
+            "id": 44,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Hiểm Cháy Nổ",
+            "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
+            "trangThai": "Đã đóng",
+            "soTien": "250 000",
+            "hanDong": "12/10/2023",
+            "maGiaoDich": "2RCY5CG5FN",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "12/10/2023 19:12"
+        },
+        {
+            "id": 45,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Hiểm Tai Nạn",
+            "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
+            "trangThai": "Đã đóng",
+            "soTien": "450 000",
+            "hanDong": "31/10/2023",
+            "maGiaoDich": "9YCW8GG6BE",
+            "phuongThucThanhToan": "Ngân hàng",
+            "thoiGian": "31/10/2023 17:30"
+        },
+        {
+            "id": 46,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Hiểm Xe Cộ",
+            "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
+            "trangThai": "Đã đóng",
+            "soTien": "320 000",
+            "hanDong": "01/10/2023",
+            "maGiaoDich": "2SPU0WM2CU",
+            "phuongThucThanhToan": "Ngân hàng",
+            "thoiGian": "01/10/2023 16:39"
+        },
+        {
+            "id": 47,
+            "idHome": "S201",
+            "tenDichVu": "Dịch Vụ Sửa Chữa",
+            "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
+            "trangThai": "Đã đóng",
+            "soTien": "120 000",
+            "hanDong": "02/10/2023",
+            "maGiaoDich": "4IXB3SB5GC",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "02/10/2023 17:34"
+        },
+        {
+            "id": 48,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Dưỡng Thang Máy",
+            "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
+            "trangThai": "Đã đóng",
+            "soTien": "100 000",
+            "hanDong": "02/10/2023",
+            "maGiaoDich": "4AQU7BU6UP",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "02/10/2023 10:02"
+        },
+        {
+            "id": 49,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Dưỡng Cảnh Quan",
+            "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
+            "trangThai": "Đã đóng",
+            "soTien": "100 000",
+            "hanDong": "22/10/2023",
+            "maGiaoDich": "4VER6TC0HL",
+            "phuongThucThanhToan": "VnPay",
+            "thoiGian": "22/10/2023 13:51"
+        },
+        {
+            "id": 50,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Dưỡng Hệ Thống Cấp Nước",
+            "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
+            "trangThai": "Đã đóng",
+            "soTien": "100 000",
+            "hanDong": "09/10/2023",
+            "maGiaoDich": "4SWA9ZT4VK",
+            "phuongThucThanhToan": "Ngân hàng",
+            "thoiGian": "09/10/2023 24:06"
+        },
+        {
+            "id": 51,
+            "idHome": "S201",
+            "tenDichVu": "Bảo Dưỡng Hệ Thống Điện",
+            "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
+            "trangThai": "Đã đóng",
+            "soTien": "100 000",
+            "hanDong": "20/10/2023",
+            "maGiaoDich": "5DMU9DZ8VA",
+            "phuongThucThanhToan": "MoMo",
+            "thoiGian": "20/10/2023 00:05"
+        }
+    ]
+var originalTableData = JSON.parse(JSON.stringify(tableData));

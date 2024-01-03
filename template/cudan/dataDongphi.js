@@ -1,465 +1,4 @@
-var tableData = JSON.parse(localStorage.getItem('tableData')) ||
-  [
-    {
-      "id": 1,
-      "idHome": "S201",
-      "tenDichVu": "Dịch vụ nước",
-      "loaiDichVu": "Dịch Vụ Cơ Bản",
-      "trangThai": "Chưa đóng",
-      "soTien": "800 000",
-      "hanDong": "25/12/2023."
-    },
-    {
-      "id": 2,
-      "idHome": "S201",
-      "tenDichVu": "Dịch vụ điện",
-      "loaiDichVu": "Dịch Vụ Cơ Bản",
-      "trangThai": "Chưa đóng",
-      "soTien": "1 200 000",
-      "hanDong": "14/12/2023."
-    },
-    {
-      "id": 3,
-      "idHome": "S201",
-      "tenDichVu": "Dịch vụ Internet",
-      "loaiDichVu": "Dịch Vụ Cơ Bản",
-      "trangThai": "Chưa đóng",
-      "soTien": "500 000",
-      "hanDong": "22/12/2023."
-    },
-    {
-      "id": 4,
-      "idHome": "S201",
-      "tenDichVu": "Dịch vụ An ninh",
-      "loaiDichVu": "Dịch Vụ An Ninh và Bảo Vệ",
-      "trangThai": "Chưa đóng",
-      "soTien": "700 000",
-      "hanDong": "18/12/2023."
-    },
-    {
-      "id": 5,
-      "idHome": "S201",
-      "tenDichVu": "Gửi xe máy",
-      "loaiDichVu": "Dịch Vụ Gửi Xe và Đỗ Xe",
-      "trangThai": "Chưa đóng",
-      "soTien": "100 000",
-      "hanDong": "15/12/2023."
-    },
-    {
-      "id": 6,
-      "idHome": "S201",
-      "tenDichVu": "Dịch Vụ Thu Gom Rác",
-      "loaiDichVu": "Dịch Vụ Cơ Bản",
-      "trangThai": "Chưa đóng",
-      "soTien": "100 000",
-      "hanDong": "09/12/2023."
-    },
-    {
-      "id": 7,
-      "idHome": "S201",
-      "tenDichVu": "Dịch Vụ Bảo Vệ",
-      "loaiDichVu": "Dịch Vụ An Ninh và Bảo Vệ",
-      "trangThai": "Chưa đóng",
-      "soTien": "560 000",
-      "hanDong": "11/12/2023."
-    },
-    {
-      "id": 8,
-      "idHome": "S201",
-      "tenDichVu": "Dịch Vụ Gym",
-      "loaiDichVu": "Dịch Vụ Giải Trí và Thể Thao",
-      "trangThai": "Chưa đóng",
-      "soTien": "700 000",
-      "hanDong": "15/12/2023."
-    },
-    {
-      "id": 9,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Hiểm Chung Cư",
-      "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
-      "trangThai": "Chưa đóng",
-      "soTien": "200 000",
-      "hanDong": "18/12/2023."
-    },
-    {
-      "id": 10,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Hiểm Cháy Nổ",
-      "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
-      "trangThai": "Đã đóng",
-      "soTien": "250 000",
-      "hanDong": "11/12/2023."
-    },
-    {
-      "id": 11,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Hiểm Tai Nạn",
-      "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
-      "trangThai": "Đã đóng",
-      "soTien": "450 000",
-      "hanDong": "28/12/2023."
-    },
-    {
-      "id": 12,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Hiểm Xe Cộ",
-      "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
-      "trangThai": "Đã đóng",
-      "soTien": "320 000",
-      "hanDong": "13/12/2023."
-    },
-    {
-      "id": 13,
-      "idHome": "S201",
-      "tenDichVu": "Dịch Vụ Sửa Chữa",
-      "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
-      "trangThai": "Đã đóng",
-      "soTien": "120 000",
-      "hanDong": "10/12/2023."
-    },
-    {
-      "id": 14,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Dưỡng Thang Máy",
-      "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
-      "trangThai": "Đã đóng",
-      "soTien": "100 000",
-      "hanDong": "08/12/2023."
-    },
-    {
-      "id": 15,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Dưỡng Cảnh Quan",
-      "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
-      "trangThai": "Đã đóng",
-      "soTien": "100 000",
-      "hanDong": "24/12/2023."
-    },
-    {
-      "id": 16,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Dưỡng Hệ Thống Cấp Nước",
-      "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
-      "trangThai": "Đã đóng",
-      "soTien": "100 000",
-      "hanDong": "05/12/2023."
-    },
-    {
-      "id": 17,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Dưỡng Hệ Thống Điện",
-      "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
-      "trangThai": "Đã đóng",
-      "soTien": "100 000",
-      "hanDong": "19/12/2023."
-    },
-    {
-      "id": 18,
-      "idHome": "S201",
-      "tenDichVu": "Dịch vụ nước",
-      "loaiDichVu": "Dịch Vụ Cơ Bản",
-      "trangThai": "Đã đóng",
-      "soTien": "800 000",
-      "hanDong": "29/11/2023."
-    },
-    {
-      "id": 19,
-      "idHome": "S201",
-      "tenDichVu": "Dịch vụ điện",
-      "loaiDichVu": "Dịch Vụ Cơ Bản",
-      "trangThai": "Đã đóng",
-      "soTien": "1 200 000",
-      "hanDong": "17/11/2023."
-    },
-    {
-      "id": 20,
-      "idHome": "S201",
-      "tenDichVu": "Dịch vụ Internet",
-      "loaiDichVu": "Dịch Vụ Cơ Bản",
-      "trangThai": "Đã đóng",
-      "soTien": "500 000",
-      "hanDong": "17/11/2023."
-    },
-    {
-      "id": 21,
-      "idHome": "S201",
-      "tenDichVu": "Dịch vụ An ninh",
-      "loaiDichVu": "Dịch Vụ An Ninh và Bảo Vệ",
-      "trangThai": "Đã đóng",
-      "soTien": "700 000",
-      "hanDong": "17/11/2023."
-    },
-    {
-      "id": 22,
-      "idHome": "S201",
-      "tenDichVu": "Gửi xe máy",
-      "loaiDichVu": "Dịch Vụ Gửi Xe và Đỗ Xe",
-      "trangThai": "Đã đóng",
-      "soTien": "100 000",
-      "hanDong": "11/11/2023."
-    },
-    {
-      "id": 23,
-      "idHome": "S201",
-      "tenDichVu": "Dịch Vụ Thu Gom Rác",
-      "loaiDichVu": "Dịch Vụ Cơ Bản",
-      "trangThai": "Đã đóng",
-      "soTien": "100 000",
-      "hanDong": "05/11/2023."
-    },
-    {
-      "id": 24,
-      "idHome": "S201",
-      "tenDichVu": "Dịch Vụ Bảo Vệ",
-      "loaiDichVu": "Dịch Vụ An Ninh và Bảo Vệ",
-      "trangThai": "Đã đóng",
-      "soTien": "560 000",
-      "hanDong": "30/11/2023."
-    },
-    {
-      "id": 25,
-      "idHome": "S201",
-      "tenDichVu": "Dịch Vụ Gym",
-      "loaiDichVu": "Dịch Vụ Giải Trí và Thể Thao",
-      "trangThai": "Đã đóng",
-      "soTien": "700 000",
-      "hanDong": "07/11/2023."
-    },
-    {
-      "id": 26,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Hiểm Chung Cư",
-      "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
-      "trangThai": "Đã đóng",
-      "soTien": "200 000",
-      "hanDong": "06/11/2023."
-    },
-    {
-      "id": 27,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Hiểm Cháy Nổ",
-      "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
-      "trangThai": "Đã đóng",
-      "soTien": "250 000",
-      "hanDong": "18/11/2023."
-    },
-    {
-      "id": 28,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Hiểm Tai Nạn",
-      "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
-      "trangThai": "Đã đóng",
-      "soTien": "450 000",
-      "hanDong": "16/11/2023."
-    },
-    {
-      "id": 29,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Hiểm Xe Cộ",
-      "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
-      "trangThai": "Đã đóng",
-      "soTien": "320 000",
-      "hanDong": "20/11/2023."
-    },
-    {
-      "id": 30,
-      "idHome": "S201",
-      "tenDichVu": "Dịch Vụ Sửa Chữa",
-      "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
-      "trangThai": "Đã đóng",
-      "soTien": "120 000",
-      "hanDong": "16/11/2023."
-    },
-    {
-      "id": 31,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Dưỡng Thang Máy",
-      "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
-      "trangThai": "Đã đóng",
-      "soTien": "100 000",
-      "hanDong": "18/11/2023."
-    },
-    {
-      "id": 32,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Dưỡng Cảnh Quan",
-      "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
-      "trangThai": "Đã đóng",
-      "soTien": "100 000",
-      "hanDong": "03/11/2023."
-    },
-    {
-      "id": 33,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Dưỡng Hệ Thống Cấp Nước",
-      "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
-      "trangThai": "Đã đóng",
-      "soTien": "100 000",
-      "hanDong": "03/11/2023."
-    },
-    {
-      "id": 34,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Dưỡng Hệ Thống Điện",
-      "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
-      "trangThai": "Đã đóng",
-      "soTien": "100 000",
-      "hanDong": "24/11/2023."
-    },
-    {
-      "id": 35,
-      "idHome": "S201",
-      "tenDichVu": "Dịch vụ nước",
-      "loaiDichVu": "Dịch Vụ Cơ Bản",
-      "trangThai": "Đã đóng",
-      "soTien": "800 000",
-      "hanDong": "20/10/2023."
-    },
-    {
-      "id": 36,
-      "idHome": "S201",
-      "tenDichVu": "Dịch vụ điện",
-      "loaiDichVu": "Dịch Vụ Cơ Bản",
-      "trangThai": "Đã đóng",
-      "soTien": "1 200 000",
-      "hanDong": "23/10/2023."
-    },
-    {
-      "id": 37,
-      "idHome": "S201",
-      "tenDichVu": "Dịch vụ Internet",
-      "loaiDichVu": "Dịch Vụ Cơ Bản",
-      "trangThai": "Đã đóng",
-      "soTien": "500 000",
-      "hanDong": "28/10/2023."
-    },
-    {
-      "id": 38,
-      "idHome": "S201",
-      "tenDichVu": "Dịch vụ An ninh",
-      "loaiDichVu": "Dịch Vụ An Ninh và Bảo Vệ",
-      "trangThai": "Đã đóng",
-      "soTien": "700 000",
-      "hanDong": "03/10/2023."
-    },
-    {
-      "id": 39,
-      "idHome": "S201",
-      "tenDichVu": "Gửi xe máy",
-      "loaiDichVu": "Dịch Vụ Gửi Xe và Đỗ Xe",
-      "trangThai": "Đã đóng",
-      "soTien": "100 000",
-      "hanDong": "17/10/2023."
-    },
-    {
-      "id": 40,
-      "idHome": "S201",
-      "tenDichVu": "Dịch Vụ Thu Gom Rác",
-      "loaiDichVu": "Dịch Vụ Cơ Bản",
-      "trangThai": "Đã đóng",
-      "soTien": "100 000",
-      "hanDong": "20/10/2023."
-    },
-    {
-      "id": 41,
-      "idHome": "S201",
-      "tenDichVu": "Dịch Vụ Bảo Vệ",
-      "loaiDichVu": "Dịch Vụ An Ninh và Bảo Vệ",
-      "trangThai": "Đã đóng",
-      "soTien": "560 000",
-      "hanDong": "17/10/2023."
-    },
-    {
-      "id": 42,
-      "idHome": "S201",
-      "tenDichVu": "Dịch Vụ Gym",
-      "loaiDichVu": "Dịch Vụ Giải Trí và Thể Thao",
-      "trangThai": "Đã đóng",
-      "soTien": "700 000",
-      "hanDong": "23/10/2023."
-    },
-    {
-      "id": 43,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Hiểm Chung Cư",
-      "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
-      "trangThai": "Đã đóng",
-      "soTien": "200 000",
-      "hanDong": "31/10/2023."
-    },
-    {
-      "id": 44,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Hiểm Cháy Nổ",
-      "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
-      "trangThai": "Đã đóng",
-      "soTien": "250 000",
-      "hanDong": "01/10/2023."
-    },
-    {
-      "id": 45,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Hiểm Tai Nạn",
-      "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
-      "trangThai": "Đã đóng",
-      "soTien": "450 000",
-      "hanDong": "06/10/2023."
-    },
-    {
-      "id": 46,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Hiểm Xe Cộ",
-      "loaiDichVu": "Dịch Vụ Bảo Hiểm và An Toàn",
-      "trangThai": "Đã đóng",
-      "soTien": "320 000",
-      "hanDong": "23/10/2023."
-    },
-    {
-      "id": 47,
-      "idHome": "S201",
-      "tenDichVu": "Dịch Vụ Sửa Chữa",
-      "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
-      "trangThai": "Đã đóng",
-      "soTien": "120 000",
-      "hanDong": "29/10/2023."
-    },
-    {
-      "id": 48,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Dưỡng Thang Máy",
-      "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
-      "trangThai": "Đã đóng",
-      "soTien": "100 000",
-      "hanDong": "04/10/2023."
-    },
-    {
-      "id": 49,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Dưỡng Cảnh Quan",
-      "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
-      "trangThai": "Đã đóng",
-      "soTien": "100 000",
-      "hanDong": "29/10/2023."
-    },
-    {
-      "id": 50,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Dưỡng Hệ Thống Cấp Nước",
-      "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
-      "trangThai": "Đã đóng",
-      "soTien": "100 000",
-      "hanDong": "23/10/2023."
-    },
-    {
-      "id": 51,
-      "idHome": "S201",
-      "tenDichVu": "Bảo Dưỡng Hệ Thống Điện",
-      "loaiDichVu": "Dịch Vụ Bảo Dưỡng và Sửa Chữa",
-      "trangThai": "Đã đóng",
-      "soTien": "100 000",
-      "hanDong": "23/10/2023."
-    }
-  ]
+
 
 
 /*
@@ -477,7 +16,7 @@ var state = {
 }
 
 // Lưu trạng thái của tableData
-var originalTableData = JSON.parse(JSON.stringify(tableData));
+// var originalTableData = JSON.parse(JSON.stringify(tableData));
 
 buildTable()
 
@@ -551,7 +90,7 @@ function buildTable() {
   var myList = data.querySet;
 
   table.empty(); // Xóa nội dung cũ trong bảng
-
+ 
   for (var i in myList) {
     var buttonColor = (myList[i].trangThai === "Chưa đóng") ? "#DDF2FD" : "#f7c5c0";
     var buttonLabel = (myList[i].trangThai === "Chưa đóng") ? "Đóng phí" : "Đã đóng";
@@ -559,14 +98,16 @@ function buildTable() {
 
     // Thêm sự kiện click để mở pop-up nếu là "Đóng phí"
     var paymentAction = (myList[i].trangThai === "Chưa đóng") ? `openPaymentModal('${myList[i].id}', '${myList[i].tenDichVu}', '${myList[i].loaiDichVu}', '${myList[i].soTien}', '${myList[i].hanDong}')` : '';
+    var stt = (state.page - 1) * state.rows + parseInt(i) + 1;
 
     var row = `<tr>
-              <td id="idInput">${myList[i].id}</td>
+              <td>${stt}</td>
               <td>${myList[i].tenDichVu}</td>
               <td>${myList[i].loaiDichVu}</td>
               <td>${myList[i].trangThai}</td>
               <td>${myList[i].soTien}</td>
               <td id="hanDong">${myList[i].hanDong}</td>
+              <td id="idInput" style="display: none;">${myList[i].id}</td>
               <td> 
                 <button type="button" class="custom-btn"
                   data-toggle="modal" style="background-color: ${buttonColor}; color: ${buttonTextColor};"
@@ -618,6 +159,11 @@ function updateStatus(id, data) {
   if (itemIndex !== -1) {
     // Cập nhật trangThai thành "Đã đóng"
     data[itemIndex].trangThai = 'Đã đóng';
+    // Thêm thông tin mới vào mục
+    data[itemIndex].maGiaoDich = $('#paymentSuccessMaGiaoDich').text(generateRandomCode());
+    data[itemIndex].phuongThucThanhToan = $('#typePayment option:selected').text();
+    data[itemIndex].thoiGian =   $('#paymentSuccessThoiGian').text(`${hanDong} ${generateRandomTime()}`);
+
 
     console.log('Update Status - Data updated successfully:', data);
 
@@ -648,12 +194,9 @@ function submitForm() {
   $('#paymentSuccessLoaiDV').text(loaiDV);
   $('#paymentSuccessSoTien').text(soTien);
   $('#paymentSuccessPhuongThuc').text(phuongThucThanhToan);
-  $('#paymentSuccessThoiGian').text(hanDong);
 
   // Hiển thị mã giao dịch ngẫu nhiên
   $('#paymentSuccessMaGiaoDich').text(generateRandomCode());
-
-
 
   // Hiển thị thời gian ngẫu nhiên
   $('#paymentSuccessThoiGian').text(`${hanDong} ${generateRandomTime()}`);
@@ -670,6 +213,79 @@ function submitForm() {
   updateStatus(id, originalTableData);
   // location.reload();
 }
+
+// Biến toàn cục để lưu giữ giá trị maGiaoDich và thoiGian
+var globalMaGiaoDich;
+var globalThoiGian;
+
+function updateStatus(id, data) {
+  console.log('Update Status - Received ID:', id);
+
+  // Chuyển đổi kiểu dữ liệu của id thành số
+  id = parseInt(id);
+
+  // Tìm mục có ID phù hợp trong dữ liệu được truyền vào (data)
+  const itemIndex = data.findIndex(item => item.id === id);
+
+  if (itemIndex !== -1) {
+    // Cập nhật trangThai thành "Đã đóng"
+    data[itemIndex].trangThai = 'Đã đóng';
+
+    // Thêm thông tin mới vào mục
+    data[itemIndex].maGiaoDich = globalMaGiaoDich;
+    data[itemIndex].phuongThucThanhToan = $('#typePayment option:selected').text();
+    data[itemIndex].thoiGian = globalThoiGian;
+
+    console.log('Update Status - Data updated successfully:', data);
+
+    // Lưu trạng thái mới vào Local Storage
+    localStorage.setItem('tableData', JSON.stringify(data));
+
+    buildTable(); // Gọi lại hàm buildTable sau khi cập nhật dữ liệu
+  } else {
+    console.log('Update Status - Item not found.');
+  }
+}
+
+// Hàm submitForm
+function submitForm() {
+  // Lấy thông tin từ các trường input
+  var tenDV = $('#tenDV').val();
+  var loaiDV = $('#loaiDV').val();
+  var soTien = $('#soTien').val();
+  var phuongThucThanhToan = $('#typePayment option:selected').text();
+
+  // Lấy thời gian từ cột hanDong trong bảng
+  var hanDong = $('#hanDong').text(); // Sử dụng id tương ứng với cột hanDong trong bảng
+  console.log('Submit Form - hanDong:', hanDong);
+
+  // Lưu giá trị maGiaoDich và thoiGian vào biến toàn cục
+  globalMaGiaoDich = generateRandomCode();
+  globalThoiGian = `${hanDong} ${generateRandomTime()}`;
+
+  // Hiển thị thông báo thanh toán thành công
+  $('#paymentSuccessTenDV').text(tenDV);
+  $('#paymentSuccessLoaiDV').text(loaiDV);
+  $('#paymentSuccessSoTien').text(soTien);
+  $('#paymentSuccessPhuongThuc').text(phuongThucThanhToan);
+  $('#paymentSuccessThoiGian').text(globalThoiGian);
+
+  // Hiển thị mã giao dịch ngẫu nhiên
+  $('#paymentSuccessMaGiaoDich').text(globalMaGiaoDich);
+
+  // Hiển thị modal thông báo thanh toán thành công
+  $('#paymentSuccessModal').modal('show');
+
+  // Đóng modal thanh toán
+  $('#paymentModal').modal('hide');
+
+  // Cập nhật trạng thái trong dữ liệu JSON
+  let id = $('#idInput').text();
+  id = parseInt(id, 10);
+  updateStatus(id, originalTableData);
+  // location.reload();
+}
+
 
 function generateRandomCode() {
   // Sinh mã ngẫu nhiên gồm chữ in hoa và số
@@ -721,6 +337,9 @@ function searchAndFilter() {
       return false;
     }
     if (currentStatus === "notPay" && item.trangThai !== "Chưa đóng") {
+      return false;
+    }
+    if (currentStatus === "Pay" && item.trangThai !== "Đã đóng") {
       return false;
     }
     return Object.keys(item).some(key =>
@@ -793,5 +412,7 @@ function updateButtonText(text) {
   var button = document.getElementById('choiceButton');
   if (button) {
     button.textContent = (text === 'notPay') ? 'Phí chưa đóng' : 'Tất cả';
+    button.textContent = (text === 'Pay') ? 'Phí đã đóng' : 'Tất cả';
+
   }
 }
