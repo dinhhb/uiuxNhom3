@@ -2,15 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Datta Able Free Bootstrap 4 Admin Template</title>
-    <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 11]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <![endif]-->
-    <!-- Meta -->
+    <title>BQL-Xem thống kê</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -19,10 +11,13 @@
     <meta name="keywords"
           content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, datta able, datta able bootstrap admin template, free admin theme, free dashboard template"/>
     <meta name="author" content="CodedThemes"/>
-
+    <link rel="import" href="header.html">
     <!-- Favicon icon -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-zkRf1z1uPbXpFZV4KTMEH7PVB7ZlDdjw0EhMf7ueExUqMW+0vWuAHR4/j5qoHw1NvMyO4tDw9HZmpyKiCyr/D3A==" crossorigin="anonymous" /> -->
+    <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-zkRf1z1uPbXpFZV4KTMEH7PVB7ZlDdjw0EhMf7ueExUqMW+0vWuAHR4/j5qoHw1NvMyO4tDw9HZmpyKiCyr/D3A==" crossorigin="anonymous" />-->
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <!-- fontawesome icon -->
+
     <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- animation css -->
@@ -30,83 +25,6 @@
     <!-- vendor css -->
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <style>
-        .custom-dropdown .btn {
-            background-color: #FFFFFF; /* White background */
-            border: 1px solid #D0D5DD; /* Border color */
-            border-radius: 0.5rem; /* Rounded corners */
-        }
-
-        /* Optional: if you want to style the dropdown menu */
-        .custom-dropdown .dropdown-menu {
-            border-color: #D0D5DD;
-            border-radius: 0.5rem; /* Rounded corners for the dropdown menu */
-        }
-
-        .custom-search-input {
-            border: 1px solid #D0D5DD; /* Border color */
-            border-radius: 0.5rem; /* Rounded corners for the dropdown menu */
-            background-color: #FFFFFF;
-        }
-
-        .custom-search-input .form-control {
-            border: none;
-            box-shadow: none; /* Remove default box-shadow */
-            background-color: #FFFFFF;
-        }
-
-        .custom-search-input .input-group-text {
-            background: transparent;
-            border: none;
-        }
-
-        .custom-btn {
-            background-color: #DDF2FD; /* Light blue background */
-            color: #427D9D; /* Dark blue text color */
-            border: none; /* Optional: removes the default border */
-            padding: 5px 10px; /* Optional: for padding inside the button */
-            border-radius: 0.8rem; /* Optional: if you want rounded corners */
-            cursor: pointer; /* Changes the cursor to a pointer on hover */
-        }
-
-        .custom-btn:focus {
-            outline: none;
-        }
-
-        .pagination-custom {
-            justify-content: center; /* Center the pagination */
-        }
-
-        .pagination-custom .page-item.active .page-link {
-            background-color: #DDF2FD; /* Light blue background for active page */
-            border-color: #DDF2FD;
-            color: #427D9D; /* Dark blue text color for active page */
-        }
-
-        .pagination-custom .page-link {
-            color: #427D9D; /* Dark blue text color for pages */
-        }
-
-        .pagination-custom .page-item:not(.active) .page-link:hover {
-            background-color: #DDF2FD; /* Light blue background for hover */
-        }
-
-        .pagination-custom .page-item:first-child .page-link {
-            border-top-left-radius: .25rem;
-            border-bottom-left-radius: .25rem;
-        }
-
-        .pagination-custom .page-item:last-child .page-link {
-            border-top-right-radius: .25rem;
-            border-bottom-right-radius: .25rem;
-        }
-        /* Tạo kiểu cho dropdown menu */
-        .dropdown-style{
-            max-height: 150px; /* Chiều cao tối đa cho phép scroll */
-            overflow-y: auto; /* Cho phép scroll nếu nội dung vượt quá chiều cao tối đa */
-        }
-    </style>
-    <script src="quanLyTamVang.js"></script>
 </head>
 
 <body>
@@ -117,115 +35,70 @@
     </div>
 </div>
 <!-- [ Pre-loader ] End -->
-<!-- [ navigation menu ] start -->
-<nav class="pcoded-navbar">
-    <div class="navbar-wrapper">
-        <div class="navbar-brand header-logo">
-            <a href="index.html" class="b-brand">
-                <div class="b-bg">
-                    <i class="feather icon-trending-up"></i>
-                </div>
-                <span class="b-title">Soc Son Plaza</span>
-            </a>
-            <!-- <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a> -->
+
+<!-- Header -->
+<div class="header">
+    <img src="./assets/images/logo.png">
+    <p style="color:#164863;padding-top:30px;padding-left:30px;line-height: 21px;font-style: normal;font-family: 'Inter';font-size:25px;font-weight: 600;">
+        Soc Son Plaza</p>
+    <a href=""><img src="./assets/images/avatar.png" class="avatar">
+        <div class="user-info">
+            <p>Văn Thanh</p>
+            <p class="subtitle">Ban quản lý</p>
         </div>
-        <div class="navbar-content scroll-div">
-            <ul class="nav pcoded-inner-navbar">
-                <!-- <li class="nav-item pcoded-menu-caption">
-                    <label>Navigation</label>
-                </li> -->
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Xem thống
-                                kê</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Tạo báo cáo tài
-                                chính</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item active">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Quản lý tạm trú, tạm
-                                vắng</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project"
-                    class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Quản lý đóng
-                                phí</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Thông báo đóng
-                                phí</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Ý kiến của cư
-                                dân</span></a>
-                </li>
-                <!-- <li class="nav-item pcoded-menu-caption">
-                    <label>UI Element</label>
-                </li> -->
-                <!-- <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
-                    <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Components</span></a>
-                    <ul class="pcoded-submenu">
-                        <li class=""><a href="bc_button.html" class="">Button</a></li>
-                        <li class=""><a href="bc_badges.html" class="">Badges</a></li>
-                        <li class=""><a href="bc_breadcrumb-pagination.html" class="">Breadcrumb & paggination</a></li>
-                        <li class=""><a href="bc_collapse.html" class="">Collapse</a></li>
-                        <li class=""><a href="bc_tabs.html" class="">Tabs & pills</a></li>
-                        <li class=""><a href="bc_typography.html" class="">Typography</a></li>
+    </a>
+</div>
+<!-- End-header -->
 
-
-                        <li class=""><a href="icon-feather.html" class="">Feather<span class="pcoded-badge label label-danger">NEW</span></a></li>
-                    </ul>
-                </li> -->
-                <!-- <li class="nav-item pcoded-menu-caption">
-                    <label>Forms & table</label>
-                </li>
-                <li data-username="form elements advance componant validation masking wizard picker select" class="nav-item">
-                    <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Form elements</span></a>
-                </li>
-                <li data-username="Table bootstrap datatable footable" class="nav-item">
-                    <a href="tbl_bootstrap.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-server"></i></span><span class="pcoded-mtext">Table</span></a>
-                </li>
-                <li class="nav-item pcoded-menu-caption">
-                    <label>Chart & Maps</label>
-                </li>
-                <li data-username="Charts Morris" class="nav-item"><a href="chart-morris.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Chart</span></a></li>
-                <li data-username="Maps Google" class="nav-item"><a href="map-google.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a></li>
-                <li class="nav-item pcoded-menu-caption">
-                    <label>Pages</label>
-                </li>
-                <li data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe" class="nav-item pcoded-hasmenu">
-                    <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
-                    <ul class="pcoded-submenu">
-                        <li class=""><a href="auth-signup.html" class="" target="_blank">Sign up</a></li>
-                        <li class=""><a href="auth-signin.html" class="" target="_blank">Sign in</a></li>
-                    </ul>
-                </li>
-                <li data-username="Sample Page" class="nav-item"><a href="sample-page.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li>
-                <li data-username="Disabled Menu" class="nav-item disabled"><a href="javascript:" class="nav-link"><span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Disabled menu</span></a></li> -->
-            </ul>
+<!-- [ menu ] start -->
+<div class="containeri" style="display:flex; width:100%; ">
+    <div class="menu"
+         style="position: fixed;background-color:#FFFFFF;margin-top:100px;margin-left:30px; width:300px;border-radius: 14px;height:px;">
+        <div class="menu-item">
+            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-home"
+                                                                                 style="color: #000000; width:30px;height:30px;"></i></span><span
+                    class="menu-options">Dashboard</span></a>
+        </div>
+        <div class="menu-item">
+            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-chart-bar"
+                                                                                 style="color: #000000;width:30px;height:30px;"></i></span><span
+                    class="menu-options">Xem thống kê</span></a>
+        </div>
+        <div class="menu-item">
+            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-file-excel"
+                                                                                 style="color: #000000; width: 30px; height: 30px;"></i></span><span
+                    class="menu-options">Tạo báo cáo tài chính</span></a>
+        </div>
+        <div class="menu-item">
+            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-user-cog"
+                                                                                 style="color: #000000; width:30px;height:30px;"></i></span><span
+                    class="menu-options">Quản lí tạm trú/tạm vắng</span></a>
+        </div>
+        <div class="menu-item">
+            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-money-bill-wave"
+                                                                                 style="color: #000000; width:30px;height:30px;"></i></span><span
+                    class="menu-options">Quản lý đóng phí</span></a>
+        </div>
+        <div class="menu-item">
+            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-bell"
+                                                                                 style="color: #000000; width:30px;height:30px;"></i></span><span
+                    class="menu-options">Thông báo thu phí</span></a>
+        </div>
+        <div class="menu-item">
+            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-comment-dots"
+                                                                                 style="color: #000000; width:30px;height:30px;"></i></span><span
+                    class="menu-options">Ý kiến của cư dân</span></a>
+        </div>
+        <div class="menu-item-logout" style="padding-top:50px;">
+            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-sign-out-alt"
+                                                                                 style="color: red; width:30px;height:30px;"></i></span><span
+                    class="menu-options-logout" style="color:red;">Đăng xuất</span></a>
         </div>
     </div>
-</nav>
-<!-- [ navigation menu ] end -->
-
-<!-- [ Header ] start -->
-
-<!-- [ Header ] end -->
-
-<!-- [ Main Content ] start -->
-<div class="pcoded-main-container">
-    <div class="pcoded-wrapper">
-        <div class="pcoded-content">
+    <!-- End menu -->
+    <!-- Phần của mọi người -->
+    <div class="pcoded-wrapper" style="width:1520px;">
+        <div class="information" style="margin-top:100px;margin-left:350px;margin-right:30px;">
             <div class="pcoded-inner-content">
                 <!-- [ breadcrumb ] start -->
                 <!-- [ breadcrumb ] end -->
@@ -235,7 +108,7 @@
                         <div class="row">
                             <!-- [ Hover-table ] start -->
                             <div class="col-xl-12">
-                                <div class="card">
+                                <div class="card" style="border-radius: 15px;">
                                     <div class="card-block">
 
                                         <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
@@ -300,7 +173,8 @@
                                                         data-toggle="dropdown" aria-haspopup="true" id="monthButton"
                                                         aria-expanded="false">Chọn tháng
                                                 </button>
-                                                <div class="dropdown-menu dropdown-style" aria-labelledby="monthDropdownButton" id="monthDropdown">
+                                                <div class="dropdown-menu dropdown-style"
+                                                     aria-labelledby="monthDropdownButton" id="monthDropdown">
                                                 </div>
                                             </div>
                                             <div class="btn-group dropdown custom-dropdown">
@@ -308,23 +182,13 @@
                                                         data-toggle="dropdown" aria-haspopup="true" id="yearButton"
                                                         aria-expanded="false">Chọn năm
                                                 </button>
-                                                <div class="dropdown-menu dropdown-style" aria-labelledby="yearDropdownButton" id="yearDropdown">
+                                                <div class="dropdown-menu dropdown-style"
+                                                     aria-labelledby="yearDropdownButton" id="yearDropdown">
                                                 </div>
                                             </div>
                                             <script>
 
                                             </script>
-
-
-
-                                            <!--                                                <div class="btn-group mb-2 mr-2">-->
-                                            <!--                                                    <button class="btn btn-third dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Chọn chung cư</button>-->
-                                            <!--                                                    <div class="dropdown-menu">-->
-                                            <!--                                                        <a class="dropdown-item" href="#!">Action</a>-->
-                                            <!--                                                        <a class="dropdown-item" href="#!">Another action</a>-->
-                                            <!--                                                        <a class="dropdown-item" href="#!">Something else here</a>-->
-                                            <!--                                                    </div>-->
-                                            <!--                                                </div>-->
 
                                             <div class="search-container" style="display: flex; align-items: center;">
                                                 <div class="input-group custom-search-input">
@@ -337,7 +201,7 @@
                                                            aria-describedby="basic-addon1">
                                                 </div>
                                             </div>
-                                            <button class="btn btn-primary">Thêm khoản phí</button>
+                                            <!--                                            <button class="btn btn-primary">Thêm khoản phí</button>-->
                                         </div>
                                     </div>
                                     <!-- <div class="card-header">
@@ -388,7 +252,7 @@
     </div>
 
 </div>
-<!-- [ Main Content ] end -->
+
 <!-- [ popup] Xem thêm  -->
 <!-- Modal -->
 <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
@@ -432,8 +296,8 @@
                                    value="" disabled>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="diaChiTamTru">Địa chỉ nơi đến</label>
-                            <input type="text" class="form-control" id="diaChiTamTru" placeholder=""
+                            <label for="diaChiTamVang">Địa chỉ nơi đến</label>
+                            <input type="text" class="form-control" id="diaChiTamVang" placeholder=""
                                    value="" disabled>
                         </div>
                         <div class="form-group col-md-6">
@@ -457,16 +321,22 @@
                                    value="" disabled>
                         </div>
 
-                        <div class="form-group  col-md-12">
-                            <label for="reason">Lý do</label>
-                            <div class="col-md-6">
+                            <div class="form-group col-md-6">
+                                <label for="ChungCu">Chung cư</label>
+                                <select id="ChungCu" class="form-control" disabled>
+                                    <option selected>Chọn chung cư</option>
+                                    <option value="s1">S1</option>
+                                    <option value="s2">S2</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="reason">Lý do</label>
                                 <textarea class="form-control" id="reason" rows="3" maxlength="225"
                                           placeholder="Nhập lý do..." disabled></textarea>
                                 <div class="text-right">
                                     <small id="charNum" class="form-text text-muted">0 / 225</small>
                                 </div>
                             </div>
-                        </div>
 
                     </div>
                     <!-- Include other form fields as per your screenshot -->
@@ -519,6 +389,7 @@
                                 <option value="Nam">Nam</option>
                                 <option value="Nữ">Nữ</option>
                             </select>
+                            </select>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="diaChiThuongTru1">Địa chỉ thường trú </label>
@@ -526,8 +397,8 @@
                                    value="Điền Tất Bình">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="diaChiTamTru1">Địa chỉ nơi đến</label>
-                            <input type="text" class="form-control" id="diaChiTamTru1" placeholder="Điền Tất Bình"
+                            <label for="diaChiTamVang1">Địa chỉ nơi đến</label>
+                            <input type="text" class="form-control" id="diaChiTamVang1" placeholder="Điền Tất Bình"
                                    value="Điền Tất Bình">
                         </div>
                         <div class="form-group col-md-6">
@@ -550,16 +421,22 @@
                             <input type="date" class="form-control" id="ngayKetThuc1" placeholder=""
                                    value="">
                         </div>
+                        <div class="form-group col-md-6">
+                            <label for="ChungCu1">Chung cư</label>
+                            <select id="ChungCu1" class="form-control" >
+                                <option selected>Chọn chung cư</option>
+                                <option value="s1">S1</option>
+                                <option value="s2">S2</option>
+                            </select>
+                        </div>
 
-                        <div class="form-group  col-md-12">
+                        <div class="form-group  col-md-6">
                             <label for="reason">Lý do</label>
-                            <div class="col-md-6">
                                 <textarea class="form-control" id="reason1" rows="3" maxlength="225"
                                           placeholder="Nhập lý do..."></textarea>
                                 <div class="text-right">
                                     <small id="charNum1" class="form-text text-muted">0 / 225</small>
                                 </div>
-                            </div>
                         </div>
 
                     </div>
@@ -569,16 +446,16 @@
             <div class="modal-footer">
                 <!-- Add any footer buttons if necessary -->
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="saveChangesButton">Xác nhận </button>
+                <button type="button" class="btn btn-primary" id="saveChangesButton">Xác nhận</button>
             </div>
         </div>
     </div>
 </div>
 <!-- [ And popup] chỉnh sửa  -->
-
 <!-- [popup] cònfirm  -->
 <!-- Modal Confirmation -->
-<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel"
+     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -598,26 +475,208 @@
     </div>
 </div>
 
-<!-- [ And popup]  cònfirm -->
+<!-- Modal Xác Nhận Xóa -->
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteConfirmationModalLabel">Xác Nhận Xóa</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Bạn có chắc chắn muốn xóa mục này không? Hành động này không thể hoàn tác.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+                <button type="button" class="btn btn-danger" id="confirmDeleteButton">Xóa</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Required Js -->
 <script src="assets/js/vendor-all.min.js"></script>
 <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/js/pcoded.min.js"></script>
-<script>
-    // JavaScript for character counter
-    document.addEventListener('DOMContentLoaded', function () {
-        var reasonTextarea = document.getElementById('reason');
-        var charNumDisplay = document.getElementById('charNum');
+<script src="../JsTamVang/loadData.js"></script>
+<script src="../JsTamVang/quanLyTamVang.js"></script>
+<script src="assets/plugins/chart-morris/js/raphael.min.js"></script>
+<script src="assets/plugins/chart-morris/js/morris.min.js"></script>
+<!-- Phần này bắt buộc -->
+<style>
+    body {
+        margin: 0; /* Loại bỏ margin mặc định của body */
+    }
 
-        reasonTextarea.addEventListener('input', function () {
-            var currentLength = this.value.length;
-            charNumDisplay.textContent = `${currentLength} / 225`;
-        });
-    });
-</script>
-<script src="quanLyTamVang.js"></script>
+    .header {
+        background-color: #FFFFFF;
+        display: flex;
+        position: fixed; /* Đặt vị trí của header là cố định */
+        width: 100%; /* Chiều rộng 100% của header */
+        height: 80px;
+        z-index: 1000; /* Đảm bảo header nằm trên cùng */
+    }
+
+    .header img {
+        margin-left: 20px;
+        margin-top: 10px;
+        width: 50px;
+        height: 56px;
+    }
+
+    .avatar {
+        position: absolute;
+        top: 5px;
+        right: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .user-info {
+        position: absolute;
+        top: 20px;
+        right: 90px;
+    }
+
+    .user-info p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        color: #000000;
+        margin: 0;
+    }
+
+    .user-info p.subtitle {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.15px;
+        color: rgba(142, 142, 142, 0.87);
+        margin: 0;
+    }
+
+    /* Kích thước và độ cao của phần content để tránh che khuất nội dung khi header fixed */
+    .content {
+        margin-top: 74px;
+    }
+
+    .menu-options {
+        /* Dashboard */
+        height: 18px;
+        padding-left: 0px;
+        padding-top: 50px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.1px;
+
+        color: #000000;
 
 
+    }
+
+    .menu-options-logout {
+        height: 18px;
+        padding-left: 0px;
+        padding-top: 50px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.1px;
+        color: red;
+    }
+
+    .menu-item {
+        padding-top: 12px;
+
+    }
+
+    .custom-dropdown .btn {
+        background-color: #FFFFFF; /* White background */
+        border: 1px solid #D0D5DD; /* Border color */
+        border-radius: 0.5rem; /* Rounded corners */
+    }
+
+    /* Optional: if you want to style the dropdown menu */
+    .custom-dropdown .dropdown-menu {
+        border-color: #D0D5DD;
+        border-radius: 0.5rem; /* Rounded corners for the dropdown menu */
+    }
+
+    .custom-search-input {
+        border: 1px solid #D0D5DD; /* Border color */
+        border-radius: 0.5rem; /* Rounded corners for the dropdown menu */
+        background-color: #FFFFFF;
+    }
+
+    .custom-search-input .form-control {
+        border: none;
+        box-shadow: none; /* Remove default box-shadow */
+        background-color: #FFFFFF;
+    }
+
+    .custom-search-input .input-group-text {
+        background: transparent;
+        border: none;
+    }
+
+    .custom-btn {
+        background-color: #DDF2FD; /* Light blue background */
+        color: #427D9D; /* Dark blue text color */
+        border: none; /* Optional: removes the default border */
+        padding: 5px 10px; /* Optional: for padding inside the button */
+        border-radius: 0.8rem; /* Optional: if you want rounded corners */
+        cursor: pointer; /* Changes the cursor to a pointer on hover */
+    }
+
+    .custom-btn:focus {
+        outline: none;
+    }
+
+    .pagination-custom {
+        justify-content: center; /* Center the pagination */
+    }
+
+    .pagination-custom .page-item.active .page-link {
+        background-color: #DDF2FD; /* Light blue background for active page */
+        border-color: #DDF2FD;
+        color: #427D9D; /* Dark blue text color for active page */
+    }
+
+    .pagination-custom .page-link {
+        color: #427D9D; /* Dark blue text color for pages */
+    }
+
+    .pagination-custom .page-item:not(.active) .page-link:hover {
+        background-color: #DDF2FD; /* Light blue background for hover */
+    }
+
+    .pagination-custom .page-item:first-child .page-link {
+        border-top-left-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+    }
+
+    .pagination-custom .page-item:last-child .page-link {
+        border-top-right-radius: .25rem;
+        border-bottom-right-radius: .25rem;
+    }
+
+    /* Tạo kiểu cho dropdown menu */
+    .dropdown-style {
+        max-height: 150px; /* Chiều cao tối đa cho phép scroll */
+        overflow-y: auto; /* Cho phép scroll nếu nội dung vượt quá chiều cao tối đa */
+    }
+</style>
 </body>
 
 </html>
