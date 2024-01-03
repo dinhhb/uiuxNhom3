@@ -90,7 +90,7 @@ function buildTable() {
   var myList = data.querySet;
 
   table.empty(); // Xóa nội dung cũ trong bảng
- 
+
   for (var i in myList) {
     var buttonColor = (myList[i].trangThai === "Chưa đóng") ? "#DDF2FD" : "#f7c5c0";
     var buttonLabel = (myList[i].trangThai === "Chưa đóng") ? "Đóng phí" : "Đã đóng";
@@ -162,7 +162,7 @@ function updateStatus(id, data) {
     // Thêm thông tin mới vào mục
     data[itemIndex].maGiaoDich = $('#paymentSuccessMaGiaoDich').text(generateRandomCode());
     data[itemIndex].phuongThucThanhToan = $('#typePayment option:selected').text();
-    data[itemIndex].thoiGian =   $('#paymentSuccessThoiGian').text(`${hanDong} ${generateRandomTime()}`);
+    data[itemIndex].thoiGian = $('#paymentSuccessThoiGian').text(`${hanDong} ${generateRandomTime()}`);
 
 
     console.log('Update Status - Data updated successfully:', data);
@@ -186,9 +186,25 @@ function submitForm() {
   var phuongThucThanhToan = $('#typePayment option:selected').text();
 
   // Lấy thời gian từ cột hanDong trong bảng
-  var hanDong = $('#hanDong').text(); // Sử dụng id tương ứng với cột hanDong trong bảng
+  var hanDong = $('#hanDong').text();
+
   console.log('Submit Form - hanDong:', hanDong);
 
+  // Show the confirmation modal
+  $('#confirmationModal').modal('show');
+
+  // Event listener for the confirm button in the confirmation modal
+  $('#confirmSaveChanges').off('click').on('click', function () {
+    // Close the confirmation modal
+    $('#confirmationModal').modal('hide');
+
+    // Perform actions for payment success and show the payment success modal
+    showPaymentSuccessModal(tenDV, loaiDV, soTien, phuongThucThanhToan, hanDong);
+  });
+}
+
+function showPaymentSuccessModal(tenDV, loaiDV, soTien, phuongThucThanhToan, hanDong) {
+  // Set modal content
   // Hiển thị thông báo thanh toán thành công
   $('#paymentSuccessTenDV').text(tenDV);
   $('#paymentSuccessLoaiDV').text(loaiDV);
@@ -201,7 +217,7 @@ function submitForm() {
   // Hiển thị thời gian ngẫu nhiên
   $('#paymentSuccessThoiGian').text(`${hanDong} ${generateRandomTime()}`);
 
-  // Hiển thị modal thông báo thanh toán thành công
+  // Show the payment success modal
   $('#paymentSuccessModal').modal('show');
 
   // Đóng modal thanh toán
@@ -213,6 +229,8 @@ function submitForm() {
   updateStatus(id, originalTableData);
   // location.reload();
 }
+
+
 
 // Biến toàn cục để lưu giữ giá trị maGiaoDich và thoiGian
 var globalMaGiaoDich;
@@ -247,7 +265,6 @@ function updateStatus(id, data) {
   }
 }
 
-// Hàm submitForm
 function submitForm() {
   // Lấy thông tin từ các trường input
   var tenDV = $('#tenDV').val();
@@ -259,21 +276,34 @@ function submitForm() {
   var hanDong = $('#hanDong').text(); // Sử dụng id tương ứng với cột hanDong trong bảng
   console.log('Submit Form - hanDong:', hanDong);
 
-  // Lưu giá trị maGiaoDich và thoiGian vào biến toàn cục
-  globalMaGiaoDich = generateRandomCode();
-  globalThoiGian = `${hanDong} ${generateRandomTime()}`;
+  // Show the confirmation modal
+  $('#confirmationModal').modal('show');
 
+  // Event listener for the confirm button in the confirmation modal
+  $('#confirmSaveChanges').off('click').on('click', function () {
+      // Close the confirmation modal
+      $('#confirmationModal').modal('hide');
+
+      // Perform actions for payment success and show the payment success modal
+      showPaymentSuccessModal(tenDV, loaiDV, soTien, phuongThucThanhToan, hanDong);
+  });
+}
+
+function showPaymentSuccessModal(tenDV, loaiDV, soTien, phuongThucThanhToan, hanDong) {
+  // Set modal content
   // Hiển thị thông báo thanh toán thành công
   $('#paymentSuccessTenDV').text(tenDV);
   $('#paymentSuccessLoaiDV').text(loaiDV);
   $('#paymentSuccessSoTien').text(soTien);
   $('#paymentSuccessPhuongThuc').text(phuongThucThanhToan);
-  $('#paymentSuccessThoiGian').text(globalThoiGian);
 
   // Hiển thị mã giao dịch ngẫu nhiên
-  $('#paymentSuccessMaGiaoDich').text(globalMaGiaoDich);
+  $('#paymentSuccessMaGiaoDich').text(generateRandomCode());
 
-  // Hiển thị modal thông báo thanh toán thành công
+  // Hiển thị thời gian ngẫu nhiên
+  $('#paymentSuccessThoiGian').text(`${hanDong} ${generateRandomTime()}`);
+
+  // Show the payment success modal
   $('#paymentSuccessModal').modal('show');
 
   // Đóng modal thanh toán
@@ -285,6 +315,7 @@ function submitForm() {
   updateStatus(id, originalTableData);
   // location.reload();
 }
+
 
 
 function generateRandomCode() {
@@ -309,12 +340,12 @@ function padLeft(value, length) {
   return String(value).padStart(length, '0');
 }
 
-// function clearLocalStorage() {
-//   localStorage.removeItem('tableData');
-// }
+function clearLocalStorage() {
+  localStorage.removeItem('tableData');
+}
 
-// // Gọi hàm để xóa dữ liệu
-// clearLocalStorage();
+// Gọi hàm để xóa dữ liệu
+clearLocalStorage();
 
 // **************************************************************Filer***********************************
 var currentMonth = null;

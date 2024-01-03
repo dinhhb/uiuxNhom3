@@ -169,3 +169,13 @@
         max-height: 150px; /* Chiều cao tối đa cho phép scroll */
         overflow-y: auto; /* Cho phép scroll nếu nội dung vượt quá chiều cao tối đa */
     }
+    .menu-item.active {
+        background-color: #E8EDF0;
+        margin-left:15px;
+        margin-right:15px; 
+        border-radius: 5px; /* Màu hồng cho background khi active */
+    }
+
+    .menu-item.active a {
+        color: #164863; /* Màu xanh cho icon và chữ khi active */
+    }
