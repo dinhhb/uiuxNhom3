@@ -18,14 +18,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-zkRf1z1uPbXpFZV4KTMEH7PVB7ZlDdjw0EhMf7ueExUqMW+0vWuAHR4/j5qoHw1NvMyO4tDw9HZmpyKiCyr/D3A=="
         crossorigin="anonymous" />
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
     <!-- fontawesome icon -->
-    <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../assets/fonts/fontawesome/css/fontawesome-all.min.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <!-- animation css -->
-    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css">
+    <link rel="stylesheet" href="../assets/plugins/animation/css/animate.min.css">
     <!-- vendor css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 
 
@@ -41,18 +41,7 @@
     <!-- [ Pre-loader ] End -->
 
     <!-- Header -->
-    <div class="header">
-        <img src="./assets/images/logo.png">
-        <p
-            style="color:#164863;padding-top:30px;padding-left:30px;line-height: 21px;font-style: normal;font-family: 'Inter';font-size:25px;font-weight: 600;">
-            Soc Son Plaza</p>
-        <a href=""><img src="./assets/images/avatar.png" class="avatar">
-            <div class="user-info">
-                <p>Văn Thanh</p>
-                <p class="subtitle">Ban quản lý</p>
-            </div>
-        </a>
-    </div>
+    <?php include 'header.html'; ?>
     <!-- End-header -->
 
     <!-- [ menu ] start -->
@@ -417,6 +406,7 @@
     </style>
 
     <script>
+
         function submitForm() {
             // Logic to handle form submission here
             // ...
