@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    build: .
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8080:80"   # Ánh xạ cổng 8080 của máy host vào cổng 8080 của container
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
+    driver: bridge
