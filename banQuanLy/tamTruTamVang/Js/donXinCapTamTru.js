@@ -95,8 +95,14 @@ function buildTable() {
                   <td>${myList[i].gioiTinh}</td>
                   <td>${myList[i].DDThuongTru}</td>
                   <td>
-                    <i class="fa fa-trash-o mr-2" style="font-size:20px" aria-hidden="true" ></i>
-                    <i class="fa fa-pencil" style="font-size:20px" aria-hidden="true" data-toggle="modal" data-target="#infoModalChange"></i>
+                        
+                    <button type="button" class="no-outline"
+                    style="background-color: #F2A9A9; color: #C64141; opacity: 0.7; border: none;  border-radius: 0.8rem; padding: 5px 12px; font-size: 14px; margin-right: 8px;  cursor: pointer;border: none;"> 
+                     Hủy</button>
+                    <button type="button" class="no-outline"
+                    style="background-color: #DDF2FD; color: #27AE60; border: none;  border-radius: 0.8rem; padding: 5px 12px; font-size: 14px; cursor: pointer;border: none;">
+                    Duyệt</button>
+            
                     </td>
                     <td> <button type="button" class="custom-btn view-details-button" data-toggle="modal" data-id="${myList[i].id}">Xem thêm</button></td>
                                                             `
@@ -191,14 +197,13 @@ function showDetails(id) {
     // Tìm kiếm thông tin dựa trên ID trong mảng tableTamTru
     var person = tableTamTru.find(item => item.id === id);
     if (person) {
-        console.log(person);
         // Cập nhật thông tin vào các trường trong modal
         document.getElementById('fullName').value = person.hoTen;
         document.getElementById('dob').value = formatDate(person.ngaySinh);
         document.getElementById('cccd').value = person.CCCD;
         document.getElementById('genderSelect').value = person.gioiTinh;
         document.getElementById('diaChiThuongTru').value = person.DDThuongTru;
-        document.getElementById('diaChiTamVang').value = person.DDTamTru;
+        document.getElementById('diaChiTamTru').value = person.DDTamTru;
         document.getElementById('soDienThoai').value = person.SDT;
         document.getElementById('ngheNghiep').value = person.ngheNghiep;
         document.getElementById('ngayBatDau').value = formatDate(person.ngayBatDau);
@@ -275,148 +280,8 @@ function showEditForm(id) {
     }
 }
 
-// Gắn sự kiện click vào biểu tượng chỉnh sửa
-document.addEventListener('DOMContentLoaded', function () {
-    var tableBody = document.getElementById('table-body');
-    tableBody.addEventListener('click', function (event) {
-        var target = event.target;
-        // Kiểm tra xem có phải là biểu tượng chỉnh sửa hay không
-        if (target.classList.contains('fa-pencil')) {
-            var id = target.closest('tr').querySelector('.view-details-button').getAttribute('data-id');
-            showEditForm(Number(id));
-        }
-    });
-});
-
-
-function confirmAndSaveChanges() {
-    // Hãy chắc chắn rằng currentEditingId đã được đặt giá trị
-    if (currentEditingId == null) {
-        console.error("No current editing ID set.");
-        return;
-    }
-    var editedPerson = {
-        id: currentEditingId,
-        hoTen: document.getElementById('fullName1').value,
-        ngaySinh: formatDateReverse(document.getElementById('dob1').value),
-        CCCD: document.getElementById('cccd1').value,
-        gioiTinh: document.getElementById('genderSelect1').value,
-        DDThuongTru: document.getElementById('diaChiThuongTru1').value,
-        DDTamTru: document.getElementById('diaChiTamTru1').value,
-        SDT: document.getElementById('soDienThoai1').value,
-        ngheNghiep: document.getElementById('ngheNghiep1').value,
-        ngayBatDau: formatDateReverse(document.getElementById('ngayBatDau1').value),
-        ngayKetThuc: formatDateReverse(document.getElementById('ngayKetThuc1').value),
-        canHo: document.getElementById('ChungCu1').value,
-        lyDo: document.getElementById('reason1').value
-
-    };
-    // Hiển thị modal xác nhận trước khi lưu
-    $('#confirmationModal').modal('show');
-    // Tìm vị trí của người dùng trong mảng và cập nhật thông tin
-    var index = tableTamTru.findIndex(item => item.id === currentEditingId);
-    if (index !== -1) {
-        tableTamTru[index] = editedPerson;
-    }
-    // Đóng modal chỉnh sửa và modal xác nhận
-    $('#infoModalChange').modal('hide');
-    $('#confirmationModal').modal('hide');
-    // Lưu dữ liệu vào localStorage
-    saveToLocalStorage(tableTamTru);
-
-    // Xây dựng lại bảng với dữ liệu đã cập nhật
-    buildTable();
-
-    // Gọi lại hàm lọc
-    searchAndFilter();
-}
-
-document.getElementById('confirmSaveChanges').addEventListener('click', confirmAndSaveChanges);
-
-
-// Hàm này sẽ được gọi khi nhấn nút "Save changes"
-function saveChanges() {
-    var editedPerson = {
-        id: currentEditingId,
-        hoTen: document.getElementById('fullName1').value,
-        ngaySinh: formatDateReverse(document.getElementById('dob1').value),
-        CCCD: document.getElementById('cccd1').value,
-        gioiTinh: document.getElementById('genderSelect1').value,
-        DDThuongTru: document.getElementById('diaChiThuongTru1').value,
-        DDTamTru: document.getElementById('diaChiTamTru1').value,
-        SDT: document.getElementById('soDienThoai1').value,
-        ngheNghiep: document.getElementById('ngheNghiep1').value,
-        ngayBatDau: formatDateReverse(document.getElementById('ngayBatDau1').value),
-        ngayKetThuc: formatDateReverse(document.getElementById('ngayKetThuc1').value),
-        lyDo: document.getElementById('reason1').value
-    };
-    // Hiển thị modal xác nhận trước khi lưu
-    $('#confirmationModal').modal('show');
-    // Tìm vị trí của người dùng trong mảng và cập nhật thông tin
-    var index = tableTamTru.findIndex(item => item.id === currentEditingId);
-    if (index !== -1) {
-        tableTamTru[index] = editedPerson;
-    }
-    // Đóng modal chỉnh sửa và modal xác nhận
-    $('#infoModalChange').modal('hide');
-    $('#confirmationModal').modal('hide');
-    buildTable();
-}
-
 // Chuyển đổi ngày tháng từ dạng YYYY-MM-DD sang DD/MM/YYYY
 function formatDateReverse(dateString) {
     var parts = dateString.split("-");
     return parts[2] + "/" + parts[1] + "/" + parts[0];
 }
-
-document.getElementById('saveChangesButton').addEventListener('click', function () {
-    $('#confirmationModal').modal('show');
-});
-
-
-// Định nghĩa hàm hiển thị modal xác nhận xóa
-function confirmDelete(id) {
-    // Lưu ID của hàng cần xóa vào biến toàn cục
-    currentDeletingId = id;
-
-    // Hiển thị modal xác nhận xóa
-    $('#deleteConfirmationModal').modal('show');
-}
-
-// Thêm sự kiện click vào biểu tượng thùng rác
-document.addEventListener('DOMContentLoaded', function () {
-    var tableBody = document.getElementById('table-body');
-    tableBody.addEventListener('click', function (event) {
-        var target = event.target;
-        if (target.classList.contains('fa-trash-o')) {
-            var id = target.closest('tr').querySelector('.view-details-button').getAttribute('data-id');
-            confirmDelete(Number(id));
-        }
-    });
-});
-
-// Xử lý sự kiện xác nhận xóa
-document.getElementById('confirmDeleteButton').addEventListener('click', function () {
-    // Xóa dữ liệu từ mảng tableTamTru và state.querySet
-    tableTamTru = tableTamTru.filter(item => item.id !== currentDeletingId);
-    state.querySet = state.querySet.filter(item => item.id !== currentDeletingId);
-
-    // Lưu dữ liệu đã cập nhật vào localStorage
-    saveToLocalStorage(tableTamTru);
-    // Kiểm tra số lượng trang còn lại
-    var newTotalPages = Math.ceil(state.querySet.length / state.rows);
-    if (state.page > newTotalPages) {
-        // Cập nhật trang hiện tại nếu trang hiện tại không còn tồn tại
-        state.page = newTotalPages || 1; // Đảm bảo rằng trang không bao giờ là 0
-    }
-
-
-    // Đóng modal xác nhận xóa
-    $('#deleteConfirmationModal').modal('hide');
-
-    // Xây dựng lại bảng với dữ liệu đã cập nhật
-    // Đặt buildTable để chạy ngay sau tất cả các tác vụ hiện tại trong call stack
-    setTimeout(buildTable, 0);
-    console.log("Deleted item. New data:", tableTamTru);
-});
-
