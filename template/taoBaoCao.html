@@ -64,12 +64,12 @@
                             style="color: #000000; width:30px;height:30px;"></i></span><span
                         class="menu-options">Dashboard</span></a>
             </div>
-            <div class="menu-item active">
+            <div class="menu-item">
                 <a href="Xemthongke.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-chart-bar"
                             style="color: #000000;width:30px;height:30px;"></i></span><span class="menu-options">Xem
                         thống kê</span></a>
             </div>
-            <div class="menu-item">
+            <div class="menu-item active">
                 <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-file-excel"
                             style="color: #000000; width: 30px; height: 30px;"></i></span><span class="menu-options">Tạo
                         báo cáo tài chính</span></a>
@@ -121,61 +121,20 @@
                                                 <div class="btn-group dropdown custom-dropdown">
                                                     <button class="btn btn-third dropdown-toggle" type="button"
                                                         data-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">Chọn tháng</button>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="#!">Action</a>
-                                                        <a class="dropdown-item" href="#!">Another action</a>
-                                                        <a class="dropdown-item" href="#!">Something else here</a>
+                                                        id="loaiBaoCaoButton" aria-expanded="false">Bảng cân đối kế toán
+                                                    </button>
+                                                    <div class="dropdown-menu dropdown-style"
+                                                        aria-labelledby="loaiBaoCaoDropdownButton" id="loaiBaoCaoDropdown">
                                                     </div>
                                                 </div>
-                                                <div class="btn-group dropdown custom-dropdown">
-                                                    <button class="btn btn-third dropdown-toggle" type="button"
-                                                        data-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">Chọn năm</button>
-                                                    <div class="dropdown-menu">
-                                                        <a class="dropdown-item" href="#!">Action</a>
-                                                        <a class="dropdown-item" href="#!">Another action</a>
-                                                        <a class="dropdown-item" href="#!">Something else here</a>
-                                                    </div>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="tamtruOptions"
-                                                        id="tamtrutOption2" value="tamtru">
-                                                    <label class="form-check-label-tttv" for="tamtruOption2">
-                                                        Tạm trú
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="tamtruOptions"
-                                                        id="tamtrutOption2" value="tamtru">
-                                                    <label class="form-check-label-tttv" for="tamtruOption2">
-                                                        Tạm vắng
-                                                    </label>
-                                                </div>
-                                                <!--                                                <div class="btn-group mb-2 mr-2">-->
-                                                <!--                                                    <button class="btn btn-third dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Chọn chung cư</button>-->
-                                                <!--                                                    <div class="dropdown-menu">-->
-                                                <!--                                                        <a class="dropdown-item" href="#!">Action</a>-->
-                                                <!--                                                        <a class="dropdown-item" href="#!">Another action</a>-->
-                                                <!--                                                        <a class="dropdown-item" href="#!">Something else here</a>-->
-                                                <!--                                                    </div>-->
-                                                <!--                                                </div>-->
-
-                                                <div class="search-container"
-                                                    style="display: flex; align-items: center;">
-                                                    <div class="input-group custom-search-input">
-                                                        <div class="input-group-prepend">
-                                                            <span class="input-group-text" id="basic-addon1"><i
-                                                                    class="fa fa-search"></i></span>
-                                                        </div>
-                                                        <input type="text" id="searchInput" class="form-control"
-                                                            placeholder="Tìm kiếm..." aria-label="Search"
-                                                            aria-describedby="basic-addon1">
-                                                    </div>
-                                                </div>
+                                                <button type="submit" class="btn btn-primary1 btn-group">Xem báo cáo đã gửi
+                                                </button>
+                                                <button data-toggle="modal" data-target="#confirmationModal" type="submitBaoCao" class="btn btn-primary btn-group">Gửi báo cáo
+                                                </button>
                                             </div>
+                                            
                                         </div>
-                                        <form method="post" style="min-height: 60vh;">
+                                        <form id="baoCao" method="post" style="min-height: 60vh;">
                                             <textarea id="mytextarea" style="height: 60vh;">Hello, World!</textarea>
                                         </form>
                                         <script>
@@ -188,24 +147,27 @@
                                                 }
                                             });
                                         </script>
+                                        <div class="align-left" style="padding-top: 10px;">
+                                            <a href="Xemthongke.html"><button type="button"
+                                                    class="btn custom-btn d-inline-block ml-4 mb-3"
+                                                    style="padding: 10px 30px; background: #6c757d; color: white;">Quay
+                                                    lại</button></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-
-
-
 
                             <nav aria-label="Page navigation example">
                                 <ul class="pagination pagination-custom" id="pagination-wrapper">
 
                                 </ul>
                             </nav>
-                            <div class="align-left">
+                            <!-- <div class="align-left">
                                 <a href="Xemthongke.html"><button type="button"
                                         class="btn custom-btn d-inline-block ml-4 mb-3"
                                         style="padding: 10px 30px; background: #9BBEC8; color: white;">Quay
                                         lại</button></a>
-                            </div>
+                            </div> -->
                         </div>
 
                     </div>
@@ -333,7 +295,7 @@
             border-radius: 0.5rem;
             font-family: 'Inter';
             font-style: normal;
-            width: 150px;
+            /* width: 150px; */
             color: #667085
                 /* Rounded corners */
         }
@@ -361,6 +323,13 @@
             /* Remove default box-shadow */
             background-color: #FFFFFF;
         }
+
+        .btn-third {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
 
         .custom-search-input .input-group-text {
             background: transparent;
@@ -414,6 +383,7 @@
             border-bottom-left-radius: .25rem;
         }
 
+
         .pagination-custom .page-item:last-child .page-link {
             border-top-right-radius: .25rem;
             border-bottom-right-radius: .25rem;
@@ -445,6 +415,313 @@
             /* Màu xanh cho icon và chữ khi active */
         }
     </style>
+
+    <script>
+        function submitForm() {
+            // Logic to handle form submission here
+            // ...
+
+            // Close the confirmation modal if it's still open
+            $('#confirmationModal').modal('hide');
+
+            // Show success modal
+            $('#successModal').modal('show');
+        }
+
+
+        document.getElementById('baoCao').addEventListener('submitBaoCao', function(event) {
+            // Ngăn form thực hiện hành động mặc định
+            event.preventDefault();
+            $('#confirmationModal').modal('show');
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var loaiBaoCaoButton = document.getElementById('loaiBaoCaoButton');
+            var yearButton = document.getElementById('yearButton');
+
+            // Tạo dropdown chọn tháng
+            var loaiBaoCaos = ["Báo cáo kết quả hoạt động kinh doanh", "Báo cáo lưu chuyển tiền tệ", "Thuyết minh báo cáo tài chính"];
+            var loaiBaoCaoOptions = '';
+            // var loaiBaoCaoOptions = '<a class="dropdown-item" href="#" data-value="">Tất cả tháng </a>';
+            loaiBaoCaos.forEach(function (loaiBaoCao, index) {
+                loaiBaoCaoOptions += '<a class="dropdown-item" href="#" data-value="' + (index + 1) + '">' + loaiBaoCao + '</a>';
+            });
+            var loaiBaoCaoDropdown = document.getElementById('loaiBaoCaoDropdown');
+            loaiBaoCaoDropdown.innerHTML = loaiBaoCaoOptions;
+
+            // Tạo dropdown chọn năm
+            var startYear = 1900; // Năm bắt đầu
+            var endYear = new Date().getFullYear(); // Năm hiện tại
+            // Tạo dropdown chọn năm với tùy chọn bỏ lọc
+            var yearOptions = '<a class="dropdown-item" href="#" data-value="">Tất cả năm</a>';
+            for (var year = endYear; year >= startYear; year--) {
+                yearOptions += '<a class="dropdown-item" href="#" data-value="' + year + '">' + year + '</a>';
+            }
+            var yearDropdown = document.getElementById('yearDropdown');
+            yearDropdown.innerHTML = yearOptions;
+
+            // Xử lý sự kiện chọn tháng
+            $('#loaiBaoCaoDropdown').on('click', '.dropdown-item', function () {
+                loaiBaoCaoButton.textContent = this.textContent;
+                currentloaiBaoCao = $(this).data('value'); // Lưu trữ giá trị tháng đã chọn
+                searchAndFilter(); // Gọi lại hàm lọc
+            });
+
+            // Xử lý sự kiện chọn năm
+            $('#yearDropdown').on('click', '.dropdown-item', function () {
+                yearButton.textContent = this.textContent;
+                currentYear = $(this).data('value'); // Lưu trữ giá trị năm đã chọn
+                searchAndFilter(); // Gọi lại hàm lọc
+            });
+
+        });
+    </script>
+
+<style>
+    body {
+        margin: 0; /* Loại bỏ margin mặc định của body */
+    }
+    .btn-primary {
+        color: #fff;
+        background-color: #427D9D;
+        border-color: #164863;
+    }
+
+    .btn-primary1 {
+        color: #fff;
+        background-color: #9BBEC8;
+        border-color: #9BBEC8;
+    }
+
+    .header {
+        background-color: #FFFFFF;
+        display: flex;
+        position: fixed; /* Đặt vị trí của header là cố định */
+        width: 100%; /* Chiều rộng 100% của header */
+        height: 80px;
+        z-index: 1000; /* Đảm bảo header nằm trên cùng */
+    }
+
+    .header img {
+        margin-left: 20px;
+        margin-top: 10px;
+        width: 50px;
+        height: 56px;
+    }
+
+    .avatar {
+        position: absolute;
+        top: 5px;
+        right: 200px;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    .user-info {
+        position: absolute;
+        top: 20px;
+        right: 90px;
+    }
+
+    .user-info p {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        color: #000000;
+        margin: 0;
+    }
+
+    .user-info p.subtitle {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        letter-spacing: 0.15px;
+        color: rgba(142, 142, 142, 0.87);
+        margin: 0;
+    }
+
+    /* Kích thước và độ cao của phần content để tránh che khuất nội dung khi header fixed */
+    .content {
+        margin-top: 74px;
+    }
+
+    .menu-options {
+        /* Dashboard */
+        height: 18px;
+        padding-left: 0px;
+        padding-top: 50px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.1px;
+
+        color: #000000;
+
+
+    }
+
+    .menu-options-logout {
+        height: 18px;
+        padding-left: 0px;
+        padding-top: 50px;
+
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.1px;
+        color: red;
+    }
+
+    .menu-item {
+        padding-top: 12px;
+
+    }
+
+    .custom-dropdown .btn {
+        background-color: #FFFFFF; /* White background */
+        border: 1px solid #D0D5DD; /* Border color */
+        border-radius: 0.5rem; /* Rounded corners */
+    }
+
+    /* Optional: if you want to style the dropdown menu */
+    .custom-dropdown .dropdown-menu {
+        border-color: #D0D5DD;
+        border-radius: 0.5rem; /* Rounded corners for the dropdown menu */
+    }
+
+    .custom-search-input {
+        border: 1px solid #D0D5DD; /* Border color */
+        border-radius: 0.5rem; /* Rounded corners for the dropdown menu */
+        background-color: #FFFFFF;
+    }
+
+    .custom-search-input .form-control {
+        border: none;
+        box-shadow: none; /* Remove default box-shadow */
+        background-color: #FFFFFF;
+    }
+
+    .custom-search-input .input-group-text {
+        background: transparent;
+        border: none;
+    }
+
+    .custom-btn {
+        background-color: #DDF2FD; /* Light blue background */
+        color: #427D9D; /* Dark blue text color */
+        border: none; /* Optional: removes the default border */
+        padding: 5px 10px; /* Optional: for padding inside the button */
+        border-radius: 0.8rem; /* Optional: if you want rounded corners */
+        cursor: pointer; /* Changes the cursor to a pointer on hover */
+    }
+
+    .custom-btn:focus {
+        outline: none;
+    }
+
+    .pagination-custom {
+        justify-content: center; /* Center the pagination */
+    }
+
+    .pagination-custom .page-item.active .page-link {
+        background-color: #DDF2FD; /* Light blue background for active page */
+        border-color: #DDF2FD;
+        color: #427D9D; /* Dark blue text color for active page */
+    }
+
+    .pagination-custom .page-link {
+        color: #427D9D; /* Dark blue text color for pages */
+    }
+
+    .pagination-custom .page-item:not(.active) .page-link:hover {
+        background-color: #DDF2FD; /* Light blue background for hover */
+    }
+
+    .pagination-custom .page-item:first-child .page-link {
+        border-top-left-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+    }
+
+    .pagination-custom .page-item:last-child .page-link {
+        border-top-right-radius: .25rem;
+        border-bottom-right-radius: .25rem;
+    }
+
+    /* Tạo kiểu cho dropdown menu */
+    .dropdown-style {
+        max-height: 150px; /* Chiều cao tối đa cho phép scroll */
+        overflow-y: auto; /* Cho phép scroll nếu nội dung vượt quá chiều cao tối đa */
+    }
+
+    /* Style for the 'Gửi báo cáo' button */
+.btn-xac-nhan {
+    background-color: #28a745; /* Bootstrap green color */
+    border-color: #28a745;
+    color: #fff; /* White text */
+
+}
+
+/* Style for the 'Hủy bỏ' button */
+.btn-huy-bo {
+    background-color: #6c757d; /* Bootstrap gray color */
+    border-color: #6c757d;
+    color: #fff; /* White text */
+}
+
+</style>
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="successModalTitle">Thành công</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Báo cáo đã được gửi thành công.
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-huy-bo" data-dismiss="modal">Đóng</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">Xác nhận</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Bạn có chắc chắn muốn gửi báo cáo này không?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-huy-bo" data-dismiss="modal">Hủy bỏ</button>
+          <button type="button" class="btn btn-xac-nhan" onclick="submitForm()">Xác nhận</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
 </body>
+
+
 
 </html>
