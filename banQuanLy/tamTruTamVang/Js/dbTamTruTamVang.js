@@ -69,13 +69,13 @@ document.querySelectorAll('.form-check-input').forEach(function (radio) {
 
         if (option === 'all') { // Cả 2 chung cư
             filteredDataTamTru = tableData;
-            filteredDataTamVang = tableTamVang;
+            filteredDataTamVang = tableTamTru;
         } else if (option === 's1') { // S1
             filteredDataTamTru = tableData.filter(item => item.canHo === 's1');
-            filteredDataTamVang = tableTamVang.filter(item => item.canHo === 's1');
+            filteredDataTamVang = tableTamTru.filter(item => item.canHo === 's1');
         } else { // S2
             filteredDataTamTru = tableData.filter(item => item.canHo === 's2');
-            filteredDataTamVang = tableTamVang.filter(item => item.canHo === 's2');
+            filteredDataTamVang = tableTamTru.filter(item => item.canHo === 's2');
         }
 
         // Lấy số lượng tạm trú và tạm vắng
@@ -90,7 +90,7 @@ document.querySelectorAll('.form-check-input').forEach(function (radio) {
 // Hàm khởi tạo
 function init() {
     var tamTruCount = tableData.length;
-    var tamVangCount = tableTamVang.length;
+    var tamVangCount = tableTamTru.length;
     updateChartAndLegend(tamTruCount, tamVangCount);
 }
 init();

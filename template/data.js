@@ -70,7 +70,7 @@ const lines = data.trim().split('\n');
 
 // Xử lý từng dòng và chuyển đổi chúng thành đối tượng.
 const result = lines.map(line => {
-    const [id, hoTen, gioiTinh, ngaySinh, SDT, CCCD, DDThuongTru,ngheNghiep, DDTamVang,ngayBatDau,ngayKetThuc, lyDo,canHo] = line.split('\t');
+    const [id, hoTen, gioiTinh, ngaySinh, SDT, CCCD, DDThuongTru,ngheNghiep, DDTamTru,ngayBatDau,ngayKetThuc, lyDo,canHo] = line.split('\t');
     return {
         id: Number(id),hoTen,
         gioiTinh,
@@ -79,7 +79,7 @@ const result = lines.map(line => {
         CCCD,
         DDThuongTru,
         ngheNghiep,
-        DDTamVang,
+        DDTamTru,
         ngayBatDau,
         ngayKetThuc,
         lyDo: lyDo || "",

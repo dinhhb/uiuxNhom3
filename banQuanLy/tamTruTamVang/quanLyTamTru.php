@@ -60,12 +60,12 @@
                                     <div class="card-block">
 
                                         <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
-                                            <h3>Quản lý tạm vắng </h3>
+                                            <h3>Quản lý tạm trú </h3>
                                         </div>
                                         <div class="mt-3 justify-content-between">
                                             <form class="d-flex justify-content-between"
                                                   style="display: flex; align-items: center; justify-content: start; gap: 20px;"
-                                                  action="dangKiTamVang.php">
+                                                  action="dangKiTamTru.php">
                                                 <div class="mb-3"
                                                      style="display: flex; align-items: center; justify-content: start; gap: 20px;">
                                                     <!-- Radio button group -->
@@ -98,8 +98,7 @@
                                                 </div>
 
                                                 <!-- Submit button -->
-                                                <button type="submit" class="btn btn-primary btn-group">Đăng kí tạm
-                                                    vắng
+                                                <button type="submit" class="btn btn-primary btn-group">Đăng kí tạm trú
                                                 </button>
                                             </form>
                                         </div>
@@ -244,8 +243,8 @@
                                    value="" disabled>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="diaChiTamVang">Địa chỉ nơi đến</label>
-                            <input type="text" class="form-control" id="diaChiTamVang" placeholder=""
+                            <label for="diaChiTamTru">Địa chỉ tạm trú </label>
+                            <input type="text" class="form-control" id="diaChiTamTru" placeholder=""
                                    value="" disabled>
                         </div>
                         <div class="form-group col-md-6">
@@ -345,8 +344,8 @@
                                    value="Điền Tất Bình">
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="diaChiTamVang1">Địa chỉ nơi đến</label>
-                            <input type="text" class="form-control" id="diaChiTamVang1" placeholder="Điền Tất Bình"
+                            <label for="diaChiTamTru1">Địa chỉ tạm trú </label>
+                            <input type="text" class="form-control" id="diaChiTamTru1" placeholder="Điền Tất Bình"
                                    value="Điền Tất Bình">
                         </div>
                         <div class="form-group col-md-6">
@@ -449,8 +448,8 @@
 <script src="../../template/assets/js/vendor-all.min.js"></script>
 <script src="../../template/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!--<script src="assets/js/pcoded.min.js"></script>-->
-<script src="JsTamVang/loadData.js"></script>
-<script src="JsTamVang/quanLyTamVang.js"></script>
+<script src="Js/loadData.js"></script>
+<script src="Js/quanLyTamTru.js"></script>
 <!--<script src="assets/plugins/chart-morris/js/raphael.min.js"></script>-->
 <!--<script src="assets/plugins/chart-morris/js/morris.min.js"></script>-->
 <!-- Phần này bắt buộc -->

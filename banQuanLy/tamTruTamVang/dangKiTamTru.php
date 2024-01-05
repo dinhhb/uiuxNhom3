@@ -196,7 +196,7 @@
                                 <div class="card ">
                                     <div class="card-block">
 
-                                        <h3 style="text-align: center    ;font-weight: bold;">Đăng kí tạm vắng</h3>
+                                        <h3 style="text-align: center    ;font-weight: bold;">Đăng kí tạm trú</h3>
                                         <form id="registrationForm">
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
@@ -234,9 +234,9 @@
                                                            placeholder="Nhập địa chỉ thường trú">
                                                 </div>
                                                 <div class="form-group col-md-6">
-                                                    <label for="diaChiTamVang">Địa chỉ nơi đến</label>
-                                                    <input type="text" class="form-control" id="diaChiTamVang"
-                                                           placeholder="Nhập địa chỉ nơi đến">
+                                                    <label for="diaChiTamTru">Địa chỉ tạm trú </label>
+                                                    <input type="text" class="form-control" id="diaChiTamTru"
+                                                           placeholder="Nhập địa chỉ nơi đến" value="Bắc Phú, Sóc Sơn, Hà Nội">
                                                 </div>
                                             </div>
 
@@ -337,7 +337,7 @@
 <!-- Required Js -->
 
 <script src="Js/loadData.js"></script>
-<script src="Js/dangKiTamVang.js"></script>
+<script src="Js/dangKiTamTru.js"></script>
 <script src="../../template/assets/js/vendor-all.min.js"></script>
 <script src="../../template/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script src="../../template/assets/js/pcoded.min.js"></script>

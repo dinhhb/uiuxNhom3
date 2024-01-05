@@ -449,8 +449,8 @@
 <script src="../../template/assets/js/vendor-all.min.js"></script>
 <script src="../../template/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!--<script src="assets/js/pcoded.min.js"></script>-->
-<script src="JsTamVang/loadData.js"></script>
-<script src="JsTamVang/quanLyTamVang.js"></script>
+<script src="Js/loadData.js"></script>
+<script src="Js/quanLyTamVang.js"></script>
 <!--<script src="assets/plugins/chart-morris/js/raphael.min.js"></script>-->
 <!--<script src="assets/plugins/chart-morris/js/morris.min.js"></script>-->
 <!-- Phần này bắt buộc -->

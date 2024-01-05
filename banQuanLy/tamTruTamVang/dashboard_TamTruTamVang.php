@@ -298,8 +298,8 @@
 <script src="../../template/assets/js/vendor-all.min.js"></script>
 <script src="../../template/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <script src="../../template/assets/js/pcoded.min.js"></script>
-<script src="JsTamVang/loadData.js"></script>
-<script src="JsTamVang/dbTamTruTamVang.js"></script>
+<script src="Js/loadData.js"></script>
+<script src="Js/dbTamTruTamVang.js"></script>
 
 
 </body>
