@@ -13,7 +13,7 @@
     <link rel="import" href="header.html">
     <!-- Favicon icon -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-zkRf1z1uPbXpFZV4KTMEH7PVB7ZlDdjw0EhMf7ueExUqMW+0vWuAHR4/j5qoHw1NvMyO4tDw9HZmpyKiCyr/D3A==" crossorigin="anonymous" /> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-zkRf1z1uPbXpFZV4KTMEH7PVB7ZlDdjw0EhMf7ueExUqMW+0vWuAHR4/j5qoHw1NvMyO4tDw9HZmpyKiCyr/D3A==" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-zkRf1z1uPbXpFZV4KTMEH7PVB7ZlDdjw0EhMf7ueExUqMW+0vWuAHR4/j5qoHw1NvMyO4tDw9HZmpyKiCyr/D3A==" crossorigin="anonymous" /> -->
     <link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon">
     <!-- fontawesome icon -->
     <link rel="stylesheet" href="../../assets/fonts/fontawesome/css/fontawesome-all.min.css">
@@ -64,9 +64,9 @@
                                                 <div class="dropdown-menu dropdown-style" aria-labelledby="loaiBaoCaoDropdownButton" id="loaiBaoCaoDropdown">
                                                 </div>
                                             </div>
-                                            <button type="submit" class="btn btn-primary1 btn-group">Xem báo cáo đã gửi
+                                            <button type="button" class="btn btn-primary1 btn-group">Xem báo cáo đã gửi
                                             </button>
-                                            <button data-toggle="modal" data-target="#confirmationModal" type="submitBaoCao" class="btn btn-primary btn-group">Gửi báo cáo
+                                            <button id="baoCaoSubmit" type="submit" class="btn btn-primary btn-group">Gửi báo cáo
                                             </button>
                                         </div>
 
@@ -117,8 +117,8 @@
     </div>
 
     <!-- Required Js -->
-    <script src="assets/js/vendor-all.min.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/vendor-all.min.js"></script>
+    <script src="../../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- Phần này bắt buộc -->
     <style>
         body {
@@ -352,27 +352,20 @@
     </style>
 
     <script>
-        function submitForm() {
-            // Logic to handle form submission here
-            // ...
-
-            // Close the confirmation modal if it's still open
-            $('#confirmationModal').modal('hide');
-
-            // Show success modal
-            $('#successModal').modal('show');
-        }
+        
 
 
-        document.getElementById('baoCao').addEventListener('submitBaoCao', function(event) {
+        document.getElementById('baoCaoSubmit').addEventListener('click', function(event) {
             // Ngăn form thực hiện hành động mặc định
+            console.log("Anh ga");
             event.preventDefault();
             $('#confirmationModal').modal('show');
         });
 
+
+
         document.addEventListener('DOMContentLoaded', function() {
             var loaiBaoCaoButton = document.getElementById('loaiBaoCaoButton');
-            var yearButton = document.getElementById('yearButton');
 
             // Tạo dropdown chọn tháng
             var loaiBaoCaos = ["Báo cáo kết quả hoạt động kinh doanh", "Báo cáo lưu chuyển tiền tệ", "Thuyết minh báo cáo tài chính"];
@@ -383,32 +376,6 @@
             });
             var loaiBaoCaoDropdown = document.getElementById('loaiBaoCaoDropdown');
             loaiBaoCaoDropdown.innerHTML = loaiBaoCaoOptions;
-
-            // Tạo dropdown chọn năm
-            var startYear = 1900; // Năm bắt đầu
-            var endYear = new Date().getFullYear(); // Năm hiện tại
-            // Tạo dropdown chọn năm với tùy chọn bỏ lọc
-            var yearOptions = '<a class="dropdown-item" href="#" data-value="">Tất cả năm</a>';
-            for (var year = endYear; year >= startYear; year--) {
-                yearOptions += '<a class="dropdown-item" href="#" data-value="' + year + '">' + year + '</a>';
-            }
-            var yearDropdown = document.getElementById('yearDropdown');
-            yearDropdown.innerHTML = yearOptions;
-
-            // Xử lý sự kiện chọn tháng
-            $('#loaiBaoCaoDropdown').on('click', '.dropdown-item', function() {
-                loaiBaoCaoButton.textContent = this.textContent;
-                currentloaiBaoCao = $(this).data('value'); // Lưu trữ giá trị tháng đã chọn
-                searchAndFilter(); // Gọi lại hàm lọc
-            });
-
-            // Xử lý sự kiện chọn năm
-            $('#yearDropdown').on('click', '.dropdown-item', function() {
-                yearButton.textContent = this.textContent;
-                currentYear = $(this).data('value'); // Lưu trữ giá trị năm đã chọn
-                searchAndFilter(); // Gọi lại hàm lọc
-            });
-
         });
     </script>
 
@@ -620,68 +587,20 @@
             /* Cho phép scroll nếu nội dung vượt quá chiều cao tối đa */
         }
 
-        /* Style for the 'Gửi báo cáo' button */
-        .btn-xac-nhan {
-            background-color: #28a745;
-            /* Bootstrap green color */
-            border-color: #28a745;
-            color: #fff;
-            /* White text */
-
-        }
-
-        /* Style for the 'Hủy bỏ' button */
-        .btn-huy-bo {
-            background-color: #6c757d;
-            /* Bootstrap gray color */
-            border-color: #6c757d;
-            color: #fff;
-            /* White text */
-        }
     </style>
 
     <!-- Success Modal -->
-    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="successModalTitle">Thành công</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Báo cáo đã được gửi thành công.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-huy-bo" data-dismiss="modal">Đóng</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php 
+        $modalContent = 'Báo cáo đã được gửi thành công';
+        include '../../common/modal/successModal.php';
+    ?>
 
 
     <!-- Modal -->
-    <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitle">Xác nhận</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Bạn có chắc chắn muốn gửi báo cáo này không?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-huy-bo" data-dismiss="modal">Hủy bỏ</button>
-                    <button type="button" class="btn btn-xac-nhan" onclick="submitForm()">Xác nhận</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
+    <?php 
+        $modalContent = 'Bạn có chắc chắn muốn gửi báo cáo này không?';
+        include '../../common/modal/confirmationModal.php';
+    ?>
 
 </body>
 
