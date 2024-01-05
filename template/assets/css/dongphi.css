@@ -1,0 +1,77 @@
+.custom-dropdown .btn {
+    background-color: #FFFFFF; /* White background */
+    border: 1px solid #D0D5DD; /* Border color */
+    border-radius: 0.5rem; /* Rounded corners */
+}
+
+/* Optional: if you want to style the dropdown menu */
+.custom-dropdown .dropdown-menu {
+    border-color: #D0D5DD;
+    border-radius: 0.5rem; /* Rounded corners for the dropdown menu */
+}
+
+.custom-search-input {
+    border: 1px solid #D0D5DD; /* Border color */
+    border-radius: 0.5rem; /* Rounded corners for the dropdown menu */
+    background-color: #FFFFFF;
+}
+.custom-search-input .form-control {
+    border: none;
+    box-shadow: none; /* Remove default box-shadow */
+    background-color: #FFFFFF;
+}
+.custom-search-input .input-group-text {
+    background: transparent;
+    border: none;
+}
+.custom-btn {
+    background-color: #DDF2FD; /* Light blue background */
+    background-color: #f9c3c3; /* Light blue background */
+
+    color: #427D9D; /* Dark blue text color */
+    border: none; /* Optional: removes the default border */
+    padding: 5px 10px; /* Optional: for padding inside the button */
+    border-radius: 0.8rem; /* Optional: if you want rounded corners */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+.custom-btn:focus {
+    outline: none;
+}
+
+.pagination-custom {
+    justify-content: center; /* Center the pagination */
+}
+
+.pagination-custom .page-item.active .page-link {
+    background-color: #DDF2FD; /* Light blue background for active page */
+    border-color: #DDF2FD;
+    color: #427D9D; /* Dark blue text color for active page */
+}
+
+.pagination-custom .page-link {
+    color: #427D9D; /* Dark blue text color for pages */
+}
+
+.pagination-custom .page-item:not(.active) .page-link:hover {
+    background-color: #DDF2FD; /* Light blue background for hover */
+}
+
+.pagination-custom .page-item:first-child .page-link {
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+.pagination-custom .page-item:last-child .page-link {
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+}
+.modal-body .p {
+    color : red;
+}
+.dropdown-style{
+    max-height: 150px; /* Chiều cao tối đa cho phép scroll */
+    overflow-y: auto; /* Cho phép scroll nếu nội dung vượt quá chiều cao tối đa */
+}
+
+
+    
