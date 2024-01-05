@@ -333,6 +333,9 @@ function confirmAndSaveChanges() {
 
     // Xây dựng lại bảng với dữ liệu đã cập nhật
     buildTable();
+    
+    // Gọi lại hàm lọc
+    searchAndFilter();
 }
 document.getElementById('confirmSaveChanges').addEventListener('click', confirmAndSaveChanges);
 

@@ -20,16 +20,16 @@
     <meta name="author" content="CodedThemes" />
 
     <!-- Favicon icon -->
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../template/assets/images/favicon.ico" type="image/x-icon">
     <!-- fontawesome icon -->
-    <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../template/assets/fonts/fontawesome/css/fontawesome-all.min.css">
 <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- animation css -->
-    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css">
+    <link rel="stylesheet" href="../../template/assets/plugins/animation/css/animate.min.css">
     <!-- vendor css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../../template/assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
     <!-- Make sure to include the datalabels plugin -->
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
@@ -105,7 +105,7 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             padding: 20px;
-            margin-top: 50px;
+            margin-top: 6px;
             text-align: center;
             max-width: 400px; /* Adjust as needed */
         }
@@ -130,6 +130,7 @@
             border-radius: 50%;
         }
         .card-body {
+            margin-top: 6px;
             padding: 15px;
             background-color: #fff;
             border-radius: 10px;
@@ -153,6 +154,7 @@
         }
 
     </style>
+
 </head>
 
 <body>
@@ -163,115 +165,22 @@
     </div>
 </div>
 <!-- [ Pre-loader ] End -->
-<!-- [ navigation menu ] start -->
-<nav class="pcoded-navbar">
-    <div class="navbar-wrapper">
-        <div class="navbar-brand header-logo">
-            <a href="index.html" class="b-brand">
-                <div class="b-bg">
-                    <i class="feather icon-trending-up"></i>
-                </div>
-                <span class="b-title">Soc Son Plaza</span>
-            </a>
-            <!-- <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a> -->
-        </div>
-        <div class="navbar-content scroll-div">
-            <ul class="nav pcoded-inner-navbar">
-                <!-- <li class="nav-item pcoded-menu-caption">
-                    <label>Navigation</label>
-                </li> -->
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Xem thống
-                                kê</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Tạo báo cáo tài
-                                chính</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item active">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Quản lý tạm trú, tạm
-                                vắng</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project"
-                    class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Quản lý đóng
-                                phí</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Thông báo đóng
-                                phí</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Ý kiến của cư
-                                dân</span></a>
-                </li>
-                <!-- <li class="nav-item pcoded-menu-caption">
-                    <label>UI Element</label>
-                </li> -->
-                <!-- <li data-username="basic components Button Alert Badges breadcrumb Paggination progress Tooltip popovers Carousel Cards Collapse Tabs pills Modal Grid System Typography Extra Shadows Embeds" class="nav-item pcoded-hasmenu">
-                    <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Components</span></a>
-                    <ul class="pcoded-submenu">
-                        <li class=""><a href="bc_button.html" class="">Button</a></li>
-                        <li class=""><a href="bc_badges.html" class="">Badges</a></li>
-                        <li class=""><a href="bc_breadcrumb-pagination.html" class="">Breadcrumb & paggination</a></li>
-                        <li class=""><a href="bc_collapse.html" class="">Collapse</a></li>
-                        <li class=""><a href="bc_tabs.html" class="">Tabs & pills</a></li>
-                        <li class=""><a href="bc_typography.html" class="">Typography</a></li>
-
-
-                        <li class=""><a href="icon-feather.html" class="">Feather<span class="pcoded-badge label label-danger">NEW</span></a></li>
-                    </ul>
-                </li> -->
-                <!-- <li class="nav-item pcoded-menu-caption">
-                    <label>Forms & table</label>
-                </li>
-                <li data-username="form elements advance componant validation masking wizard picker select" class="nav-item">
-                    <a href="form_elements.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-file-text"></i></span><span class="pcoded-mtext">Form elements</span></a>
-                </li>
-                <li data-username="Table bootstrap datatable footable" class="nav-item">
-                    <a href="tbl_bootstrap.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-server"></i></span><span class="pcoded-mtext">Table</span></a>
-                </li>
-                <li class="nav-item pcoded-menu-caption">
-                    <label>Chart & Maps</label>
-                </li>
-                <li data-username="Charts Morris" class="nav-item"><a href="chart-morris.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span><span class="pcoded-mtext">Chart</span></a></li>
-                <li data-username="Maps Google" class="nav-item"><a href="map-google.html" class="nav-link "><span class="pcoded-micon"><i class="feather icon-map"></i></span><span class="pcoded-mtext">Maps</span></a></li>
-                <li class="nav-item pcoded-menu-caption">
-                    <label>Pages</label>
-                </li>
-                <li data-username="Authentication Sign up Sign in reset password Change password Personal information profile settings map form subscribe" class="nav-item pcoded-hasmenu">
-                    <a href="javascript:" class="nav-link "><span class="pcoded-micon"><i class="feather icon-lock"></i></span><span class="pcoded-mtext">Authentication</span></a>
-                    <ul class="pcoded-submenu">
-                        <li class=""><a href="auth-signup.html" class="" target="_blank">Sign up</a></li>
-                        <li class=""><a href="auth-signin.html" class="" target="_blank">Sign in</a></li>
-                    </ul>
-                </li>
-                <li data-username="Sample Page" class="nav-item"><a href="sample-page.html" class="nav-link"><span class="pcoded-micon"><i class="feather icon-sidebar"></i></span><span class="pcoded-mtext">Sample page</span></a></li>
-                <li data-username="Disabled Menu" class="nav-item disabled"><a href="javascript:" class="nav-link"><span class="pcoded-micon"><i class="feather icon-power"></i></span><span class="pcoded-mtext">Disabled menu</span></a></li> -->
-            </ul>
-        </div>
-    </div>
-</nav>
 <!-- [ navigation menu ] end -->
 
-<!-- [ Header ] start -->
 
-<!-- [ Header ] end -->
+<!-- Header -->
+<?php include '../common/header.php'; ?>
+<!-- End-header -->
 
 <!-- [ Main Content ] start -->
-<div class="pcoded-main-container">
-    <div class="pcoded-wrapper">
-        <div class="pcoded-content">
+<div class="containeri" style="display:flex; width:100%; ">
+    <!-- [ menu ] start -->
+    <?php include '../common/sidebar.php'; ?>
+    <!-- End menu -->
+
+
+    <div class="pcoded-wrapper" style="width:1520px;">
+        <div class="information"  style="margin-top:100px;margin-left:350px;margin-right:30px;">
             <div class="pcoded-inner-content">
                 <!-- [ breadcrumb ] start -->
                 <!-- [ breadcrumb ] end -->
@@ -293,19 +202,19 @@
                                                     <!-- Radio button group -->
                                                     <label for="apartmentChoice" class="form-label">Chọn chung cư</label>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="apartmentOptions" id="apartmentOption1" value="option1">
+                                                        <input class="form-check-input" type="radio" name="apartmentOptions" id="apartmentOption1" value="all">
                                                         <label class="form-check-label" for="apartmentOption1">
                                                             Cả 2 chung cư
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="apartmentOptions" id="apartmentOption2" value="option2">
+                                                        <input class="form-check-input" type="radio" name="apartmentOptions" id="apartmentOption2" value="s1">
                                                         <label class="form-check-label" for="apartmentOption2">
                                                             S1
                                                         </label>
                                                     </div>
                                                     <div class="form-check ">
-                                                        <input class="form-check-input" type="radio" name="apartmentOptions" id="apartmentOption3" value="option3">
+                                                        <input class="form-check-input" type="radio" name="apartmentOptions" id="apartmentOption3" value="s2">
                                                         <label class="form-check-label" for="apartmentOption3">
                                                             S2
                                                         </label>
@@ -325,12 +234,12 @@
                                             </ul>
                                                 <div class="d-flex justify-content-between">
                                                     <span></span> <!-- Placeholder for left side content -->
-                                                    <a href="quanLyTamVang.html" class="link-button mt-3">Quản lý đơn tạm trú/ tạm vắng >></a>
+                                                    <a href="quanLyTamVang.php" class="link-button mt-3">Quản lý đơn tạm trú/ tạm vắng >></a>
                                                 </div>
                                             </div>
 
                                         </div>
-                                        <div class="col-md-6 mt-5">
+                                        <div class="col-md-6">
 
                                             <div class="card-body row">
                                                 <div class=" col-md-0">
@@ -386,71 +295,11 @@
 
 
 <!-- Required Js -->
-<script src="assets/js/vendor-all.min.js"></script>
-<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/pcoded.min.js"></script>
-<script>
-    // JavaScript for character counter
-    document.addEventListener('DOMContentLoaded', function () {
-        var reasonTextarea = document.getElementById('reason');
-        var charNumDisplay = document.getElementById('charNum');
-
-        reasonTextarea.addEventListener('input', function () {
-            var currentLength = this.value.length;
-            charNumDisplay.textContent = `${currentLength} / 225`;
-        });
-    });
-
-    // Prepare the doughnut chart data
-    const data = {
-        labels: ['Số người tạm trú', 'Số người tạm vắng'],
-        datasets: [{
-            data: [25, 12],
-            backgroundColor: ['#5F8CA0', '#BFD1D9'],
-            borderColor: ['#ffffff', '#ffffff'],
-            borderWidth: 2
-        }]
-    };
-
-    // Chart configuration
-    const config = {
-        type: 'doughnut',
-        data: data,
-        options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            plugins: {
-                legend: {
-                    display: false
-                },
-                tooltip: {
-                    enabled: true
-                },
-                // Configure datalabels plugin
-                datalabels: {
-                    color: '#fff',
-                    font: {
-                        weight: 'bold'
-                    },
-                    formatter: (value, context) => {
-                        // Calculate percentage
-                        const total = context.chart.data.datasets[0].data.reduce((sum, current) => sum + current, 0);
-                        const percentage = (value / total * 100).toFixed(2) + '%';
-                        return percentage;
-                    }
-                }
-            }
-        },
-        // Pass the plugin as an array to the plugins option
-        plugins: [ChartDataLabels]
-    };
-
-    // Initialize the doughnut chart
-    var doughnutChart = new Chart(
-        document.getElementById('doughnutChart').getContext('2d'),
-        config
-    );
-</script>
+<script src="../../template/assets/js/vendor-all.min.js"></script>
+<script src="../../template/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../template/assets/js/pcoded.min.js"></script>
+<script src="JsTamVang/loadData.js"></script>
+<script src="JsTamVang/dbTamTruTamVang.js"></script>
 
 
 </body>

@@ -15,15 +15,15 @@
     <!-- Favicon icon -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-zkRf1z1uPbXpFZV4KTMEH7PVB7ZlDdjw0EhMf7ueExUqMW+0vWuAHR4/j5qoHw1NvMyO4tDw9HZmpyKiCyr/D3A==" crossorigin="anonymous" /> -->
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-zkRf1z1uPbXpFZV4KTMEH7PVB7ZlDdjw0EhMf7ueExUqMW+0vWuAHR4/j5qoHw1NvMyO4tDw9HZmpyKiCyr/D3A==" crossorigin="anonymous" />-->
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../template/assets/images/favicon.ico" type="image/x-icon">
     <!-- fontawesome icon -->
 
-    <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../template/assets/fonts/fontawesome/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- animation css -->
-    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css">
+    <link rel="stylesheet" href="../../template/assets/plugins/animation/css/animate.min.css">
     <!-- vendor css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../../template/assets/css/style.css">
 
 </head>
 
@@ -37,65 +37,13 @@
 <!-- [ Pre-loader ] End -->
 
 <!-- Header -->
-<div class="header">
-    <img src="./assets/images/logo.png">
-    <p style="color:#164863;padding-top:30px;padding-left:30px;line-height: 21px;font-style: normal;font-family: 'Inter';font-size:25px;font-weight: 600;">
-        Soc Son Plaza</p>
-    <a href=""><img src="./assets/images/avatar.png" class="avatar">
-        <div class="user-info">
-            <p>Văn Thanh</p>
-            <p class="subtitle">Ban quản lý</p>
-        </div>
-    </a>
-</div>
+<?php include '../common/header.php'; ?>
 <!-- End-header -->
-
-<!-- [ menu ] start -->
 <div class="containeri" style="display:flex; width:100%; ">
-    <div class="menu"
-         style="position: fixed;background-color:#FFFFFF;margin-top:100px;margin-left:30px; width:300px;border-radius: 14px;height:px;">
-        <div class="menu-item">
-            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-home"
-                                                                                 style="color: #000000; width:30px;height:30px;"></i></span><span
-                    class="menu-options">Dashboard</span></a>
-        </div>
-        <div class="menu-item">
-            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-chart-bar"
-                                                                                 style="color: #000000;width:30px;height:30px;"></i></span><span
-                    class="menu-options">Xem thống kê</span></a>
-        </div>
-        <div class="menu-item">
-            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-file-excel"
-                                                                                 style="color: #000000; width: 30px; height: 30px;"></i></span><span
-                    class="menu-options">Tạo báo cáo tài chính</span></a>
-        </div>
-        <div class="menu-item">
-            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-user-cog"
-                                                                                 style="color: #000000; width:30px;height:30px;"></i></span><span
-                    class="menu-options">Quản lí tạm trú/tạm vắng</span></a>
-        </div>
-        <div class="menu-item">
-            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-money-bill-wave"
-                                                                                 style="color: #000000; width:30px;height:30px;"></i></span><span
-                    class="menu-options">Quản lý đóng phí</span></a>
-        </div>
-        <div class="menu-item">
-            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-bell"
-                                                                                 style="color: #000000; width:30px;height:30px;"></i></span><span
-                    class="menu-options">Thông báo thu phí</span></a>
-        </div>
-        <div class="menu-item">
-            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-comment-dots"
-                                                                                 style="color: #000000; width:30px;height:30px;"></i></span><span
-                    class="menu-options">Ý kiến của cư dân</span></a>
-        </div>
-        <div class="menu-item-logout" style="padding-top:50px;">
-            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-sign-out-alt"
-                                                                                 style="color: red; width:30px;height:30px;"></i></span><span
-                    class="menu-options-logout" style="color:red;">Đăng xuất</span></a>
-        </div>
-    </div>
+    <!-- [ menu ] start -->
+    <?php include '../common/sidebar.php'; ?>
     <!-- End menu -->
+
     <!-- Phần của mọi người -->
     <div class="pcoded-wrapper" style="width:1520px;">
         <div class="information" style="margin-top:100px;margin-left:350px;margin-right:30px;">
@@ -117,7 +65,7 @@
                                         <div class="mt-3 justify-content-between">
                                             <form class="d-flex justify-content-between"
                                                   style="display: flex; align-items: center; justify-content: start; gap: 20px;"
-                                                  action="dangKiTamVang.html">
+                                                  action="dangKiTamVang.php">
                                                 <div class="mb-3"
                                                      style="display: flex; align-items: center; justify-content: start; gap: 20px;">
                                                     <!-- Radio button group -->
@@ -194,7 +142,7 @@
                                                 <div class="input-group custom-search-input">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="basic-addon1"><i
-                                                                class="fa fa-search"></i></span>
+                                                                    class="fa fa-search"></i></span>
                                                     </div>
                                                     <input type="text" id="searchInput" class="form-control"
                                                            placeholder="Tìm kiếm..." aria-label="Search"
@@ -321,22 +269,22 @@
                                    value="" disabled>
                         </div>
 
-                            <div class="form-group col-md-6">
-                                <label for="ChungCu">Chung cư</label>
-                                <select id="ChungCu" class="form-control" disabled>
-                                    <option selected>Chọn chung cư</option>
-                                    <option value="s1">S1</option>
-                                    <option value="s2">S2</option>
-                                </select>
+                        <div class="form-group col-md-6">
+                            <label for="ChungCu">Chung cư</label>
+                            <select id="ChungCu" class="form-control" disabled>
+                                <option selected>Chọn chung cư</option>
+                                <option value="s1">S1</option>
+                                <option value="s2">S2</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="reason">Lý do</label>
+                            <textarea class="form-control" id="reason" rows="3" maxlength="225"
+                                      placeholder="Nhập lý do..." disabled></textarea>
+                            <div class="text-right">
+                                <small id="charNum" class="form-text text-muted">0 / 225</small>
                             </div>
-                            <div class="form-group col-md-6">
-                                <label for="reason">Lý do</label>
-                                <textarea class="form-control" id="reason" rows="3" maxlength="225"
-                                          placeholder="Nhập lý do..." disabled></textarea>
-                                <div class="text-right">
-                                    <small id="charNum" class="form-text text-muted">0 / 225</small>
-                                </div>
-                            </div>
+                        </div>
 
                     </div>
                     <!-- Include other form fields as per your screenshot -->
@@ -423,7 +371,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="ChungCu1">Chung cư</label>
-                            <select id="ChungCu1" class="form-control" >
+                            <select id="ChungCu1" class="form-control">
                                 <option selected>Chọn chung cư</option>
                                 <option value="s1">S1</option>
                                 <option value="s2">S2</option>
@@ -432,11 +380,11 @@
 
                         <div class="form-group  col-md-6">
                             <label for="reason">Lý do</label>
-                                <textarea class="form-control" id="reason1" rows="3" maxlength="225"
-                                          placeholder="Nhập lý do..."></textarea>
-                                <div class="text-right">
-                                    <small id="charNum1" class="form-text text-muted">0 / 225</small>
-                                </div>
+                            <textarea class="form-control" id="reason1" rows="3" maxlength="225"
+                                      placeholder="Nhập lý do..."></textarea>
+                            <div class="text-right">
+                                <small id="charNum1" class="form-text text-muted">0 / 225</small>
+                            </div>
                         </div>
 
                     </div>
@@ -476,7 +424,8 @@
 </div>
 
 <!-- Modal Xác Nhận Xóa -->
-<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog"
+     aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -497,11 +446,11 @@
 </div>
 
 <!-- Required Js -->
-<script src="assets/js/vendor-all.min.js"></script>
-<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../template/assets/js/vendor-all.min.js"></script>
+<script src="../../template/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!--<script src="assets/js/pcoded.min.js"></script>-->
-<script src="../JsTamVang/loadData.js"></script>
-<script src="../JsTamVang/quanLyTamVang.js"></script>
+<script src="JsTamVang/loadData.js"></script>
+<script src="JsTamVang/quanLyTamVang.js"></script>
 <!--<script src="assets/plugins/chart-morris/js/raphael.min.js"></script>-->
 <!--<script src="assets/plugins/chart-morris/js/morris.min.js"></script>-->
 <!-- Phần này bắt buộc -->
@@ -509,107 +458,11 @@
     body {
         margin: 0; /* Loại bỏ margin mặc định của body */
     }
+
     .btn-primary {
         color: #fff;
         background-color: #427D9D;
         border-color: #164863;
-    }
-
-    .header {
-        background-color: #FFFFFF;
-        display: flex;
-        position: fixed; /* Đặt vị trí của header là cố định */
-        width: 100%; /* Chiều rộng 100% của header */
-        height: 80px;
-        z-index: 1000; /* Đảm bảo header nằm trên cùng */
-    }
-
-    .header img {
-        margin-left: 20px;
-        margin-top: 10px;
-        width: 50px;
-        height: 56px;
-    }
-
-    .avatar {
-        position: absolute;
-        top: 5px;
-        right: 200px;
-        border-radius: 50%;
-        overflow: hidden;
-    }
-
-    .user-info {
-        position: absolute;
-        top: 20px;
-        right: 90px;
-    }
-
-    .user-info p {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-        color: #000000;
-        margin: 0;
-    }
-
-    .user-info p.subtitle {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 16px;
-        letter-spacing: 0.15px;
-        color: rgba(142, 142, 142, 0.87);
-        margin: 0;
-    }
-
-    /* Kích thước và độ cao của phần content để tránh che khuất nội dung khi header fixed */
-    .content {
-        margin-top: 74px;
-    }
-
-    .menu-options {
-        /* Dashboard */
-        height: 18px;
-        padding-left: 0px;
-        padding-top: 50px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 21px;
-        letter-spacing: 0.1px;
-
-        color: #000000;
-
-
-    }
-
-    .menu-options-logout {
-        height: 18px;
-        padding-left: 0px;
-        padding-top: 50px;
-
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 21px;
-        letter-spacing: 0.1px;
-        color: red;
-    }
-
-    .menu-item {
-        padding-top: 12px;
-
-    }
-
-    .custom-dropdown .btn {
-        background-color: #FFFFFF; /* White background */
-        border: 1px solid #D0D5DD; /* Border color */
-        border-radius: 0.5rem; /* Rounded corners */
     }
 
     /* Optional: if you want to style the dropdown menu */
