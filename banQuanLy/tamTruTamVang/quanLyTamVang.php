@@ -39,7 +39,6 @@
 <!-- Header -->
 <?php include '../common/header.php'; ?>
 <!-- End-header -->
-<div class="containeri" style="display:flex; width:100%; ">
     <!-- [ menu ] start -->
     <?php include '../common/sidebar.php'; ?>
     <!-- End menu -->
