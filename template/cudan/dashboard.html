@@ -71,7 +71,7 @@
                                         </div>
                                         <div style="display:flex;position:relative;">
                                             <div class="img-dashboard" style="padding-top:30px;padding-left:375px;">
-                                                <img style="width: 387px;height: 381px;filter: drop-shadow(0px 4px 4px rgba(22, 72, 99, 0.25));border-radius: 45px;" src="assets/images/chung-cu-mini.jpg">
+                                                <img style="width: 387px;height: 381px;filter: drop-shadow(0px 4px 4px rgba(22, 72, 99, 0.25));border-radius: 30px;" src="../assets/images/chung-cu-mini.jpg">
                                             </div>
                                             <div class="vector-left" style="padding-left:220px;padding-top:60px;position:absolute;">
                                                 <svg width="230" height="110" viewBox="0 0 230 110" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -85,12 +85,12 @@
                                             </div>
                                             <div class="tenchungcu" style="position:absolute; padding-top:37px;padding-left:245px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Thông tin căn hộ</div>
                                             <div class="tenchungcu" style="position:absolute; padding-top:10px;padding-left:780px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Thông tin cư dân</div>
-                                            <div class="thongtinchungcu" style="position:absolute;width:200px;height:161px;top:120px;left:150px;background-color: #E8EDF0;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 15px;">
+                                            <div class="thongtinchungcu" style="position:absolute;width: 190px;height:161px;top:120px;left:150px;background-color: #E8EDF0;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 15px;">
                                                 <ul style="padding-top:15px;list-style-type:none;color:#000000;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;">
                                                     <li>Căn hộ: số 1</li>
                                                     <li>Chung cư: S2</li>
                                                     <li>Số thành viên: 1</li>
-                                                    <li>Số phương tiên: 1</li>
+                                                    <li>Số phương tiện: 1</li>
                                                 </ul>
                                             </div>
                                             <div class="thongtinchungcu" style="position:absolute;width:200px;height:161px;top:100px;left:820px;background-color: #E8EDF0;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 15px;">
@@ -150,100 +150,7 @@
 
     </div>
 
-    <!-- [ popup] Xem thêm  -->
-    <!-- Modal -->
-    <div class="modal fade" id="infoModal" tabindex="-1" role="dialog" aria-labelledby="infoModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Phản ánh về <span id="inforloaiPA"></span></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" style="color: black">
-                    <p>Từ ông/ bà:<span> Mai Quốc Bảo</span></p>
-                    <p>Căn hộ gia đình số: <span>1</span></p>
-                    <p>Chung cư: <span>S1</span></p>
-                    <p>Nội dung phản ánh: <span id="infornoiDung"></span></p>
-
-                    <!-- Dùng CSS Flexbox -->
-                    <div class="image-container">
-                        <div class="image-text">
-                            <p>Ảnh minh họa</p>
-                        </div>
-                        <div class="image-content">
-                            <span id="inforimage"></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- [ popup] Xem thêm end  -->
-
-    <!-- [ popup] Tạo mới  -->
-    <!-- Modal -->
-    <div class="modal fade" id="newPA" tabindex="-1" role="dialog" aria-labelledby="modalTitle" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitle">Tạo mới</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- Form fields without placeholder and value attributes -->
-                    <form id="myForm">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="fullName1">Họ và tên</label>
-                                <input type="text" class="form-control" id="fullName1" placeholder="Mai Quốc Bảo"
-                                    value="Mai Quốc Bảo">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="loaiDV">Địa chỉ</label>
-                                <input type="text" class="form-control" id="loaiDV" placeholder=""
-                                    value="Căn hộ số 1 Chung cư S2">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="typePA">Loại phản ánh</label>
-                                <select class="form-control" id="typePA">
-                                    <option value="Vệ sinh">Vệ sinh</option>
-                                    <option value="Dịch vụ">Dịch vụ</option>
-                                    <option value="An ninh">An ninh</option>
-                                    <option value="Bảo trì và sửa chữa">Bảo trì và sửa chữa</option>
-                                    <option value="Quy định cộng đồng">Quy định cộng đồng</option>
-                                </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="loaiDV">Ảnh minh họa</label>
-                                <input type="file" class="form-control" id="avatar" name="avatar"
-                                    accept="image/png, image/jpeg" />
-                            </div>
-                            <div class="form-group  col-md-12 center-form">
-                                <label for="reason">Lý do</label>
-                                <div class="col-md-10">
-                                    <textarea class="form-control" id="reason1" rows="3" maxlength="225"
-                                        placeholder="Nhập lý do..."></textarea>
-                                    <div class="text-right">
-                                        <small id="charNum1" class="form-text text-muted">0 / 225</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-                <div class="text-right" style="margin-bottom: 30px;"> <!-- Căn phải nút Submit -->
-                    <button type="button" class="btn btn-primary" id="submitbtn">Xác nhận</button>
-                </div>
-                </form>
-                <!-- Include other form fields as per your screenshot -->
-            </div>
-        </div>
-    </div>
-    <!-- [ popup] Tạo mới  -->
+    
 
 
     <!-- Required Js -->

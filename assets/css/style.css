@@ -7732,8 +7732,8 @@ a.btn-theme.active {
 /* Alternate buttons */
 .btn-primary {
   color: #fff;
-  background-color: #04a9f5;
-  border-color: #04a9f5;
+  background-color: #427D9D;
+  border-color: #164863;
 }
 .btn-primary:hover {
   color: #fff;
@@ -7774,8 +7774,8 @@ a.btn-theme.active {
 
 .btn-success {
   color: #fff;
-  background-color: #1de9b6;
-  border-color: #1de9b6;
+  background-color: #27AE60;
+  border-color: #27AE60;
 }
 .btn-success:hover {
   color: #fff;
