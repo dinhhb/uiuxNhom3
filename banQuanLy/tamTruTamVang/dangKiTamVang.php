@@ -20,16 +20,16 @@
     <meta name="author" content="CodedThemes"/>
 
     <!-- Favicon icon -->
-    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../template/assets/images/favicon.ico" type="image/x-icon">
     <!-- fontawesome icon -->
-    <link rel="stylesheet" href="assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../../template/assets/fonts/fontawesome/css/fontawesome-all.min.css">
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- animation css -->
-    <link rel="stylesheet" href="assets/plugins/animation/css/animate.min.css">
+    <link rel="stylesheet" href="../../template/assets/plugins/animation/css/animate.min.css">
     <!-- vendor css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../../template/assets/css/style.css">
 
     <style>
         .custom-dropdown .btn {
@@ -170,72 +170,20 @@
     </div>
 </div>
 <!-- [ Pre-loader ] End -->
-<!-- [ navigation menu ] start -->
-<nav class="pcoded-navbar">
-    <div class="navbar-wrapper">
-        <div class="navbar-brand header-logo">
-            <a href="index.html" class="b-brand">
-                <div class="b-bg">
-                    <i class="feather icon-trending-up"></i>
-                </div>
-                <span class="b-title">Soc Son Plaza</span>
-            </a>
-            <!-- <a class="mobile-menu" id="mobile-collapse" href="javascript:"><span></span></a> -->
-        </div>
-        <div class="navbar-content scroll-div">
-            <ul class="nav pcoded-inner-navbar">
-                <!-- <li class="nav-item pcoded-menu-caption">
-                    <label>Navigation</label>
-                </li> -->
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Xem thống
-                                kê</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Tạo báo cáo tài
-                                chính</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item active">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Quản lý tạm trú, tạm
-                                vắng</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project"
-                    class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Quản lý đóng
-                                phí</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Thông báo đóng
-                                phí</span></a>
-                </li>
-                <li data-username="dashboard Default Ecommerce CRM Analytics Crypto Project" class="nav-item">
-                    <a href="index.html" class="nav-link "><span class="pcoded-micon"><i
-                            class="feather icon-home"></i></span><span class="pcoded-mtext">Ý kiến của cư
-                                dân</span></a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
-<!-- [ navigation menu ] end -->
-
-<!-- [ Header ] start -->
-
-<!-- [ Header ] end -->
+<!-- Header -->
+<?php include '../common/header.php'; ?>
+<!-- End-header -->
 
 <!-- [ Main Content ] start -->
-<div class="pcoded-main-container">
-    <div class="pcoded-wrapper">
-        <div class="pcoded-content">
+<div class="containeri" style="display:flex; width:100%; ">
+    <!-- [ menu ] start -->
+    <?php include '../common/sidebar.php'; ?>
+    <!-- End menu -->
+
+
+
+    <div class="pcoded-wrapper" style="width:1520px;">
+        <div class="information"  style="margin-top:100px;margin-left:350px;margin-right:30px;">
             <div class="pcoded-inner-content">
                 <!-- [ breadcrumb ] start -->
                 <!-- [ breadcrumb ] end -->
@@ -388,11 +336,11 @@
 
 <!-- Required Js -->
 
-<script src="../JsTamVang/loadData.js"></script>
-<script src="../JsTamVang/dangkiTamVang.js"></script>
-<script src="assets/js/vendor-all.min.js"></script>
-<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-<script src="assets/js/pcoded.min.js"></script>
+<script src="Js/loadData.js"></script>
+<script src="Js/dangKiTamVang.js"></script>
+<script src="../../template/assets/js/vendor-all.min.js"></script>
+<script src="../../template/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../../template/assets/js/pcoded.min.js"></script>
 <script>
     // JavaScript for character counter
     document.addEventListener('DOMContentLoaded', function () {

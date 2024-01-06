@@ -7,6 +7,7 @@ function get_current_file_name()
 
 // Call the function and store the current file name
 $current_file_name = get_current_file_name();
+$current_folder_name= $_SERVER['PHP_SELF'];
 ?>
 
 <div class="containeri" style="display:flex; width:100%; ">
@@ -20,8 +21,8 @@ $current_file_name = get_current_file_name();
         <div class="menu-item <?php echo ($current_file_name == 'taoBaoCaoTaiChinh.php') ? 'active' : ''; ?>">
             <a href="/banQuanLy/baoCaoTaiChinh/xemBaoCaoTaiChinh.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-file-excel" style="color: #000000; width: 30px; height: 30px;"></i></span><span class="menu-options">Tạo báo cáo tài chính</span></a>
         </div>
-        <div class="menu-item <?php echo ($current_file_name == 'abc.php') ? 'active' : ''; ?>">
-            <a href="/banQuanLy/tamTruTamVang/abc.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-user-cog" style="color: #000000; width:30px;height:30px;"></i></span><span class="menu-options">Quản lí tạm trú/tạm vắng</span></a>
+        <div class="menu-item <?php echo (strpos($current_folder_name, '/tamTruTamVang/') !== false) ? 'active' : ''; ?>">
+            <a href="/banQuanLy/tamTruTamVang/dashboard_TamTruTamVang.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-user-cog" style="color: #000000; width:30px;height:30px;"></i></span><span class="menu-options">Quản lí tạm trú/tạm vắng</span></a>
         </div>
         <div class="menu-item <?php echo ($current_file_name == 'quanLyDongPhi.php') ? 'active' : ''; ?>">
             <a href="/banQuanLy/dongPhi/quanLyDongPhi.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-money-bill-wave" style="color: #000000; width:30px;height:30px;"></i></span><span class="menu-options">Quản lý đóng phí</span></a>
@@ -37,6 +38,7 @@ $current_file_name = get_current_file_name();
         </div>
     </div>
 
+
     <script>
         document.getElementById('logout').addEventListener('click', function(event) {
             console.log("logout");
@@ -45,3 +47,56 @@ $current_file_name = get_current_file_name();
             $('#confirmationModalLogout').modal('show');
         });
     </script>
+
+    <style>
+        /* Kích thước và độ cao của phần content để tránh che khuất nội dung khi header fixed */
+        .content {
+            margin-top: 74px;
+        }
+        .menu-options {
+            /* Dashboard */
+            height: 18px;
+            padding-left: 0px;
+            padding-top: 50px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.1px;
+
+            color: #000000;
+
+
+        }
+
+        .menu-options-logout {
+            height: 18px;
+            padding-left: 0px;
+            padding-top: 50px;
+
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 21px;
+            letter-spacing: 0.1px;
+            color: red;
+        }
+
+        .menu-item {
+            padding-top: 12px;
+
+        }
+        .menu-item.active {
+            background-color: #E8EDF0;
+            margin-left:15px;
+            margin-right:15px;
+            border-radius: 5px; /* Màu hồng cho background khi active */
+        }
+
+        .menu-item.active a {
+            color: #164863; /* Màu xanh cho icon và chữ khi active */
+        }
+    </style>
