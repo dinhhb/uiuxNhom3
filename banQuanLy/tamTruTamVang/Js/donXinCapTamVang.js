@@ -1,5 +1,6 @@
 
-var activeItems = tableDonTamTru.filter(item => item.trangThai == 0);
+var activeItems = tableDonTamVang.filter(item => item.trangThai == 0);
+console.log(activeItems)
 var state = {
     'querySet': activeItems,
 
@@ -123,22 +124,22 @@ function confirmApproval(id) {
 document.getElementById('btn-xac-nhan').addEventListener('click', approveRequest);
 function approveRequest() {
     // Tìm kiếm thông tin dựa trên ID trong mảng activeItems
-    var index = tableDonTamTru.findIndex(item => item.id === window.idToApprove);
+    var index = tableDonTamVang.findIndex(item => item.id === window.idToApprove);
     if (index !== -1) {
-        // Chuyển dữ liệu từ activeItems sang tableTamTru
-        var person = tableDonTamTru[index];
-        // Tạo ID mới dựa trên số lượng mục trong tableTamTru
-        person.id = tableTamTru.length + 1;
+        // Chuyển dữ liệu từ activeItems sang tableData
+        var person = tableDonTamVang[index];
+        // Tạo ID mới dựa trên số lượng mục trong tableData
+        person.id = tableData.length + 1;
 
-        // Thêm mục vào tableTamTru
-        tableTamTru.push(person);
+        // Thêm mục vào tableData
+        tableData.push(person);
 
         // Cập nhật trạng thái của mục được duyệt
-        tableDonTamTru[index].trangThai = 1;
+        tableDonTamVang[index].trangThai = 1;
 
         // Lưu dữ liệu vào localStorage
-        localStorage.setItem('tableDonTamTru', JSON.stringify(tableDonTamTru));
-        localStorage.setItem('tableTamTru', JSON.stringify(tableTamTru));
+        localStorage.setItem('tableDonTamVang', JSON.stringify(tableDonTamVang));
+        localStorage.setItem('tableData', JSON.stringify(tableData));
 
         // Đóng modal xác nhận
         $('#confirmationModal').modal('hide');
@@ -148,7 +149,7 @@ function approveRequest() {
         // Cập nhật bảng
         buildTable();
         // Kiểm tra xem trang hiện tại có còn mục nào không
-        var currentPageItems = tableDonTamTru.filter(item => item.trangThai == 0).slice((state.page - 1) * state.rows, state.page * state.rows);
+        var currentPageItems = tableDonTamVang.filter(item => item.trangThai == 0).slice((state.page - 1) * state.rows, state.page * state.rows);
         if (currentPageItems.length === 0 && state.page > 1) {
             // Nếu không, chuyển đến trang trước đó
             state.page--;
@@ -248,7 +249,7 @@ function showDetails(id) {
         document.getElementById('cccd').value = person.CCCD;
         document.getElementById('genderSelect').value = person.gioiTinh;
         document.getElementById('diaChiThuongTru').value = person.DDThuongTru;
-        document.getElementById('diaChiTamTru').value = person.DDTamTru;
+        document.getElementById('diaChiTamVang').value = person.DDTamVang;
         document.getElementById('soDienThoai').value = person.SDT;
         document.getElementById('ngheNghiep').value = person.ngheNghiep;
         document.getElementById('ngayBatDau').value = formatDate(person.ngayBatDau);

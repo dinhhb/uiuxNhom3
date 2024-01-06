@@ -62,7 +62,7 @@
                                     <div class="card-block">
 
                                         <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
-                                            <h3>Quản lý đơn xin cấp tạm trú</h3>
+                                            <h3>Quản lý đơn xin cấp tạm vắng</h3>
                                         </div>
                                         <div class="mt-3 justify-content-between">
                                             <form class="d-flex justify-content-between"
@@ -105,10 +105,10 @@
                                             <div class="btn-group dropdown custom-dropdown">
                                                 <button class="btn btn-third dropdown-toggle" type="button"
                                                         data-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">Đơn xin cấp tạm trú
+                                                        aria-expanded="false">Đơn xin cấp tạm vắng
                                                 </button>
                                                 <div class="dropdown-menu ">
-                                                    <a class="dropdown-item" href="./donXinCapTamVang.php">Đơn xin cấp tạm vắng</a>
+                                                    <a class="dropdown-item" href="./donXinCapTamTru.php">Đơn xin cấp tạm trú</a>
                                                 </div>
                                             </div>
                                             <div class="btn-group dropdown custom-dropdown">
@@ -239,8 +239,8 @@
                                    value="" disabled>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="diaChiTamTru">Địa chỉ tạm trú </label>
-                            <input type="text" class="form-control" id="diaChiTamTru" placeholder=""
+                            <label for="diaChiTamVang">Địa chỉ tạm vắng </label>
+                            <input type="text" class="form-control" id="diaChiTamVang" placeholder=""
                                    value="" disabled>
                         </div>
                         <div class="form-group col-md-6">
@@ -434,7 +434,7 @@ include '../../common/modal/successModal.php';
 <script src="../../template/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!--<script src="assets/js/pcoded.min.js"></script>-->
 <script src="Js/loadData.js"></script>
-<script src="Js/donXinCapTamTru.js"></script>
+<script src="Js/donXinCapTamVang.js"></script>
 <!--<script src="assets/plugins/chart-morris/js/raphael.min.js"></script>-->
 <!--<script src="assets/plugins/chart-morris/js/morris.min.js"></script>-->
 <!-- Phần này bắt buộc -->

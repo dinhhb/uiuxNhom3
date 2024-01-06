@@ -273,7 +273,7 @@
                                                     </div>
                                                     <div class="d-flex justify-content-between">
                                                         <span></span> <!-- Placeholder for left side content -->
-                                                        <a href="#" class="link-button mt-3">Quản lý đơn tạm vắng >></a>
+                                                        <a href="./donXinCapTamVang.php" class="link-button mt-3">Quản lý đơn tạm vắng >></a>
                                                     </div>
                                                 </div>
                                             </div>

@@ -12,7 +12,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-huy-bo" data-dismiss="modal">Hủy bỏ</button>
-                <button type="button" class="btn btn-xac-nhan" id="btn-xac-nhan" onclick="submitForm()">Xác nhận</button>
+                <button type="button" class="btn btn-xac-nhan" id="btn-xac-nhan" >Xác nhận</button>
             </div>
         </div>
     </div>

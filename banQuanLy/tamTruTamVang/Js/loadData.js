@@ -3132,13 +3132,21 @@ function loadtableTamVangFromLocalStorage() {
 }
 
 // Khởi tạo và Tải dữ liệu từ localStorage
-function loadtableDonTamVangFromLocalStorage() {
+function loadtableDonTamTruFromLocalStorage() {
     var storedData = localStorage.getItem('tableDonTamTru');
     if (storedData) {
         tableDonTamTru = JSON.parse(storedData);
+    }
+}
+// Khởi tạo và Tải dữ liệu từ localStorage
+function loadtableDonTamVangFromLocalStorage() {
+    var storedData = localStorage.getItem('tableDonTamVang');
+    if (storedData) {
+        tableDonTamVang = JSON.parse(storedData);
     }
 }
 
 loadFromLocalStorage();
 loadtableTamVangFromLocalStorage();
 loadtableDonTamVangFromLocalStorage();
+loadtableDonTamTruFromLocalStorage();

@@ -107,12 +107,10 @@
                                             <div class="btn-group dropdown custom-dropdown">
                                                 <button class="btn btn-third dropdown-toggle" type="button"
                                                         data-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">Chọn loại dịch vụ
+                                                        aria-expanded="false">Quản lý tạm trú
                                                 </button>
                                                 <div class="dropdown-menu ">
-                                                    <a class="dropdown-item" href="#!">Action</a>
-                                                    <a class="dropdown-item" href="#!">Another action</a>
-                                                    <a class="dropdown-item" href="#!">Something else here</a>
+                                                    <a style="font-size: 14px;" class="dropdown-item" href="./quanLyTamVang.php">Quản lý tạm vắng</a>
                                                 </div>
                                             </div>
                                             <div class="btn-group dropdown custom-dropdown">
