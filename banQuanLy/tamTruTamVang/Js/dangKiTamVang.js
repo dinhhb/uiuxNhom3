@@ -26,7 +26,7 @@ function confirmAndSaveChanges() {
     // buildTable();
     saveToLocalStorage(tableData);
     $('#confirmationModal').modal('hide');
-    window.location="quanLyTamVang.html";
+    window.location="quanLyTamVang.php";
 };
 
 // Chuyển đổi ngày tháng từ dạng YYYY-MM-DD sang DD/MM/YYYY
