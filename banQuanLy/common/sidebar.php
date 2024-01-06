@@ -18,7 +18,7 @@ $current_file_name = get_current_file_name();
             <a href="/banQuanLy/xemThongKe/xemThongKe.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-chart-bar" style="color: #000000;width:30px;height:30px;"></i></span><span class="menu-options">Xem thống kê</span></a>
         </div>
         <div class="menu-item <?php echo ($current_file_name == 'taoBaoCaoTaiChinh.php') ? 'active' : ''; ?>">
-            <a href="/banQuanLy/baoCaoTaiChinh/taoBaoCaoTaiChinh.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-file-excel" style="color: #000000; width: 30px; height: 30px;"></i></span><span class="menu-options">Tạo báo cáo tài chính</span></a>
+            <a href="/banQuanLy/baoCaoTaiChinh/xemBaoCaoTaiChinh.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-file-excel" style="color: #000000; width: 30px; height: 30px;"></i></span><span class="menu-options">Tạo báo cáo tài chính</span></a>
         </div>
         <div class="menu-item <?php echo ($current_file_name == 'abc.php') ? 'active' : ''; ?>">
             <a href="/banQuanLy/tamTruTamVang/abc.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-user-cog" style="color: #000000; width:30px;height:30px;"></i></span><span class="menu-options">Quản lí tạm trú/tạm vắng</span></a>
@@ -33,6 +33,15 @@ $current_file_name = get_current_file_name();
             <a href="/banQuanLy/yKien/yKienCuDan.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-comment-dots" style="color: #000000; width:30px;height:30px;"></i></span><span class="menu-options">Ý kiến của cư dân</span></a>
         </div>
         <div class="menu-item-logout" style="padding-top:50px;">
-            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-sign-out-alt" style="color: red; width:30px;height:30px;"></i></span><span class="menu-options-logout" style="color:red;">Đăng xuất</span></a>
+            <a id="logout" class="nav-link "><span class="pcoded-micon"><i class="fas fa-sign-out-alt" style="color: red; width:30px;height:30px;"></i></span><span class="menu-options-logout" style="color:red;">Đăng xuất</span></a>
         </div>
     </div>
+
+    <script>
+        document.getElementById('logout').addEventListener('click', function(event) {
+            console.log("logout");
+            // Ngăn form thực hiện hành động mặc định
+            event.preventDefault();
+            $('#confirmationModalLogout').modal('show');
+        });
+    </script>
