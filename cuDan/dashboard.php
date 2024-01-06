@@ -93,7 +93,7 @@
                                                     <li>Số phương tiện: 1</li>
                                                 </ul>
                                             </div>
-                                            <div class="thongtinchungcu" style="position:absolute;width:230px;height:150px;top:50px;left:790px;background-color: #E8EDF0;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 15px;">
+                                            <div class="thongtinchungcu" style="position:absolute;width:230px;height:140px;top:50px;left:790px;background-color: #E8EDF0;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 15px;">
                                                 <ul style="padding-top:25px;list-style-type:none;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;letter-spacing: 0.1px;color:#000000">
                                                     <li>Chủ hộ: Mai Quốc Bảo</li>
                                                     <li>Đ/C: An Thượng, Hà Nội</li>
