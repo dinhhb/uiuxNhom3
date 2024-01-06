@@ -30,6 +30,6 @@ $current_file_name = get_current_file_name();
             <a href="/cuDan/phanAnh/phananh.php" class="nav-link "><span class="pcoded-micon"><i class="fa fa-commenting-o" style="color: #000000; width:30px;height:30px;"></i></span><span class="menu-options">Phản ánh</span></a>
         </div>
         <div class="menu-item-logout" style="padding-top:50px;">
-            <a href="index.html" class="nav-link "><span class="pcoded-micon"><i class="fas fa-sign-out-alt" style="color: red; width:30px;height:30px;"></i></span><span class="menu-options-logout" style="color:red;">Đăng xuất</span></a>
+            <a href="" class="nav-link "><span class="pcoded-micon"><i class="fas fa-sign-out-alt" id="logout" style="color: red; width:30px;height:30px;"></i></span><span class="menu-options-logout" style="color:red;">Đăng xuất</span></a>
         </div>
     </div>
