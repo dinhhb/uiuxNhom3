@@ -37,7 +37,9 @@
         </div>
     </div>
     <!-- [ Pre-loader ] End -->
-
+    <?php 
+        include '../../common/modal/confirmationModal.php';
+    ?>
     <!-- Header -->
     <?php include '../common/header.php'; ?>
 
@@ -45,8 +47,9 @@
 
     <!-- [ menu ] start -->
     <?php include '../common/sidebar.php'; ?>
-
         <!-- End menu -->
+
+        
         <!-- Phần của mọi người -->
         <div class="pcoded-wrapper" style="width:1520px;">
             <div class="information" style="margin-top:100px;margin-left:350px;margin-right:30px;">
@@ -114,15 +117,15 @@
                                             <table class="table table-hover">
                                                 <thead>
                                                     <tr>
-                                                        <th>STT</th>
+                                                        <th style="padding-left: 30px;">STT</th>
                                                         <th>Tên dịch vụ</th>
                                                         <th>Loại dịch vụ</th>
                                                         <th>Mã giao dịch </th>
                                                         <th>Số tiền </th>
                                                         <th>Phương thức thanh toán</th>
                                                         <th>Thời gian</th>
-                                                        <th></th>
-                                                        <th></th>
+                                                        
+                                                        
                                                     </tr>
                                                 </thead>
                                                 <tbody id="table-body" class="table-body">
@@ -167,7 +170,6 @@
     <!-- Phần này bắt buộc -->
     <script src="data.js"></script>
     <script src="Thanhtoan.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     
 </body>
 

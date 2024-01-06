@@ -127,14 +127,14 @@
                                             <table class="table table-hover">
                                                 <thead>
                                                     <tr>
-                                                        <th>STT</th>
+                                                        <th style="padding-left: 30px;">STT</th>
                                                         <th>Tên dịch vụ</th>
                                                         <th>Loại dịch vụ</th>
                                                         <th>Tình trạng </th>
                                                         <th>Số tiền </th>
                                                         <th>Hạn đóng </th>
                                                         <th></th>
-                                                        <th></th>
+                                                        <!-- <th></th> -->
                                                     </tr>
                                                 </thead>
                                                 <tbody id="table-body" class="table-body">
@@ -218,28 +218,7 @@
         </div>
     </div>
     <!-- end Thanh toán  -->
-<!-- [popup] cònfirm  -->
-<!-- Modal Confirmation -->
-<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="confirmationModalLabel">Xác nhận</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Bạn có chắc chắn muốn thanh toán?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
-                <button type="button" class="btn btn-success" id="confirmSaveChanges">Xác nhận</button>
-            </div>
-        </div>
-    </div>
-</div>
+
     <!-- [pop up] Thanh toán thành công -->
     <!-- Modal Thông Báo Thanh Toán Thành Công -->
     <div class="modal fade" id="paymentSuccessModal" tabindex="-1" role="dialog"
@@ -285,7 +264,19 @@
     <!-- Phần này bắt buộc -->
     <script src="data.js"></script>
     <script src="dataDongphi.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+    <script>
+        document.getElementById('submitbtn').addEventListener('click', function(event) {
+            // Ngăn form thực hiện hành động mặc định
+            console.log("Anh ga");
+            event.preventDefault()
+            $('#confirmationModal').modal('show');
+        });
+    </script>
+    <!-- Modal -->
+    <?php 
+        $modalContent = 'Bạn có chắc chắn muốn thanh toán không?';
+        include '../../common/modal/confirmationModal.php';
+    ?>
     
 </body>
 

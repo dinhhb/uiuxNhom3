@@ -68,7 +68,7 @@
 
                                             </div>
                                             <div class="toolbar-container d-flex justify-content-between"
-                                                style="display: flex; align-items: center; justify-content: start; gap: 20px;">
+                                                style="display: flex; align-items: center; justify-content: start; gap: 20px;padding-right: 50px;padding-left: 50px;">
                                                 <div class="btn-group dropdown custom-dropdown" id="choice">
                                                     <button class="btn btn-third dropdown-toggle" type="button"
                                                         data-toggle="dropdown" aria-haspopup="true"
@@ -169,6 +169,9 @@
     <script src="dataTB.js"></script>
     <script src="thongBao.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+    <?php 
+        include '../../common/modal/confirmationModal.php';
+    ?>
 </body>
 
 </html>

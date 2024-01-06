@@ -101,7 +101,7 @@ function buildTable() {
     var stt = (state.page - 1) * state.rows + parseInt(i) + 1;
 
     var row = `<tr>
-              <td>${stt}</td>
+              <td style="padding-left:35px;">${stt}</td>
               <td>${myList[i].tenDichVu}</td>
               <td>${myList[i].loaiDichVu}</td>
               <td>${myList[i].trangThai}</td>
@@ -145,92 +145,6 @@ function closePaymentModal() {
 
 // Gọi hàm updateStatus và truyền vào tableData
 let idToUpdate = 1; // Đặt giá trị id cần cập nhật
-
-// Hàm updateStatus nhận thêm tham số data để cập nhật dữ liệu
-function updateStatus(id, data) {
-  console.log('Update Status - Received ID:', id);
-
-  // Chuyển đổi kiểu dữ liệu của id thành số
-  id = parseInt(id);
-
-  // Tìm mục có ID phù hợp trong dữ liệu được truyền vào (data)
-  const itemIndex = data.findIndex(item => item.id === id);
-
-  if (itemIndex !== -1) {
-    // Cập nhật trangThai thành "Đã đóng"
-    data[itemIndex].trangThai = 'Đã đóng';
-    // Thêm thông tin mới vào mục
-    data[itemIndex].maGiaoDich = $('#paymentSuccessMaGiaoDich').text(generateRandomCode());
-    data[itemIndex].phuongThucThanhToan = $('#typePayment option:selected').text();
-    data[itemIndex].thoiGian = $('#paymentSuccessThoiGian').text(`${hanDong} ${generateRandomTime()}`);
-
-
-    console.log('Update Status - Data updated successfully:', data);
-
-    // Lưu trạng thái mới vào Local Storage
-    localStorage.setItem('tableData', JSON.stringify(data));
-
-    buildTable(); // Gọi lại hàm buildTable sau khi cập nhật dữ liệu
-  } else {
-    console.log('Update Status - Item not found.');
-  }
-}
-
-
-// Hàm submitForm
-function submitForm() {
-  // Lấy thông tin từ các trường input
-  var tenDV = $('#tenDV').val();
-  var loaiDV = $('#loaiDV').val();
-  var soTien = $('#soTien').val();
-  var phuongThucThanhToan = $('#typePayment option:selected').text();
-
-  // Lấy thời gian từ cột hanDong trong bảng
-  var hanDong = $('#hanDong').text();
-
-  console.log('Submit Form - hanDong:', hanDong);
-
-  // Show the confirmation modal
-  $('#confirmationModal').modal('show');
-
-  // Event listener for the confirm button in the confirmation modal
-  $('#confirmSaveChanges').off('click').on('click', function () {
-    // Close the confirmation modal
-    $('#confirmationModal').modal('hide');
-
-    // Perform actions for payment success and show the payment success modal
-    showPaymentSuccessModal(tenDV, loaiDV, soTien, phuongThucThanhToan, hanDong);
-  });
-}
-
-function showPaymentSuccessModal(tenDV, loaiDV, soTien, phuongThucThanhToan, hanDong) {
-  // Set modal content
-  // Hiển thị thông báo thanh toán thành công
-  $('#paymentSuccessTenDV').text(tenDV);
-  $('#paymentSuccessLoaiDV').text(loaiDV);
-  $('#paymentSuccessSoTien').text(soTien);
-  $('#paymentSuccessPhuongThuc').text(phuongThucThanhToan);
-
-  // Hiển thị mã giao dịch ngẫu nhiên
-  $('#paymentSuccessMaGiaoDich').text(generateRandomCode());
-
-  // Hiển thị thời gian ngẫu nhiên
-  $('#paymentSuccessThoiGian').text(`${hanDong} ${generateRandomTime()}`);
-
-  // Show the payment success modal
-  $('#paymentSuccessModal').modal('show');
-
-  // Đóng modal thanh toán
-  $('#paymentModal').modal('hide');
-
-  // Cập nhật trạng thái trong dữ liệu JSON
-  let id = $('#idInput').text();
-  id = parseInt(id, 10);
-  updateStatus(id, originalTableData);
-  // location.reload();
-}
-
-
 
 // Biến toàn cục để lưu giữ giá trị maGiaoDich và thoiGian
 var globalMaGiaoDich;
@@ -280,12 +194,12 @@ function submitForm() {
   $('#confirmationModal').modal('show');
 
   // Event listener for the confirm button in the confirmation modal
-  $('#confirmSaveChanges').off('click').on('click', function () {
-      // Close the confirmation modal
-      $('#confirmationModal').modal('hide');
+  $('#btn-xac-nhan').off('click').on('click', function () {
+    // Close the confirmation modal
+    $('#confirmationModal').modal('hide');
 
-      // Perform actions for payment success and show the payment success modal
-      showPaymentSuccessModal(tenDV, loaiDV, soTien, phuongThucThanhToan, hanDong);
+    // Perform actions for payment success and show the payment success modal
+    showPaymentSuccessModal(tenDV, loaiDV, soTien, phuongThucThanhToan, hanDong);
   });
 }
 

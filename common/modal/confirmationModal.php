@@ -60,6 +60,7 @@
 
 <script>
     function logout() {
+        console.log("logout");
         // Redirect to the index.html page
         window.location.href = '../../index.html';
     }

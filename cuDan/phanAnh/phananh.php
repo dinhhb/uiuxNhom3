@@ -124,15 +124,13 @@
                                             <table class="table table-hover">
                                                 <thead>
                                                     <tr>
-                                                        <th>STT</th>
+                                                        <th style="padding-left: 30px;">STT</th>
                                                         <th>Loại phản ánh</th>
                                                         <th>Nội dung</th>
                                                         <th>Tình trạng </th>
                                                         <th>Thời gian </th>
                                                         <th></th>
-                                                        <th></th>
-                                                        <th></th>
-                                                        <th></th>
+                                                        
                                                     </tr>
                                                 </thead>
                                                 <tbody id="table-body" class="table-body">
@@ -260,28 +258,7 @@
         </div>
     </div>
     <!-- [ popup] Tạo mới  -->
-    <!-- [popup] cònfirm  -->
-    <!-- Modal Confirmation -->
-    <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="confirmationModalLabel">Xác nhận</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Bạn có chắc chắn muốn gửi?
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
-                    <button type="button" class="btn btn-success" id="confirmSaveChanges">Xác nhận</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
     <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel"
      aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -309,7 +286,19 @@
     <!-- Phần này bắt buộc -->
     <script src="dataPhanAnh.js"></script>
     <script src="phananh.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+    <script>
+        document.getElementById('submitbtn').addEventListener('click', function(event) {
+            // Ngăn form thực hiện hành động mặc định
+            console.log("Anh ga");
+            event.preventDefault()
+            $('#confirmationModal').modal('show');
+        });
+    </script>
+    <!-- Modal -->
+    <?php 
+        $modalContent = 'Bạn có chắc chắn muốn gửi phản ánh này không?';
+        include '../../common/modal/confirmationModal.php';
+    ?>
 </body>
 
 </html>

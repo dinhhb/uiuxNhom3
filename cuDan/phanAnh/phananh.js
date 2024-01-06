@@ -5,10 +5,9 @@
 1 - Loop Through Array & Access each value
 2 - Create Table Rows & append to table
 */
-var filteredtableData1 = tableData1.filter(item => item.maGiaoDich !== "");
 
 var state = {
-    'querySet': filteredtableData1,
+    'querySet': tableData1,
     'page': 1,
     'rows': 5,
     'window': 5,
@@ -91,13 +90,12 @@ function buildTable() {
     table.empty(); // Xóa nội dung cũ trong bảng
     // var characterLimit = 50;
 
-
     for (var i in myList) {
         var stt = (state.page - 1) * state.rows + parseInt(i) + 1;
         var noiDung = myList[i].noiDung.length > 50 ? myList[i].noiDung.substring(0, 50) + '...' : myList[i].noiDung;
 
         var row = `<tr>
-                <td>${stt}</td>
+                <td style="padding-left:35px;">${stt}</td>
                 <td class="loaiPA">${myList[i].loaiPA}</td>
                 <td class="NoiDung" id="noiDung${i}">${noiDung}</td>
                 <td>${myList[i].trangThai}</td>
@@ -115,15 +113,6 @@ function buildTable() {
 
     pageButtons(data.pages);
 }
-
-
-
-function clearLocalStorage() {
-    localStorage.removeItem('tableData1');
-}
-
-// Gọi hàm để xóa dữ liệu
-clearLocalStorage();
 
 // **************************************************************Filer***********************************
 var currentMonth = null;
@@ -247,10 +236,10 @@ function confirmSubmission(event) {
     event.preventDefault();
 
     // Display the confirmation modal
-    $('#confirmationModal').modal('show');
+    // $('#confirmationModal').modal('show');
 
     // Event listener for the confirm button in the confirmation modal
-    $('#confirmSaveChanges').off('click').on('click', function () {
+    $('#btn-xac-nhan').off('click').on('click', function () {
         // Close the confirmation modal
         $('#confirmationModal').modal('hide');
 
@@ -290,9 +279,9 @@ function confirmSubmission(event) {
 
 // ************storage******************
 function clearLocalStorage() {
-    localStorage.removeItem('tableData');
-  }
-  
-  // Gọi hàm để xóa dữ liệu
-  clearLocalStorage();
+    localStorage.removeItem('tableData1');
+}
+
+// Gọi hàm để xóa dữ liệu
+clearLocalStorage();
 
