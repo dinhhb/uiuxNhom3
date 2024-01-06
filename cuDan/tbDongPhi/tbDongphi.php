@@ -169,6 +169,9 @@
     <script src="dataTB.js"></script>
     <script src="thongBao.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
+    <?php 
+        include '../../common/modal/confirmationModal.php';
+    ?>
 </body>
 
 </html>

@@ -37,7 +37,9 @@
         </div>
     </div>
     <!-- [ Pre-loader ] End -->
-
+    <?php 
+        include '../../common/modal/confirmationModal.php';
+    ?>
     <!-- Header -->
     <?php include '../common/header.php'; ?>
 
@@ -45,8 +47,9 @@
 
     <!-- [ menu ] start -->
     <?php include '../common/sidebar.php'; ?>
-
         <!-- End menu -->
+
+        
         <!-- Phần của mọi người -->
         <div class="pcoded-wrapper" style="width:1520px;">
             <div class="information" style="margin-top:100px;margin-left:350px;margin-right:30px;">
@@ -167,7 +170,6 @@
     <!-- Phần này bắt buộc -->
     <script src="data.js"></script>
     <script src="Thanhtoan.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     
 </body>
 
