@@ -114,15 +114,15 @@
                                             <table class="table table-hover">
                                                 <thead>
                                                     <tr>
-                                                        <th>STT</th>
+                                                        <th style="padding-left: 30px;">STT</th>
                                                         <th>Tên dịch vụ</th>
                                                         <th>Loại dịch vụ</th>
                                                         <th>Mã giao dịch </th>
                                                         <th>Số tiền </th>
                                                         <th>Phương thức thanh toán</th>
                                                         <th>Thời gian</th>
-                                                        <th></th>
-                                                        <th></th>
+                                                        
+                                                        
                                                     </tr>
                                                 </thead>
                                                 <tbody id="table-body" class="table-body">

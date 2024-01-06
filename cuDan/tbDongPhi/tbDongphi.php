@@ -68,7 +68,7 @@
 
                                             </div>
                                             <div class="toolbar-container d-flex justify-content-between"
-                                                style="display: flex; align-items: center; justify-content: start; gap: 20px;">
+                                                style="display: flex; align-items: center; justify-content: start; gap: 20px;padding-right: 50px;padding-left: 50px;">
                                                 <div class="btn-group dropdown custom-dropdown" id="choice">
                                                     <button class="btn btn-third dropdown-toggle" type="button"
                                                         data-toggle="dropdown" aria-haspopup="true"

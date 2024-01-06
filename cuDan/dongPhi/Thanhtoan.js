@@ -130,16 +130,16 @@ function buildTable() {
         if (myList[i].maGiaoDich !== "") {
             var stt = (state.page - 1) * state.rows + i + 1; // Calculate stt for each row
             var row = `<tr>
-                <td>${stt}</td>
+                <td style="padding-left:35px;">${stt}</td>
                 <td>${myList[i].tenDichVu}</td>
                 <td>${myList[i].loaiDichVu}</td>
                 <td>${myList[i].maGiaoDich}</td>
                 <td>${myList[i].soTien}</td>
-                <td>${myList[i].phuongThucThanhToan}</td>
+                <td style="text-align: center">${myList[i].phuongThucThanhToan}</td>
                 <td>${myList[i].thoiGian}</td>
                 <td id="idInput" style="display: none;">${myList[i].id}</td>
              </tr>`;
-             table.append(row);
+            table.append(row);
         }
     }
 
@@ -224,8 +224,8 @@ document.addEventListener('DOMContentLoaded', function () {
 // ************storage******************
 function clearLocalStorage() {
     localStorage.removeItem('tableData');
-  }
-  
-  // Gọi hàm để xóa dữ liệu
-  clearLocalStorage();
+}
+
+// Gọi hàm để xóa dữ liệu
+clearLocalStorage();
 

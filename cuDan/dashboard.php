@@ -112,15 +112,15 @@
                                                 </clipPath>
                                                 </defs>
                                                 </svg>
-                                                <div style="font-size:20px ;padding-top:10px;padding-left:10px;">Thông báo</div>
+                                                <div style="font-size:20px ;padding-top:10px;padding-left:10px;text-decoration:underline">Thông báo</div>
                                          </div>
-                                         <a href="phanAnh/phananh.php"><div class="require" style="position:relative; margin-left:100px;margin-bottom:20px; margin-top:10px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; width:1000px; height:120px; color: #090909;">
+                                         <a href="phanAnh/phananh.php"><div class="require" style="position:relative; margin-left:100px;margin-bottom:25px; margin-top:20px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; width:950px; height:120px; color: #090909;">
                                             <div class="title-require" style="padding-top:20px;padding-left:25px;font-family: 'Inter';font-style: Bold;font-weight: 700;font-size: 20px;line-height: 26px;color:#000000">Thông báo đã duyệt phản ánh</div>
                                             <div class="content-require" style="padding-top:20px;padding-left:25px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 16px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Phản ánh về dịch vụ của bạn đã được duyệt.</div>
                                             <div class="date-require" style="position:absolute;top:15px;right:30px;color: #164863;">25/12/2023</div>
                                             <a href=""><div class="detail-require" style="position:absolute;top:80px;right:50px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;"></div></a>
                                         </div></a>
-                                        <a href="dongPhi/dongPhi.php"><div class="require" style="position:relative; margin-left:100px;margin-bottom:20px; margin-top:10px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; width:1000px; height:120px; color: #090909;">
+                                        <a href="dongPhi/dongPhi.php"><div class="require" style="position:relative; margin-left:100px;margin-bottom:25px; margin-top:10px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; width:950px; height:120px; color: #090909;">
                                             <div class="title-require" style="padding-top:20px;padding-left:25px;font-family: 'Inter';font-style: Bold;font-weight: 700;font-size: 20px;line-height: 26px;color:#000000">Thông báo đóng phí</div>
                                             <div class="content-require" style="padding-top:20px;padding-left:25px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 16px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Đã cập nhật các khoản phí mới vui lòng đóng phí đúng hạn.</div>
                                             <div class="date-require" style="position:absolute;top:15px;right:30px;color: #164863;">25/12/2023</div>

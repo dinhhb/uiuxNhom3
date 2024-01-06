@@ -124,15 +124,13 @@
                                             <table class="table table-hover">
                                                 <thead>
                                                     <tr>
-                                                        <th>STT</th>
+                                                        <th style="padding-left: 30px;">STT</th>
                                                         <th>Loại phản ánh</th>
                                                         <th>Nội dung</th>
                                                         <th>Tình trạng </th>
                                                         <th>Thời gian </th>
                                                         <th></th>
-                                                        <th></th>
-                                                        <th></th>
-                                                        <th></th>
+                                                        
                                                     </tr>
                                                 </thead>
                                                 <tbody id="table-body" class="table-body">
@@ -309,7 +307,6 @@
     <!-- Phần này bắt buộc -->
     <script src="dataPhanAnh.js"></script>
     <script src="phananh.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script> -->
 </body>
 
 </html>
