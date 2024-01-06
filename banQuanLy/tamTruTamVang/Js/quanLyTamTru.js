@@ -331,7 +331,7 @@ function confirmAndSaveChanges() {
     searchAndFilter();
 }
 
-document.getElementById('confirmSaveChanges').addEventListener('click', confirmAndSaveChanges);
+document.getElementById('btn-xac-nhan').addEventListener('click', confirmAndSaveChanges);
 
 
 // Hàm này sẽ được gọi khi nhấn nút "Save changes"
@@ -403,20 +403,22 @@ document.getElementById('confirmDeleteButton').addEventListener('click', functio
 
     // Lưu dữ liệu đã cập nhật vào localStorage
     saveToLocalStorage(tableTamTru);
-    // Kiểm tra số lượng trang còn lại
-    var newTotalPages = Math.ceil(state.querySet.length / state.rows);
-    if (state.page > newTotalPages) {
-        // Cập nhật trang hiện tại nếu trang hiện tại không còn tồn tại
-        state.page = newTotalPages || 1; // Đảm bảo rằng trang không bao giờ là 0
-    }
+
 
 
     // Đóng modal xác nhận xóa
     $('#deleteConfirmationModal').modal('hide');
-
+    // Kiểm tra xem trang hiện tại có còn mục nào không
+    var currentPageItems = tableTamTru.slice((state.page - 1) * state.rows, state.page * state.rows);
+    if (currentPageItems.length === 0 && state.page > 1) {
+        // Nếu không, chuyển đến trang trước đó
+        state.page--;
+        buildTable();
+    }else {
     // Xây dựng lại bảng với dữ liệu đã cập nhật
     // Đặt buildTable để chạy ngay sau tất cả các tác vụ hiện tại trong call stack
     setTimeout(buildTable, 0);
+    }
     console.log("Deleted item. New data:", tableTamTru);
 });
 

@@ -371,7 +371,6 @@
                         <div class="form-group col-md-6">
                             <label for="ChungCu1">Chung cư</label>
                             <select id="ChungCu1" class="form-control">
-                                <option selected>Chọn chung cư</option>
                                 <option value="s1">S1</option>
                                 <option value="s2">S2</option>
                             </select>
@@ -393,35 +392,18 @@
             <div class="modal-footer">
                 <!-- Add any footer buttons if necessary -->
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="saveChangesButton">Xác nhận</button>
+                <button type="button" class="btn btn-xac-nhan" id="saveChangesButton">Xác nhận</button>
             </div>
         </div>
     </div>
 </div>
 <!-- [ And popup] chỉnh sửa  -->
 <!-- [popup] cònfirm  -->
-<!-- Modal Confirmation -->
-<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="confirmationModalLabel">Xác nhận</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Bạn có chắc chắn muốn gửi?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
-                <button type="button" class="btn btn-primary" id="confirmSaveChanges">Xác nhận</button>
-            </div>
-        </div>
-    </div>
-</div>
-
+<!-- Modal -->
+<?php
+$modalContent = 'Bạn có chắc chắn muốn xác nhận chỉnh sửa không ?';
+include '../../common/modal/confirmationModal.php';
+?>
 <!-- Modal Xác Nhận Xóa -->
 <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog"
      aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
@@ -443,6 +425,10 @@
         </div>
     </div>
 </div>
+
+
+
+
 
 <!-- Required Js -->
 <script src="../../template/assets/js/vendor-all.min.js"></script>

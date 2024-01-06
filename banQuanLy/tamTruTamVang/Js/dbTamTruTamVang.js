@@ -68,14 +68,14 @@ document.querySelectorAll('.form-check-input').forEach(function (radio) {
         var filteredDataTamTru, filteredDataTamVang;
 
         if (option === 'all') { // Cả 2 chung cư
-            filteredDataTamTru = tableData;
-            filteredDataTamVang = tableTamTru;
+            filteredDataTamVang = tableData;
+            filteredDataTamTru= tableTamTru;
         } else if (option === 's1') { // S1
-            filteredDataTamTru = tableData.filter(item => item.canHo === 's1');
-            filteredDataTamVang = tableTamTru.filter(item => item.canHo === 's1');
+            filteredDataTamVang = tableData.filter(item => item.canHo === 's1');
+             filteredDataTamTru = tableTamTru.filter(item => item.canHo === 's1');
         } else { // S2
-            filteredDataTamTru = tableData.filter(item => item.canHo === 's2');
-            filteredDataTamVang = tableTamTru.filter(item => item.canHo === 's2');
+            filteredDataTamVang = tableData.filter(item => item.canHo === 's2');
+             filteredDataTamTru = tableTamTru.filter(item => item.canHo === 's2');
         }
 
         // Lấy số lượng tạm trú và tạm vắng
@@ -89,8 +89,71 @@ document.querySelectorAll('.form-check-input').forEach(function (radio) {
 
 // Hàm khởi tạo
 function init() {
-    var tamTruCount = tableData.length;
-    var tamVangCount = tableTamTru.length;
+    var tamVangCount = tableData.length;
+    var   tamTruCount= tableTamTru.length;
+
     updateChartAndLegend(tamTruCount, tamVangCount);
 }
 init();
+
+
+function updateProgressBar() {
+    // Lấy giá trị của radio button được chọn
+    var apartmentOption = document.querySelector('input[name="apartmentOptions"]:checked').value;
+
+    // Lọc dữ liệu dựa trên giá trị của radio button
+    var filteredTableDonTamTru = tableDonTamTru.filter(item => apartmentOption === 'all' || item.canHo === apartmentOption);
+    var filteredTableDonTamVang = tableDonTamVang.filter(item => apartmentOption === 'all' || item.canHo === apartmentOption);
+
+    // Tính toán số lượng mục có trạng thái bằng 1 cho mỗi loại đơn
+    var approvedCountTru = filteredTableDonTamTru.filter(item => item.trangThai == 1).length;
+    var approvedCountVang = filteredTableDonTamVang.filter(item => item.trangThai == 1).length;
+
+    // Tính toán tổng số lượng mục cho mỗi loại đơn
+    var totalCountTru = filteredTableDonTamTru.length;
+    var totalCountVang = filteredTableDonTamVang.length;
+
+    // Tính toán phần trăm mục đã được duyệt cho mỗi loại đơn
+    var percentageTru = (approvedCountTru / totalCountTru) * 100;
+    var percentageVang = (approvedCountVang / totalCountVang) * 100;
+
+    // Cập nhật giao diện cho mỗi loại đơn
+    var progressBarTru = document.querySelector('#progress-bar-tru');
+    progressBarTru.style.width = percentageTru + '%';
+    progressBarTru.setAttribute('aria-valuenow', approvedCountTru);
+    progressBarTru.setAttribute('aria-valuemax', totalCountTru);
+
+    var progressBarVang = document.querySelector('#progress-bar-vang');
+    progressBarVang.style.width = percentageVang + '%';
+    progressBarVang.setAttribute('aria-valuenow', approvedCountVang);
+    progressBarVang.setAttribute('aria-valuemax', totalCountVang);
+
+    // Cập nhật số liệu cho mỗi loại đơn
+    var progressCountTru = document.getElementById('progress-count-tru');
+    progressCountTru.textContent = 'Đã xác nhận ' + approvedCountTru + '/' + totalCountTru;
+
+    var progressCountVang = document.getElementById('progress-count-vang');
+    progressCountVang.textContent = 'Đã xác nhận ' + approvedCountVang + '/' + totalCountVang;
+
+    // Kiểm tra xem tất cả các mục đã được duyệt chưa cho mỗi loại đơn
+    var statusTextTru = document.getElementById('status-text-tru');
+    if (approvedCountTru === totalCountTru) {
+        statusTextTru.textContent = 'Đã xác nhận tất cả';
+    } else {
+        statusTextTru.textContent = 'Cần xác nhận';
+    }
+
+    var statusTextVang = document.getElementById('status-text-vang');
+    if (approvedCountVang === totalCountVang) {
+        statusTextVang.textContent = 'Đã xác nhận tất cả';
+    } else {
+        statusTextVang.textContent = 'Cần xác nhận';
+    }
+}
+
+// Gọi hàm updateProgressBar ngay sau khi tải dữ liệu
+updateProgressBar();
+// Thêm sự kiện 'change' vào mỗi radio button
+document.getElementById('apartmentOption1').addEventListener('change', updateProgressBar);
+document.getElementById('apartmentOption2').addEventListener('change', updateProgressBar);
+document.getElementById('apartmentOption3').addEventListener('change', updateProgressBar);

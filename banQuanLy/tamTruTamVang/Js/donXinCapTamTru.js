@@ -1,15 +1,12 @@
+
+var activeItems = tableDonTamTru.filter(item => item.trangThai == 0);
 var state = {
-    'querySet': tableTamTru,
+    'querySet': activeItems,
 
     'page': 1, 'rows': 5, 'window': 5,
 }
 
 buildTable(); // Xây dựng bảng ngay lập tức sau khi tải dữ liệu
-
-function saveToLocalStorage(data) {
-    localStorage.setItem('tableTamTru', JSON.stringify(data));
-}
-
 
 function pagination(querySet, page, rows) {
 
@@ -79,37 +76,85 @@ function pageButtons(pages) {
 }
 
 
+
 function buildTable() {
     var table = $('#table-body')
     // Clear the current table before repopulating
     table.empty();
-    var data = pagination(state.querySet, state.page, state.rows)
+    var data = pagination(state.querySet.filter(item => item.trangThai == 0), state.page, state.rows)
     var myList = data.querySet
 
     for (var i = 0; i < myList.length; i++) {
-        //Keep in mind we are using "Template Litterals to create rows"
-        var row = `<tr>
+
+        if (myList[i].trangThai == 0) {
+            //Keep in mind we are using "Template Litterals to create rows"
+            var row = `<tr>
                   <td>${myList[i].id}</td>
                   <td>${myList[i].CCCD}</td>
                   <td>${myList[i].hoTen}</td>
                   <td>${myList[i].gioiTinh}</td>
                   <td>${myList[i].DDThuongTru}</td>
                   <td>
-                        
                     <button type="button" class="no-outline"
                     style="background-color: #F2A9A9; color: #C64141; opacity: 0.7; border: none;  border-radius: 0.8rem; padding: 5px 12px; font-size: 14px; margin-right: 8px;  cursor: pointer;border: none;"> 
                      Hủy</button>
                     <button type="button" class="no-outline"
-                    style="background-color: #DDF2FD; color: #27AE60; border: none;  border-radius: 0.8rem; padding: 5px 12px; font-size: 14px; cursor: pointer;border: none;">
+                    style="background-color: #DDF2FD; color: #27AE60; border: none;  border-radius: 0.8rem; padding: 5px 12px; font-size: 14px; cursor: pointer;border: none;"
+                    onclick="confirmApproval(${myList[i].id})">
                     Duyệt</button>
             
                     </td>
                     <td> <button type="button" class="custom-btn view-details-button" data-toggle="modal" data-id="${myList[i].id}">Xem thêm</button></td>
                                                             `
-        table.append(row)
+            table.append(row)
+        }
     }
 
     pageButtons(data.pages)
+}
+function confirmApproval(id) {
+    // Lưu trữ ID cần duyệt vào biến toàn cục
+    window.idToApprove = id;
+
+    // Hiển thị modal xác nhận
+    $('#confirmationModal').modal('show');
+}
+
+document.getElementById('btn-xac-nhan').addEventListener('click', approveRequest);
+function approveRequest() {
+    // Tìm kiếm thông tin dựa trên ID trong mảng activeItems
+    var index = tableDonTamTru.findIndex(item => item.id === window.idToApprove);
+    if (index !== -1) {
+        // Chuyển dữ liệu từ activeItems sang tableTamTru
+        var person = tableDonTamTru[index];
+        // Tạo ID mới dựa trên số lượng mục trong tableTamTru
+        person.id = tableTamTru.length + 1;
+
+        // Thêm mục vào tableTamTru
+        tableTamTru.push(person);
+
+        // Cập nhật trạng thái của mục được duyệt
+        tableDonTamTru[index].trangThai = 1;
+
+        // Lưu dữ liệu vào localStorage
+        localStorage.setItem('tableDonTamTru', JSON.stringify(tableDonTamTru));
+        localStorage.setItem('tableTamTru', JSON.stringify(tableTamTru));
+
+        // Đóng modal xác nhận
+        $('#confirmationModal').modal('hide');
+        // Hiển thị modal
+        $('#successModal').modal('show');
+
+        // Cập nhật bảng
+        buildTable();
+        // Kiểm tra xem trang hiện tại có còn mục nào không
+        var currentPageItems = tableDonTamTru.filter(item => item.trangThai == 0).slice((state.page - 1) * state.rows, state.page * state.rows);
+        if (currentPageItems.length === 0 && state.page > 1) {
+            // Nếu không, chuyển đến trang trước đó
+            state.page--;
+            buildTable();
+        }
+    }
 }
 
 var currentMonth = null;
@@ -119,7 +164,7 @@ var currentApartment = 'all';
 // Search and filter function
 function searchAndFilter() {
     var search = document.getElementById('searchInput').value.toLowerCase();
-    var filteredData = tableTamTru.filter(item => {
+    var filteredData = activeItems.filter(item => {
         // Thêm điều kiện lọc theo tháng và năm
         var dateParts = item.ngayBatDau.split('/'); // Tách ngày bắt đầu thành các phần
         var month = parseInt(dateParts[1], 10); // Lấy tháng và chuyển đổi thành số nguyên
@@ -194,8 +239,8 @@ function formatDate(dateString) {
 }
 
 function showDetails(id) {
-    // Tìm kiếm thông tin dựa trên ID trong mảng tableTamTru
-    var person = tableTamTru.find(item => item.id === id);
+    // Tìm kiếm thông tin dựa trên ID trong mảng activeItems
+    var person = activeItems.find(item => item.id === id);
     if (person) {
         // Cập nhật thông tin vào các trường trong modal
         document.getElementById('fullName').value = person.hoTen;
@@ -251,7 +296,7 @@ var currentEditingId = null;
 
 // Hàm này sẽ được gọi khi người dùng nhấn vào biểu tượng chỉnh sửa (fa fa-pencil).
 function showEditForm(id) {
-    var person = tableTamTru.find(item => item.id === id);
+    var person = activeItems.find(item => item.id === id);
     if (person) {
         currentEditingId = person.id
         // Cập nhật thông tin vào các trường trong modal chỉnh sửa

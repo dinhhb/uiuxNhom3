@@ -337,37 +337,7 @@ function confirmAndSaveChanges() {
     // Gọi lại hàm lọc
     searchAndFilter();
 }
-document.getElementById('confirmSaveChanges').addEventListener('click', confirmAndSaveChanges);
-
-
-// Hàm này sẽ được gọi khi nhấn nút "Save changes"
-function saveChanges() {
-    var editedPerson = {
-        id: currentEditingId,
-        hoTen: document.getElementById('fullName1').value,
-        ngaySinh: formatDateReverse(document.getElementById('dob1').value),
-        CCCD: document.getElementById('cccd1').value,
-        gioiTinh: document.getElementById('genderSelect1').value,
-        DDThuongTru: document.getElementById('diaChiThuongTru1').value,
-        DDTamVang: document.getElementById('diaChiTamVang1').value,
-        SDT: document.getElementById('soDienThoai1').value,
-        ngheNghiep: document.getElementById('ngheNghiep1').value,
-        ngayBatDau: formatDateReverse(document.getElementById('ngayBatDau1').value),
-        ngayKetThuc: formatDateReverse(document.getElementById('ngayKetThuc1').value),
-        lyDo: document.getElementById('reason1').value
-    };
-    // Hiển thị modal xác nhận trước khi lưu
-    $('#confirmationModal').modal('show');
-    // Tìm vị trí của người dùng trong mảng và cập nhật thông tin
-    var index = tableData.findIndex(item => item.id === currentEditingId);
-    if (index !== -1) {
-        tableData[index] = editedPerson;
-    }
-    // Đóng modal chỉnh sửa và modal xác nhận
-    $('#infoModalChange').modal('hide');
-    $('#confirmationModal').modal('hide');
-    buildTable();
-}
+document.getElementById('btn-xac-nhan').addEventListener('click', confirmAndSaveChanges);
 
 // Chuyển đổi ngày tháng từ dạng YYYY-MM-DD sang DD/MM/YYYY
 function formatDateReverse(dateString) {

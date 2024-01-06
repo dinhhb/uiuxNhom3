@@ -202,7 +202,7 @@
                                                     <!-- Radio button group -->
                                                     <label for="apartmentChoice" class="form-label">Chọn chung cư</label>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="apartmentOptions" id="apartmentOption1" value="all">
+                                                        <input class="form-check-input" type="radio" name="apartmentOptions" id="apartmentOption1" value="all" checked>
                                                         <label class="form-check-label" for="apartmentOption1">
                                                             Cả 2 chung cư
                                                         </label>
@@ -248,12 +248,14 @@
                                                 </div>
                                                 <div class="col-md-11">
                                                     <h5 class="">Đơn khai báo tạm trú</h5>
+                                                    <div style="display: flex;justify-content: space-between;/* align-items: center; *//* justify-items: stretch; */">
+                                                        <span id="status-text-tru">Cần xác nhận </span>    <span id="progress-count-tru">Đã xác nhận 10/15</span></div>
                                                     <div class="progress my-2">
-                                                        <div class="progress-bar" role="progressbar" style="width: 66%;border-radius: 0.5rem;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="15">10/15</div>
+                                                        <div id="progress-bar-tru" class="progress-bar" role="progressbar" style="width: 66%;border-radius: 0.5rem;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="15"></div>
                                                     </div>
                                                     <div class="d-flex justify-content-between">
                                                         <span></span> <!-- Placeholder for left side content -->
-                                                        <a href="#" class="link-button mt-3">Quản lý đơn tạm trú >></a>
+                                                        <a href="./donXinCapTamTru.php" class="link-button mt-3">Quản lý đơn tạm trú >></a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -264,8 +266,10 @@
                                                 </div>
                                                 <div class="col-md-11">
                                                     <h5 class="">Đơn khai báo tạm vắng</h5>
+                                                    <div style="display: flex;justify-content: space-between;/* align-items: center; *//* justify-items: stretch; */">
+                                                        <span id="status-text-vang">Cần xác nhận </span>    <span id="progress-count-vang">Đã xác nhận 10/15</span></div>
                                                     <div class="progress my-2">
-                                                        <div class="progress-bar" role="progressbar" style="width: 60%;border-radius: 0.5rem;" aria-valuenow="12" aria-valuemin="0" aria-valuemax="20">12/20</div>
+                                                        <div id="progress-bar-vang" class="progress-bar" role="progressbar" style="width: 66%;border-radius: 0.5rem;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="15"></div>
                                                     </div>
                                                     <div class="d-flex justify-content-between">
                                                         <span></span> <!-- Placeholder for left side content -->
@@ -301,6 +305,9 @@
 <script src="Js/loadData.js"></script>
 <script src="Js/dbTamTruTamVang.js"></script>
 
+<script>
+
+</script>
 
 </body>
 

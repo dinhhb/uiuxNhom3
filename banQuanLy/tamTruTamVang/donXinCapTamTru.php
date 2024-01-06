@@ -179,7 +179,7 @@
 
                                         </ul>
                                     </nav>
-                                    <div class="align-left">
+                                    <div class="align-left" onclick="window.location.href='dashboard_TamTruTamVang.php'">
                                         <button type="button" class="btn custom-btn d-inline-block ml-4 mb-3"
                                                 style="padding: 10px 30px; background: #9BBEC8; color: white;">Quay lại
                                         </button>
@@ -398,27 +398,16 @@
 </div>
 <!-- [ And popup] chỉnh sửa  -->
 <!-- [popup] cònfirm  -->
-<!-- Modal Confirmation -->
-<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="confirmationModalLabel">Xác nhận</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Bạn có chắc chắn muốn gửi?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
-                <button type="button" class="btn btn-primary" id="confirmSaveChanges">Xác nhận</button>
-            </div>
-        </div>
-    </div>
-</div>
+<!-- Modal -->
+<?php
+$modalContent = 'Bạn có chắc chắn muốn duyệt  không ?';
+include '../../common/modal/confirmationModal.php';
+?>
+<!-- Success Modal -->
+<?php
+$modalContent = 'Báo cáo đã được gửi thành công';
+include '../../common/modal/successModal.php';
+?>
 
 <!-- Modal Xác Nhận Xóa -->
 <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog"
