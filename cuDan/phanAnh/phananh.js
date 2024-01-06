@@ -5,10 +5,9 @@
 1 - Loop Through Array & Access each value
 2 - Create Table Rows & append to table
 */
-var filteredtableData1 = tableData1.filter(item => item.maGiaoDich !== "");
 
 var state = {
-    'querySet': filteredtableData1,
+    'querySet': tableData1,
     'page': 1,
     'rows': 5,
     'window': 5,
@@ -91,7 +90,6 @@ function buildTable() {
     table.empty(); // Xóa nội dung cũ trong bảng
     // var characterLimit = 50;
 
-
     for (var i in myList) {
         var stt = (state.page - 1) * state.rows + parseInt(i) + 1;
         var noiDung = myList[i].noiDung.length > 50 ? myList[i].noiDung.substring(0, 50) + '...' : myList[i].noiDung;
@@ -115,15 +113,6 @@ function buildTable() {
 
     pageButtons(data.pages);
 }
-
-
-
-function clearLocalStorage() {
-    localStorage.removeItem('tableData1');
-}
-
-// Gọi hàm để xóa dữ liệu
-clearLocalStorage();
 
 // **************************************************************Filer***********************************
 var currentMonth = null;
