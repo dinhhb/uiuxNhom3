@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>BQL-Xem thống kê</title>
+    <title>Đơn xin cấp tạm vắng</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -403,7 +403,7 @@ include '../../common/modal/confirmationModal.php';
 ?>
 <!-- Success Modal -->
 <?php
-$modalContent = 'Báo cáo đã được gửi thành công';
+$modalContent = 'Đơn xin cấp tạm vắng đã được duyệt thành công';
 include '../../common/modal/successModal.php';
 ?>
 

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>CD-Tạm trú tạm vắng
+    <title>CD-Dashboard Tam Vang Tam Tru
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -80,22 +80,22 @@
                                      style="">
                                     <div class="row">
                                         <div class="form-group col-md-6">
-                                            <div class="thongtinchungcu" style="width: 200px; height: 140px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; margin-top: 50px; margin-left: 250px; display: flex; justify-content: center; align-items: center;">
+                                            <div class="thongtinchungcu" style="width: 200px; height: 140px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; margin-top: 50px; margin-left: 250px; display: flex; justify-content: center; align-items: center;" onclick="window.location.href='khaiBaoTamVang.php'">
                                                 <div style="text-align: center;">
                                                     <img src="../../assets/images/cudan/tamVang.png" style="height: 50px; width: 50px;"/>
-                                                    <p style="font-family: 'Inter'; font-style: normal; font-weight: 600; font-size: 14px; letter-spacing: 0.1px; color: #000000; margin-top: 10px;">Khai báo tạm vắng</p>                                            
+                                                    <p style="font-family: 'Inter'; font-style: normal; font-weight: 600; font-size: 14px; letter-spacing: 0.1px; color: #000000; margin-top: 10px;">Khai báo tạm vắng</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <div class="thongtinchungcu" style="width: 200px; height: 140px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; margin-top: 50px; margin-left: 100px; display: flex; justify-content: center; align-items: center;">
+                                            <div class="thongtinchungcu" style="width: 200px; height: 140px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; margin-top: 50px; margin-left: 100px; display: flex; justify-content: center; align-items: center;" onclick="window.location.href='khaiBaoTamTru.php'">
                                                 <div style="text-align: center;">
                                                     <img src="../../assets/images/cudan/tamTru.png" style="height: 50px; width: 50px;"/>
-                                                    <p style="font-family: 'Inter'; font-style: normal; font-weight: 600; font-size: 14px; letter-spacing: 0.1px; color: #000000; margin-top: 10px;">Khai báo tạm trú</p>                                            
+                                                    <p style="font-family: 'Inter'; font-style: normal; font-weight: 600; font-size: 14px; letter-spacing: 0.1px; color: #000000; margin-top: 10px;">Khai báo tạm trú</p>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>   
+                                    </div>
                                     </div>
                                 </div>
                             </div>
