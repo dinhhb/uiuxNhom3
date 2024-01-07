@@ -12,21 +12,20 @@
 }
 .title-require{
     padding-top:15px;
-    padding-left:25px;
-    font-family: 'Inter';
+    padding-left:25px;  
     font-style: Bold;
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 26px;
     color:#000000
 }
 .content-require{
     padding-top:20px;
-    padding-left:20px;
-    font-family: 'Inter';
+    padding-left:25px;
+    
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 15px;
     line-height: 21px;
     letter-spacing: 0.1px;
     color: #000000;
@@ -35,6 +34,7 @@
 .date-require{
     position:absolute;
     top:15px;right:30px;
+    font-size: 16px;
     color: #164863;
 }
 
@@ -42,10 +42,10 @@
     position:absolute;
     top:80px;
     right:50px;
-    font-family: 'Inter';
+    
     font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
+    font-weight: 700;
+    font-size: 15px;
     line-height: 21px;
     letter-spacing: 0.1px;
     color: #164863;

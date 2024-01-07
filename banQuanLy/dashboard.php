@@ -59,7 +59,7 @@
                                 <div class="card" style="border-radius: 15px;">
                                     <div class="card-block">
                                         <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
-                                            <p style="font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 36px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Xin chào Ban quản lý </p>
+                                             <h3>Xin chào Ban Quản Lý </h3>
                                         </div>
                                     </div>
                                     <div style="display:flex;position:relative;">
@@ -76,10 +76,10 @@
                                                 <path d="M1 84L77.7992 1H155.9H234" stroke="#164863" stroke-width="2" />
                                             </svg>
                                         </div>
-                                        <div class="tenchungcu" style="position:absolute; padding-top:37px;padding-left:245px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Chung cư S1</div>
-                                        <div class="tenchungcu" style="position:absolute; padding-top:10px;padding-left:780px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Chung cư S2</div>
+                                        <div class="tenchungcu" style="position:absolute; padding-top:37px;padding-left:245px;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Chung cư S1</div>
+                                        <div class="tenchungcu" style="position:absolute; padding-top:10px;padding-left:780px;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Chung cư S2</div>
                                         <div class="thongtinchungcu" style="position:absolute;width:200px;height:161px;top:120px;left:150px;background-color: #E8EDF0;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 15px;">
-                                            <ul style="padding-top:15px;list-style-type:none;color:#000000;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;">
+                                            <ul style="padding-top:15px;list-style-type:none;color:#000000;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;">
                                                 <li>Diện tích: 556 m2</li>
                                                 <li>Số tầng: 5</li>
                                                 <li>Số căn hộ: 25</li>
@@ -87,7 +87,7 @@
                                             </ul>
                                         </div>
                                         <div class="thongtinchungcu" style="position:absolute;width:200px;height:161px;top:100px;left:820px;background-color: #E8EDF0;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 15px;">
-                                            <ul style="padding-top:15px;list-style-type:none;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color:#000000">
+                                            <ul style="padding-top:15px;list-style-type:none;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color:#000000">
                                                 <li>Diện tích: 556 m2</li>
                                                 <li>Số tầng: 5</li>
                                                 <li>Số căn hộ: 25</li>
@@ -95,7 +95,7 @@
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="icon-chat" style="display:flex;padding-top:50px;padding-left:100px; font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px; line-height: 21px;letter-spacing: 0.1px;color: #000000;">
+                                    <div class="icon-chat" style="display:flex;padding-top:50px;padding-left:100px; font-style: normal;font-weight: 600;font-size: 14px; line-height: 21px;letter-spacing: 0.1px;color: #000000;">
                                         <svg width="33" height="29" viewBox="0 0 33 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <g clip-path="url(#clip0_118_6101)">
                                                 <rect width="33" height="29" transform="matrix(-1 0 0 1 33 0)" fill="#9BBEC8" />
@@ -112,26 +112,26 @@
                                         </svg>
                                         <div style="padding-top:10px;padding-left:10px;">Ý kiến của cư dân</div>
                                         <a href="">
-                                            <div style="padding-top:7px;padding-left:10px;font-family: 'Inter';font-style: normal;font-weight: 700;font-size: 12px;line-height: 26px;text-decoration-line: underline;color: #164863;">Xem chi tiết >></div>
+                                            <div style="padding-top:7px;padding-left:10px;font-style: normal;font-weight: 700;font-size: 12px;line-height: 26px;text-decoration-line: underline;color: #164863;">Xem chi tiết >></div>
                                         </a>
                                     </div>
                                     <a href="">
                                         <div class="require" style="position:relative; margin-left:100px;margin-bottom:20px; margin-top:10px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; width:1000px; height:120px; color: #090909;">
-                                            <div class="title-require" style="padding-top:10px;padding-left:25px;font-family: 'Inter';font-style: Bold;font-weight: 700;font-size: 20px;line-height: 26px;color:#000000">Phản ánh hàng xóm ồn ào</div>
-                                            <div class="content-require" style="padding-top:20px;padding-left:20px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Từ: Nguyễn Văn An, hộ gia đình số 3, địa chỉ Sóc Sơn, Hà Nội...</div>
-                                            <div class="date-require" style="position:absolute;top:15px;right:30px;color: #164863;">25/11/2023</div>
+                                            <div class="title-require" style="padding-top:10px;padding-left:25px;font-style: Bold;font-weight: 700;font-size: 20px;line-height: 26px;color:#000000">Phản ánh hàng xóm ồn ào</div>
+                                            <div class="content-require" style="padding-top:20px;padding-left:20px;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Từ: Nguyễn Văn An, hộ gia đình số 3, địa chỉ Sóc Sơn, Hà Nội...</div>
+                                            <div class="date-require" style="position:absolute;top:15px;right:30px;color: #164863;font-size: 16px;">25/11/2023</div>
                                             <a href="">
-                                                <div class="detail-require" style="position:absolute;top:80px;right:50px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem thêm</div>
+                                                <div class="detail-require" style="position:absolute;top:80px;right:50px;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem thêm</div>
                                             </a>
                                         </div>
                                     </a>
                                     <a href="">
                                         <div class="require" style="position:relative; margin-left:100px;margin-bottom:20px; margin-top:10px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; width:1000px; height:120px; color: #090909;">
-                                            <div class="title-require" style="padding-top:10px;padding-left:5px;font-family: 'Inter';font-style: Bold;font-weight: 700;font-size: 20px;line-height: 26px;color:#000000">Phản ánh hàng xóm ồn ào</div>
-                                            <div class="content-require" style="padding-top:20px;padding-left:20px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Từ: Nguyễn Văn An, hộ gia đình số 3, địa chỉ Sóc Sơn, Hà Nội...</div>
-                                            <div class="date-require" style="position:absolute;top:15px;right:30px;color: #164863;">25/11/2023</div>
+                                            <div class="title-require" style="padding-top:10px;padding-left:5px;font-style: Bold;font-weight: 700;font-size: 20px;line-height: 26px;color:#000000">Phản ánh hàng xóm ồn ào</div>
+                                            <div class="content-require" style="padding-top:20px;padding-left:20px;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Từ: Nguyễn Văn An, hộ gia đình số 3, địa chỉ Sóc Sơn, Hà Nội...</div>
+                                            <div class="date-require" style="position:absolute;top:15px;right:30px;color: #164863;font-size: 16px;">25/11/2023</div>
                                             <a href="">
-                                                <div class="detail-require" style="position:absolute;top:80px;right:50px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem thêm</div>
+                                                <div class="detail-require" style="position:absolute;top:80px;right:50px;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem thêm</div>
                                             </a>
                                         </div>
                                     </a>
@@ -192,7 +192,7 @@
         }
 
         .user-info p {
-            font-family: 'Inter';
+            
             font-style: normal;
             font-weight: 600;
             font-size: 20px;
@@ -201,7 +201,7 @@
         }
 
         .user-info p.subtitle {
-            font-family: 'Inter';
+            
             font-style: normal;
             font-weight: 600;
             font-size: 16px;
@@ -221,7 +221,7 @@
             padding-left: 0px;
             padding-top: 50px;
 
-            font-family: 'Inter';
+            
             font-style: normal;
             font-weight: 600;
             font-size: 14px;
@@ -239,7 +239,7 @@
             padding-left: 0px;
             padding-top: 50px;
 
-            font-family: 'Inter';
+            
             font-style: normal;
             font-weight: 600;
             font-size: 14px;
