@@ -15,8 +15,11 @@ $current_folder_name= $_SERVER['PHP_SELF'];
         <div class="menu-item <?php echo ($current_file_name == 'dashboard.php') ? 'active' : ''; ?>">
             <a href="/banQuanLy/dashboard.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-home" style="color: #000000; width:30px;height:30px;"></i></span><span class="menu-options">Dashboard</span></a>
         </div>
-        <div class="menu-item <?php echo ($current_file_name == 'xemThongKe.php') ? 'active' : ''; ?>">
-            <a href="/banQuanLy/xemThongKe/xemThongKe.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-chart-bar" style="color: #000000;width:30px;height:30px;"></i></span><span class="menu-options">Xem thống kê</span></a>
+        <div class="menu-item <?php echo (in_array($current_file_name, ['xemThongKe.php', 'thongKeTaiChinh.php', 'thongKeCuDan.php', 'thongKeDichVu.php'])) ? 'active' : ''; ?>">
+            <a href="/banQuanLy/xemThongKe/xemThongKe.php" class="nav-link ">
+                <span class="pcoded-micon"><i class="fas fa-chart-bar" style="color: #000000;width:30px;height:30px;"></i></span>
+                <span class="menu-options">Xem thống kê</span>
+            </a>
         </div>
         <div class="menu-item <?php echo ($current_file_name == 'xemBaoCaoTaiChinh.php' || $current_file_name == 'taoBaoCaoTaiChinh.php') ? 'active' : ''; ?>">
             <a href="/banQuanLy/baoCaoTaiChinh/xemBaoCaoTaiChinh.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-file-excel" style="color: #000000; width: 30px; height: 30px;"></i></span><span class="menu-options">Tạo báo cáo tài chính</span></a>

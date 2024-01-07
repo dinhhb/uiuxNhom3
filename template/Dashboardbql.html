@@ -141,19 +141,19 @@
                                             </defs>
                                             </svg>
                                             <div style="padding-top:10px;padding-left:10px;">Ý kiến của cư dân</div>
-                                            <a href=""><div style="padding-top:7px;padding-left:10px;font-family: 'Inter';font-style: normal;font-weight: 700;font-size: 12px;line-height: 26px;text-decoration-line: underline;color: #164863;">Xem chi tiết >></div></a>
+                                            <a href="Ykiencudan.html"><div style="padding-top:7px;padding-left:10px;font-family: 'Inter';font-style: normal;font-weight: 700;font-size: 12px;line-height: 26px;text-decoration-line: underline;color: #164863;">Xem chi tiết >></div></a>
                                      </div>
-                                     <a href=""><div class="require" style="position:relative; margin-left:100px;margin-bottom:20px; margin-top:10px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; width:1000px; height:120px; color: #090909;">
+                                     <a href="#" onclick="openModal()"><div class="require" style="position:relative; margin-left:100px;margin-bottom:20px; margin-top:10px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; width:1000px; height:120px; color: #090909;">
                                         <div class="title-require" style="padding-top:10px;padding-left:25px;font-family: 'Inter';font-style: Bold;font-weight: 700;font-size: 20px;line-height: 26px;color:#000000">Phản ánh hàng xóm ồn ào</div>
                                         <div class="content-require" style="padding-top:20px;padding-left:20px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Từ: Nguyễn Văn An, hộ gia đình số 3, địa chỉ Sóc Sơn, Hà Nội...</div>
                                         <div class="date-require" style="position:absolute;top:15px;right:30px;color: #164863;">25/11/2023</div>
-                                        <a href=""><div class="detail-require" style="position:absolute;top:80px;right:50px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem thêm</div></a>
+                                        <a href="#" onclick="openModal()"><div class="detail-require" style="position:absolute;top:80px;right:50px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem thêm</div></a>
                                     </div></a>
-                                    <a href=""><div class="require" style="position:relative; margin-left:100px;margin-bottom:20px; margin-top:10px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; width:1000px; height:120px; color: #090909;">
+                                    <a href="#" onclick="openModal()"><div class="require" style="position:relative; margin-left:100px;margin-bottom:20px; margin-top:10px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; width:1000px; height:120px; color: #090909;">
                                         <div class="title-require" style="padding-top:10px;padding-left:5px;font-family: 'Inter';font-style: Bold;font-weight: 700;font-size: 20px;line-height: 26px;color:#000000">Phản ánh hàng xóm ồn ào</div>
                                         <div class="content-require" style="padding-top:20px;padding-left:20px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Từ: Nguyễn Văn An, hộ gia đình số 3, địa chỉ Sóc Sơn, Hà Nội...</div>
                                         <div class="date-require" style="position:absolute;top:15px;right:30px;color: #164863;">25/11/2023</div>
-                                        <a href=""><div class="detail-require" style="position:absolute;top:80px;right:50px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem thêm</div></a>
+                                        <a href="#" onclick="openModal()"><div class="detail-require" style="position:absolute;top:80px;right:50px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem thêm</div></a>
                                     </div></a>
 
 
@@ -165,6 +165,26 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content" style="position:relative;width:1110px;height:600px;">
+            <p style="text-align:center;font-family: 'Inter';font-style: normal;font-weight: 700;font-size: 36px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Phản ánh về vệ sinh</p>
+            <span class="close" style="position:absolute;right:20px;top:20px;">&times;</span>
+            <div class="message" style="position:absolute;top:100px;left:30px;right:450px;">
+                <ul style="list-style-type:none;font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 20px;line-height: 26px;color:#000000">
+                    <li>Từ ông/bà: Đỗ Văn Đức</li>
+                    <li>Hộ gia đình số: 31</li>
+                    <li>Chung cư: S1</li>
+                    <li>Nội dung phản ánh: Cần lưu ý về việc có một số cư dân vẫn thường xuyên vứt rác bừa bãi tại khu vực cổng A của tòa nhà S1. Tình trạng này không chỉ tạo ra một cảnh quan xấu mắt mà còn ảnh hưởng đến môi trường sống chung của chúng ta. Xin Ban Quản Lý chú ý và có những biện pháp cần thiết để ngăn chặn hành vi vứt rác không đúng quy tắc tại khu vực này. </li>
+                </ul>
+            </div>
+            <div class="img-descript" style="position:absolute;right:30px;top:100px;"><img src="assets/images/image 4.png"></div>
+            <div class="reason" style="position:absolute;top:450px;left:100px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 16px;line-height: 24px;">Lý do từ chối:   <input placeholder="Điền lý do từ chối" style="width:200px;background: #F8FAFC;border-radius: 4px;text-align:center;border:#615959;"></div>
+           <div style="position:absolute;top:500px;display:flex;">
+                <a href=""><button style="width:215px;height:44px;border:none;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 16px;line-height: 24px;box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);border-radius: 8px;justify-content: center;align-items: center;border-radius: 8px;background-color:red;color:#FFFFFF;margin-left:100px;">Từ chối</button></a>
+                <a href=""><button style="width:215px;height:44px;border:none;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 16px;line-height: 24px;box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);border-radius: 8px;justify-content: center;align-items: center;border-radius: 8px;background-color:#164863;color:#FFFFFF;margin-left:400px;">Chấp nhận và xem xét</button></a>
+             </div>
         </div>
     </div>
 
@@ -279,6 +299,65 @@
         color: #164863; /* Màu xanh cho icon và chữ khi active */
     }
 </style>
+<style>
+    /* CSS cho modal */
+.modal {
+  display: none; /* Ẩn modal ban đầu */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7); /* Tạo một overlay mờ */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* Đóng modal */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+</style>
+<script>
+// Lấy modal và nút đóng
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+
+// Ẩn modal khi ấn nút đóng hoặc click bên ngoài modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Hiển thị modal khi ấn vào "Xem thêm"
+function openModal() {
+  modal.style.display = "block";
+}
+</script>
 </body>
 
 </html>

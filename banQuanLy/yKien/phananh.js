@@ -5,18 +5,16 @@
 1 - Loop Through Array & Access each value
 2 - Create Table Rows & append to table
 */
-var filteredTableData = tableData.filter(item => item.maGiaoDich !== "");
 
 var state = {
-    'querySet': filteredTableData,
-
+    'querySet': tableData1,
     'page': 1,
     'rows': 5,
     'window': 5,
 }
 
-// Lưu trạng thái của tableData
-// var originalTableData = JSON.parse(JSON.stringify(tableData));
+// Lưu trạng thái của tableData1
+// var originaltableData1 = JSON.parse(JSON.stringify(tableData1));
 
 buildTable()
 
@@ -90,31 +88,27 @@ function buildTable() {
     var myList = data.querySet;
 
     table.empty(); // Xóa nội dung cũ trong bảng
+    // var characterLimit = 50;
 
-    // Find the index of the first row where maGiaoDich !== ""
-    var startIndex = myList.findIndex(item => item.maGiaoDich !== "");
+    for (var i in myList) {
+        var stt = (state.page - 1) * state.rows + parseInt(i) + 1;
+        var noiDung = myList[i].noiDung.length > 50 ? myList[i].noiDung.substring(0, 50) + '...' : myList[i].noiDung;
 
-    // If no such row is found, set startIndex to 0
-    if (startIndex === -1) {
-        startIndex = 0;
-    }
-
-    for (var i = startIndex; i < myList.length; i++) {
-        if (myList[i].maGiaoDich !== "") {
-            var stt = (state.page - 1) * state.rows + i + 1; // Calculate stt for each row
-            var row = `<tr>
+        var row = `<tr>
                 <td style="padding-left:35px;">${stt}</td>
-                <td>${myList[i].tenDichVu}</td>
-                <td>${myList[i].loaiDichVu}</td>
-                <td>${myList[i].maGiaoDich}</td>
-                <td>${myList[i].soTien}</td>
-                <td style="text-align: center">${myList[i].phuongThucThanhToan}</td>
-                <td id="idInput" style="display: none;">${myList[i].id}</td>
+                <td class="loaiPA">${myList[i].loaiPA}</td>
+                <td class="NoiDung" id="noiDung${i}">${noiDung}</td>
+                <td>${myList[i].trangThai}</td>
                 <td>${myList[i].thoiGian}</td>
-                
+                <td id="idInput" style="display: none;">${myList[i].id}</td>
+                <td id="image" class="image" style="display: none;">${myList[i].image}</td>
+                <td class="noiDung" style="display: none;">${myList[i].noiDung}</td>
+                <td> 
+                <button type="button" class="custom-btn" data-toggle="modal" data-target="#infoModal" onclick="detail(${i})">Xem thêm</button>
+                </td>
              </tr>`;
-            table.append(row);
-        }
+
+        table.append(row);
     }
 
     pageButtons(data.pages);
@@ -123,11 +117,12 @@ function buildTable() {
 // **************************************************************Filer***********************************
 var currentMonth = null;
 var currentYear = null;
+var currentStatus = null;
 
 // Search and filter function
 function searchAndFilter() {
     var search = document.getElementById('searchInput').value.toLowerCase();
-    var filteredData = tableData.filter(item => {
+    var filteredData = tableData1.filter(item => {
         // Thêm điều kiện lọc theo tháng và năm
         var dateParts = item.thoiGian.split('/'); // Tách ngày bắt đầu thành các phần
         var month = parseInt(dateParts[1], 10); // Lấy tháng và chuyển đổi thành số nguyên
@@ -137,6 +132,12 @@ function searchAndFilter() {
             return false;
         }
         if (currentYear && year != currentYear) {
+            return false;
+        }
+        if (currentStatus === "notduyet" && item.trangThai !== "Chưa duyệt") {
+            return false;
+        }
+        if (currentStatus === "duyet" && item.trangThai !== "Đã duyệt") {
             return false;
         }
         return Object.keys(item).some(key =>
@@ -193,13 +194,94 @@ document.addEventListener('DOMContentLoaded', function () {
         currentYear = $(this).data('value'); // Lưu trữ giá trị năm đã chọn
         searchAndFilter(); // Gọi lại hàm lọc
     });
+
+    // Xử lý sự kiện chọn trạng thái
+    $('#choice').on('click', '.dropdown-item', function () {
+        var selectedStatus = this.getAttribute('value');
+        currentStatus = selectedStatus; // Lưu trữ giá trị trạng thái đã chọn
+        updateButtonText(selectedStatus); // Cập nhật nội dung của nút
+        searchAndFilter(); // Gọi lại hàm lọc
+    });
 });
 
-// ************storage******************
-// function clearLocalStorage() {
-//     localStorage.removeItem('tableData');
-// }
+function updateButtonText(text) {
+    // Lấy thẻ button và cập nhật nội dung của nó
+    var button = document.getElementById('choiceButton');
+    if (button) {
+        button.textContent = (text === 'notduyet') ? 'Chưa duyệt' : 'Tất cả';
+        button.textContent = (text === 'duyet') ? 'Chưa duyệt' : 'Tất cả';
+    }
+}
 
-// // Gọi hàm để xóa dữ liệu
-// clearLocalStorage();
+// ***************************** Xem thêm ************************************
+function detail(id) {
+    var loaiPA = $('.loaiPA').eq(id).text();
+    var noiDung = $('.noiDung').eq(id).text();
+    var imageSrc = $('.image').eq(id).text();
+
+    // var imageSrc = $('#image').text();
+    console.log(id, imageSrc, noiDung);
+
+    $('#inforloaiPA').text(loaiPA);
+    $('#infornoiDung').text(noiDung);
+    $('#inforimage').html(`<img src="../../assets/images/cudan/${imageSrc}" alt="Phản ánh Image" style="max-width: 100%; height: auto;">`);
+
+    // Hiển thị modal xem them
+    $('#infoModel').modal('show');
+    $('#infoModel').modal('hide');
+
+}
+// *********************** Submit *************************
+function confirmSubmission(event) {
+    event.preventDefault();
+
+    // Display the confirmation modal
+    // $('#confirmationModal').modal('show');
+
+    // Event listener for the confirm button in the confirmation modal
+    $('#btn-xac-nhan').off('click').on('click', function () {
+        // Close the confirmation modal
+        $('#confirmationModal').modal('hide');
+
+        // Lấy giá trị từ form
+        var loaiPA = document.getElementById("typePA").value;
+        var image = document.getElementById("avatar").value; // Lưu đường dẫn ảnh, bạn có thể xử lý đường dẫn này nếu cần
+        var noiDung = document.getElementById("reason1").value;
+        var imageName = image.replace(/^.*[\\\/]/, '');
+
+        // Tạo đối tượng JSON mới
+        var newRecord = {
+            "id": tableData1.length + 1,
+            "idCudan": "CDS201",
+            "idHome": "S201",
+            "loaiPA": loaiPA,
+            "trangThai": "Chưa duyệt",
+            "noiDung": noiDung,
+            "image": imageName,
+            "thoiGian": new Date().toLocaleDateString()
+        };
+
+        // Thêm đối tượng mới vào mảng
+        tableData1.push(newRecord);
+
+        // Lưu lại vào localStorage
+        localStorage.setItem('tableData1', JSON.stringify(tableData1));
+
+        // Show the success modal
+        $('#successModal').modal('show');
+
+        // Reset the form
+        document.getElementById("myForm").reset();
+        $('#newPA').modal('hide');
+        location.reload();
+    });
+}
+
+// ************storage******************
+function clearLocalStorage() {
+    localStorage.removeItem('tableData1');
+}
+
+// Gọi hàm để xóa dữ liệu
+clearLocalStorage();
 

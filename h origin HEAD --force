@@ -1,0 +1,469 @@
+[33mcommit 23106221e08d41db2901b3b6cffa794d358ff3f2[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: fcd9670 12b60c7
+Author: Nguyễn Ngọc Ánh <92777484+nna2k2@users.noreply.github.com>
+Date:   Sun Jan 7 16:11:29 2024 +0700
+
+    Merge pull request #21 from nna2k2/main
+    
+    final tamTruTamVang
+
+[33mcommit 12b60c7ee77d700074ffc7d8063f9ffd8267cafb[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Sun Jan 7 15:14:21 2024 +0700
+
+    final tamTruTamVang
+
+[33mcommit fcd96700851310408130f64250ad12c6cc272d73[m
+Merge: 5a9a147 f385d0f
+Author: Nguyễn Ngọc Ánh <92777484+nna2k2@users.noreply.github.com>
+Date:   Sun Jan 7 10:32:58 2024 +0700
+
+    Merge pull request #20 from trannggg/main
+    
+    update trang chu tam tru_ vang
+
+[33mcommit f385d0f871c086f85fb0577fb79de63f7a014ecc[m
+Author: trannggg <trangtranng1006@gmail.com>
+Date:   Sun Jan 7 00:24:45 2024 +0700
+
+    update trang chu tam tru_ vang
+
+[33mcommit 5a9a147ed7feaf997a8e4930ae67cfef5e49f367[m
+Merge: 89ef399 7788cec
+Author: Nguyễn Ngọc Ánh <92777484+nna2k2@users.noreply.github.com>
+Date:   Sat Jan 6 23:28:16 2024 +0700
+
+    Merge pull request #19 from nna2k2/main
+    
+    hotfix
+
+[33mcommit 7788ceca40ee2126a6aa5f162a2749824c2bd3bc[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Sat Jan 6 23:27:32 2024 +0700
+
+    hotfix
+
+[33mcommit 89ef39945d6b8a86811a55c9bf587b308dfb9166[m
+Merge: 07c3c8b 37434c8
+Author: Hà Bửu Định <121761189+dinhhb@users.noreply.github.com>
+Date:   Sat Jan 6 22:21:28 2024 +0700
+
+    Merge pull request #18 from trannggg/main
+    
+    logout cudan
+
+[33mcommit 37434c80c52d0d96e0d6f0e05c2bb00933c908fa[m
+Author: trannggg <trangtranng1006@gmail.com>
+Date:   Sat Jan 6 22:19:09 2024 +0700
+
+    update logout
+
+[33mcommit d003655e918c3b0fdfa17039249e871ef038a8d2[m
+Merge: 6975a04 07c3c8b
+Author: trannggg <trangtranng1006@gmail.com>
+Date:   Sat Jan 6 21:38:55 2024 +0700
+
+    update
+
+[33mcommit 07c3c8b462f7ef26a0faa23d87da412745fec050[m
+Merge: afc6d1b 5482992
+Author: Hà Bửu Định <121761189+dinhhb@users.noreply.github.com>
+Date:   Sat Jan 6 21:32:22 2024 +0700
+
+    Merge pull request #17 from dinhhb/dinh
+    
+    fix logout
+
+[33mcommit 548299232028a4f9a1b0c09bae0aa36198773cfe[m
+Merge: 3efd395 afc6d1b
+Author: Hà Bửu Định <121761189+dinhhb@users.noreply.github.com>
+Date:   Sat Jan 6 21:32:06 2024 +0700
+
+    Merge branch 'main' into dinh
+
+[33mcommit 3efd395a5103b69da83904e76f347cb37fbfb0ef[m
+Author: dinhhb <habuudinh@gmail.com>
+Date:   Sat Jan 6 21:28:13 2024 +0700
+
+    fix logout
+
+[33mcommit 6975a04510fa105755a4f2a819d75f7addb84cd0[m
+Author: trannggg <trangtranng1006@gmail.com>
+Date:   Sat Jan 6 20:41:26 2024 +0700
+
+    update
+
+[33mcommit 7c93adccdc13263a7722135ca7cbab2d1207be5d[m
+Author: trannggg <trangtranng1006@gmail.com>
+Date:   Sat Jan 6 20:17:11 2024 +0700
+
+    update v2
+
+[33mcommit afc6d1b2d33b63ee9fd20ef6a8794d4db1eaac66[m
+Merge: 8f220d3 69614df
+Author: Nguyễn Ngọc Ánh <92777484+nna2k2@users.noreply.github.com>
+Date:   Sat Jan 6 16:56:16 2024 +0700
+
+    Merge pull request #16 from nna2k2/main
+    
+    hotfix
+
+[33mcommit 69614dfb9e6a683626ddd8a0d6c42e1663b5372a[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Sat Jan 6 16:49:19 2024 +0700
+
+    hotfix
+
+[33mcommit 8f220d3d70cf2473550dfab5869498852c3558ea[m
+Merge: 13d8787 3b47172
+Author: Nguyễn Ngọc Ánh <92777484+nna2k2@users.noreply.github.com>
+Date:   Sat Jan 6 16:46:25 2024 +0700
+
+    Merge pull request #15 from nna2k2/main
+    
+    final tamtrutamvang bql
+
+[33mcommit 3b47172cbeb888c85f940fc5500864ea23c245d8[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Sat Jan 6 16:43:00 2024 +0700
+
+    final tamTrutamVang bql
+
+[33mcommit da4b7b09a5fc8cabebfb489d52910b751ba5ae4f[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Sat Jan 6 11:50:55 2024 +0700
+
+    add donxincaptamtru
+
+[33mcommit 55f788481fbc72cb782a07c745c82046c56aa796[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Fri Jan 5 23:54:56 2024 +0700
+
+    Merge remote-tracking branch 'origin/main'
+    
+    # Conflicts:
+    #       template/dangKiTamVang.html
+    #       template/quanLyTamVang.html
+
+[33mcommit 13d8787e4db48e0a71d80e9afce42934bdff9eef[m
+Merge: 669ea65 e28084e
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Fri Jan 5 23:50:33 2024 +0700
+
+    Merge remote-tracking branch 'origin/main'
+    
+    # Conflicts:
+    #       template/dangKiTamVang.html
+    #       template/quanLyTamVang.html
+
+[33mcommit eec0afa7c9c8c79aedd242178af48278b5b772bc[m
+Merge: 4c08e31 e28084e
+Author: Nguyễn Ngọc Ánh <92777484+nna2k2@users.noreply.github.com>
+Date:   Fri Jan 5 23:19:02 2024 +0700
+
+    Merge branch 'dinhhb:main' into main
+
+[33mcommit e28084e38722055b732197667f575e364e979761[m
+Merge: 407584a 5ee8aed
+Author: Hà Bửu Định <121761189+dinhhb@users.noreply.github.com>
+Date:   Fri Jan 5 23:16:47 2024 +0700
+
+    Merge pull request #13 from trannggg/main
+    
+    final v1
+
+[33mcommit 5ee8aedff74e1830e2f6b58c0c9c639ef59bc51e[m
+Merge: 9a7a86f 407584a
+Author: trannggg <106738755+trannggg@users.noreply.github.com>
+Date:   Fri Jan 5 23:15:27 2024 +0700
+
+    Merge pull request #1 from dinhhb/main
+    
+    final v1
+
+[33mcommit 407584ac0fb837d23e2926ab03991eb258c9664b[m
+Merge: e70225d 7b0531e
+Author: Hà Bửu Định <121761189+dinhhb@users.noreply.github.com>
+Date:   Fri Jan 5 23:14:25 2024 +0700
+
+    Merge pull request #12 from dinhhb/dinh
+    
+    fix modal
+
+[33mcommit 7b0531eb6a3261b5af755df6ea80291f4dd51cf3[m
+Author: dinhhb <habuudinh@gmail.com>
+Date:   Fri Jan 5 23:12:13 2024 +0700
+
+    fix modal
+
+[33mcommit 4c08e3170f113cfad1880231bfacd08d9c19e9a2[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Fri Jan 5 22:52:59 2024 +0700
+
+    final tamtru
+
+[33mcommit 9a7a86fa065d42fa66c0e9fd68a530d3c95ade7a[m
+Author: trannggg <trangtranng1006@gmail.com>
+Date:   Fri Jan 5 21:54:49 2024 +0700
+
+    final v1
+
+[33mcommit f32af90a917b0848ac8023640d7207a912352f50[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Fri Jan 5 20:48:29 2024 +0700
+
+    final tamtru
+
+[33mcommit c5bc77749f2025aa2be2d01dfc9dfcafd64234c4[m
+Merge: 2c7f6ce e70225d
+Author: trannggg <106738755+trannggg@users.noreply.github.com>
+Date:   Fri Jan 5 16:15:22 2024 +0700
+
+    Merge branch 'dinhhb:main' into main
+
+[33mcommit 1728a765ce2104043e3a84dd28bc1344594bb7d3[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Fri Jan 5 15:51:35 2024 +0700
+
+    final_dashboard and quanlyTamVang
+
+[33mcommit e70225ddb2a68e193907a0a5e83cd030ce07a675[m
+Merge: 9a54cba 8005a42
+Author: Hà Bửu Định <121761189+dinhhb@users.noreply.github.com>
+Date:   Fri Jan 5 12:12:47 2024 +0700
+
+    Merge pull request #11 from dinhhb/dinh
+    
+    fix sidebar and header
+
+[33mcommit 8005a42d7bc05edcbd34eda9a77fd564160383e8[m
+Author: dinhhb <habuudinh@gmail.com>
+Date:   Fri Jan 5 12:12:31 2024 +0700
+
+    fix sidebar and header
+
+[33mcommit 9a54cba979cb77f022b1625b2e754dee2991655e[m
+Merge: e6f8ccc 5316fb6
+Author: Hà Bửu Định <121761189+dinhhb@users.noreply.github.com>
+Date:   Fri Jan 5 01:29:57 2024 +0700
+
+    Merge pull request #10 from dinhhb/dinh
+
+[33mcommit 5316fb696b809687c67684fb39c7a1970bc0833a[m
+Author: dinhhb <habuudinh@gmail.com>
+Date:   Fri Jan 5 01:28:21 2024 +0700
+
+    refactor project
+
+[33mcommit 2c7f6ce3a443ad28eaf9fdaf3064d382b1617a25[m
+Author: trannggg <trangtranng1006@gmail.com>
+Date:   Wed Jan 3 20:35:35 2024 +0700
+
+    update
+
+[33mcommit 811096c821ef1b4bc5529bbdac49ebb2f4205d24[m
+Merge: a3e5271 e6f8ccc
+Author: trannggg <106738755+trannggg@users.noreply.github.com>
+Date:   Wed Jan 3 16:59:54 2024 +0700
+
+    Merge branch 'dinhhb:main' into main
+
+[33mcommit a3e52718a7350a7a6ae794211c23f708396a0f5a[m
+Author: trannggg <trangtranng1006@gmail.com>
+Date:   Wed Jan 3 16:47:55 2024 +0700
+
+    update
+
+[33mcommit e6f8ccc37552f2a77fcf44af831b1daf3448c199[m
+Merge: 757f562 8737a35
+Author: Hà Bửu Định <121761189+dinhhb@users.noreply.github.com>
+Date:   Wed Jan 3 15:36:43 2024 +0700
+
+    Merge pull request #8 from dinhhb/dinh
+    
+    add login
+
+[33mcommit 8737a35c958afba8319a609ac806eeda8fcbd066[m
+Author: dinhhb <habuudinh@gmail.com>
+Date:   Wed Jan 3 15:34:55 2024 +0700
+
+    add login
+
+[33mcommit 757f562311b283aa65009ea31b84fd8a153ae8a7[m
+Merge: 044ac7d 059d778
+Author: Nguyễn Ngọc Ánh <92777484+nna2k2@users.noreply.github.com>
+Date:   Wed Jan 3 15:31:25 2024 +0700
+
+    Merge pull request #7 from nna2k2/main
+    
+    final quan ly tam vang
+
+[33mcommit 059d778b191fd8555b9950e90ed1d48e5f64c2b9[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Wed Jan 3 15:30:14 2024 +0700
+
+    final quan ly tam vang
+
+[33mcommit 4c6d9aaf5bf44bdf69721adb1a7aeba82d0e2e6b[m
+Merge: 4caf3b2 044ac7d
+Author: trannggg <106738755+trannggg@users.noreply.github.com>
+Date:   Wed Jan 3 15:23:02 2024 +0700
+
+    Merge branch 'dinhhb:main' into main
+
+[33mcommit 044ac7de7f0231ee1dd32535ef8a3c2441aa96fb[m
+Merge: 6af82ac dcbbf4d
+Author: Nguyễn Ngọc Ánh <92777484+nna2k2@users.noreply.github.com>
+Date:   Wed Jan 3 15:19:48 2024 +0700
+
+    Merge pull request #6 from nna2k2/main
+    
+    hotflix
+
+[33mcommit dcbbf4d01c7af61d9d7fe25f369d7f07efbff7ac[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Wed Jan 3 15:14:56 2024 +0700
+
+    final quan ly tam vang
+
+[33mcommit 0619881a69944603783742b7ac4c216cc8c0f510[m
+Merge: febd0db cf95756
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Wed Jan 3 13:21:29 2024 +0700
+
+    Merge remote-tracking branch 'origin/main'
+
+[33mcommit cf957562491759bd19f1bf06d2ab821712192816[m
+Merge: 510b7a4 6af82ac
+Author: Nguyễn Ngọc Ánh <92777484+nna2k2@users.noreply.github.com>
+Date:   Wed Jan 3 13:20:58 2024 +0700
+
+    Merge branch 'dinhhb:main' into main
+
+[33mcommit 6af82ac0e8ffd5e40df2f39ec0f9be499e015ade[m
+Merge: a550060 f8ab6f8
+Author: yumsin1906 <107594552+yumsin1906@users.noreply.github.com>
+Date:   Wed Jan 3 12:36:13 2024 +0700
+
+    Merge pull request #5 from yumsin1906/main
+    
+    add active menu
+
+[33mcommit f8ab6f80a507e03a14ad339c4525693ab54ad5dd[m
+Author: yumsin1906 <trangsuchin1906@gmail.com>
+Date:   Wed Jan 3 12:34:28 2024 +0700
+
+    add active menu
+
+[33mcommit 4caf3b25666b01ad325cd98cad01a15ae839b13b[m
+Merge: fcb6a97 a550060
+Author: trannggg <106738755+trannggg@users.noreply.github.com>
+Date:   Wed Jan 3 11:18:04 2024 +0700
+
+    Merge branch 'dinhhb:main' into main
+
+[33mcommit febd0dbb4afebbd03fa8567836647ef5b5976f39[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Tue Jan 2 15:21:52 2024 +0700
+
+    Merge branch 'main' of E:\UIUX\uiuxNhom3 with conflicts.
+
+[33mcommit 510b7a487e3189ea4fddbdcbf8f76f342eb505f7[m
+Merge: cd612a9 a550060
+Author: Nguyễn Ngọc Ánh <92777484+nna2k2@users.noreply.github.com>
+Date:   Tue Jan 2 14:59:03 2024 +0700
+
+    Merge branch 'dinhhb:main' into main
+
+[33mcommit a55006057a1db6f6f60311eaf2a7cbbfbd4d6ca8[m
+Merge: 5a4fb92 d2ca4c3
+Author: Hà Bửu Định <121761189+dinhhb@users.noreply.github.com>
+Date:   Tue Jan 2 14:54:14 2024 +0700
+
+    Merge pull request #4 from yumsin1906/main
+    
+    create header &menu
+
+[33mcommit d2ca4c3a8b00ab21ffb6a6a0e475f3f5ccdcdeb2[m
+Author: yumsin1906 <trangsuchin1906@gmail.com>
+Date:   Mon Jan 1 21:29:11 2024 +0700
+
+    delete gitnore template
+
+[33mcommit 38a7723f3ebbebf64c5ee26b8b67bbfc42d273a0[m
+Author: yumsin1906 <trangsuchin1906@gmail.com>
+Date:   Mon Jan 1 21:07:13 2024 +0700
+
+    change menu n header
+
+[33mcommit fcb6a972260c433b96c6c88330154fd2ea641fab[m
+Author: trannggg <trangtranng1006@gmail.com>
+Date:   Sun Dec 31 02:38:58 2023 +0700
+
+    page dongphi
+
+[33mcommit cd612a99910947865f974cbd1e9218da03874840[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Sun Dec 31 00:22:20 2023 +0700
+
+    hotfix
+
+[33mcommit 23b257aa9ddabacac3f60fb698db6672a360e4da[m
+Author: trannggg <trangtranng1006@gmail.com>
+Date:   Fri Dec 29 13:06:06 2023 +0700
+
+    chia nav-bar
+
+[33mcommit f7d344bee530d8768b291206aa36996ddb553715[m
+Author: trannggg <trangtranng1006@gmail.com>
+Date:   Fri Dec 29 13:01:26 2023 +0700
+
+    update
+
+[33mcommit 5a4fb928cd207ace83b871598ad1cffa3372a216[m
+Merge: d3617f7 b2b16fa
+Author: Hà Bửu Định <121761189+dinhhb@users.noreply.github.com>
+Date:   Thu Dec 28 08:29:43 2023 +0700
+
+    Merge pull request #2 from nna2k2/main
+    
+    hotfix
+
+[33mcommit b2b16fa343f2f841330d5eba7028fbec8d48cb63[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Wed Dec 27 14:36:18 2023 +0700
+
+    hotfix
+
+[33mcommit d3617f744fbef2b5fa7a8491ab3f64666daf35d5[m
+Merge: 5d4d371 069db75
+Author: Hà Bửu Định <121761189+dinhhb@users.noreply.github.com>
+Date:   Tue Dec 26 23:35:00 2023 +0700
+
+    Merge pull request #1 from nna2k2/main
+    
+    Them tam tru
+
+[33mcommit 069db7556efd0f6229b9348f637e2527ac602876[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Tue Dec 26 09:17:25 2023 +0700
+
+    tam tru
+
+[33mcommit 669ea65d4ab2ebcf1acfe1687b70785c80dd3cb5[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Tue Dec 26 09:13:47 2023 +0700
+
+    web
+
+[33mcommit 499b357ae32b8555c13f767ce199a0288cc2a336[m
+Author: Nguyễn Ngọc Ánh <anhtanul1@gmail.com>
+Date:   Tue Dec 26 09:13:17 2023 +0700
+
+    web
+
+[33mcommit 5d4d37188d69614a30169569f04f9a7faa95db85[m
+Author: dinhhb <habuudinh@gmail.com>
+Date:   Sun Dec 24 00:39:45 2023 +0700
+
+    first commit
