@@ -91,16 +91,24 @@
                                                 </div>
                                             <br>
                                         </div>
-                                    <div class="toolbar-container d-flex justify-content-between" style="display: flex; align-items: center; justify-content: start; gap: 20px;">
-                                            <div class="btn-group dropdown custom-dropdown">
-                                                <button class="btn btn-third dropdown-toggle" type="button"
-                                                        data-toggle="dropdown" aria-haspopup="true" id="typetButton"
-                                                        aria-expanded="false">Chọn loại dịch vụ
-                                                </button>
-                                                <div class="dropdown-menu dropdown-style"
-                                                     aria-labelledby="typeDropdownButton" id="typeDropdown">
+                                    <div class="toolbar-container d-flex " style="display: flex; align-items: center; justify-content: start; gap: 20px;padding-bottom:15px;">
+                                            <div class="btn-group dropdown custom-dropdown" id="choice">
+                                                    <button class="btn btn-third dropdown-toggle" type="button"
+                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                        aria-expanded="false" id="choiceButton" value="all">Chọn loại dịch vụ
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" value="all">Tất cả</a>
+                                                        <a class="dropdown-item" value="dich-vu-co-ban">Dịch vụ cơ bản</a>
+                                                        <a class="dropdown-item" value="dich-vu-an-ninh-va-bao-ve">Dịch Vụ An Ninh và Bảo Vệ</a>
+                                                        <a class="dropdown-item" value="dich-vu-gui-xe-va-do-xe">Loại Dịch Vụ Gửi Xe và Đỗ Xe</a>
+                                                        <a class="dropdown-item" value="dich-vu-giai-tri-va-the-thao">Dịch Vụ Giải Trí và Thể Thao</a>
+                                                        <a class="dropdown-item" value="dich-vu-bao-hiem-va-an-toan">Dịch Vụ Bảo Hiểm và An Toàn</a>
+                                                        <a class="dropdown-item" value="dich-vu-bao-duong-va-sua-chua">Dịch Vụ Bảo Dưỡng và Sửa Chữa</a>
+                                                        <a class="dropdown-item" value="dich-vu-khac">Dịch vụ Khác</a>
+                                                        <a class="dropdown-item" value="dich-vu-moi">Dịch vụ Mới</a>
+                                                    </div>
                                                 </div>
-                                            </div>
                                             <div class="btn-group dropdown custom-dropdown">
                                                 <button class="btn btn-third dropdown-toggle" type="button"
                                                         data-toggle="dropdown" aria-haspopup="true" id="monthButton"
@@ -127,7 +135,7 @@
                                             <!--                                                    </div>-->
                                             <!--                                                </div>-->
 
-                                            <div class="search-container" style="display: flex; align-items: center;">
+                                            <div class="search-container" style="display: flex; align-items: center;padding-left:350px;">
                                                 <div class="input-group custom-search-input">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
@@ -166,7 +174,7 @@
                                         </ul>
                                     </nav>
                                     <div class="align-left">
-                                        <a href="Xemthongke.html"><button type="button" class="btn custom-btn d-inline-block ml-4 mb-3" style="padding: 10px 30px; background: #9BBEC8; color: white;">Quay lại</button></a>
+                                        <a href="Xemthongke.php"><button type="button" class="btn custom-btn d-inline-block ml-4 mb-3" style="padding: 10px 30px; background: #9BBEC8; color: white;">Quay lại</button></a>
                                     </div>
                             </div>
                             
@@ -190,6 +198,9 @@
     <style>
     body {
         margin: 0; /* Loại bỏ margin mặc định của body */
+    }
+    .btn btn-third dropdown-toggle{
+        margin-right:100px;
     }
   .dropdown-style {
         max-height: 150px; /* Chiều cao tối đa cho phép scroll */

@@ -297,6 +297,7 @@ function buildTable() {
 var currentMonth = null;
 var currentYear = null;
 var currentApartment = "all";
+var currentStatus = null;
 
 // Search and filter function
 function searchAndFilter() {
@@ -317,11 +318,34 @@ function searchAndFilter() {
         if (currentApartment !== 'all' && apartment !== currentApartment) {
             return false;
         }
-        if (state.selectedTypeId && item.idloai !== state.selectedTypeId) {
-                return false;
-            }
-        return Object.keys(item).some(key =>
-            item[key].toString().toLowerCase().includes(search));
+        
+        if (currentStatus === "dich-vu-co-ban" && item.loaiDichVu!== "Dịch vụ cơ bản") {
+            return false;
+        }
+        if (currentStatus === "dich-vu-an-ninh-va-bao-ve" && item.loaiDichVu !== "Dịch Vụ An Ninh và Bảo Vệ") {
+            return false;
+        }
+        if (currentStatus === "dich-vu-gui-xe-va-do-xe" && item.loaiDichVu !== "Loại Dịch Vụ Gửi Xe và Đỗ Xe") {
+            return false;
+        }
+        if (currentStatus === "dich-vu-giai-tri-va-the-thao" && item.loaiDichVu !== "Dịch Vụ Giải Trí và Thể Thao") {
+            return false;
+        }
+        if (currentStatus === "dich-vu-bao-hiem-va-an-toan" && item.loaiDichVu !== "Dịch Vụ Bảo Hiểm và An Toàn") {
+            return false;
+        }
+        if (currentStatus === "dich-vu-bao-duong-va-sua-chua" && item.loaiDichVu !== "Dịch Vụ Bảo Dưỡng và Sửa Chữa") {
+            return false;
+        }
+        if (currentStatus === "dich-vu-khac" && item.loaiDichVu !== "Dịch vụ Khác") {
+            return false;
+        }
+         if (currentStatus === "dich-vu-moi" && item.loaiDichVu !== "Dịch vụ Mới") {
+            return false;
+        }
+        return true; 
+        // return Object.keys(item).some(key =>
+        //     item[key].toString().toLowerCase().includes(search));
     });
 
     console.log('Dữ liệu đã lọc:', filteredData);
@@ -333,40 +357,6 @@ function searchAndFilter() {
 
 var monthButton = document.getElementById('monthButton');
 var yearButton = document.getElementById('yearButton');
-var typeButton = document.getElementById('typeButton');
- var serviceTypes = [
-        { idloai: "1", loaiDichVu: "Dịch Vụ Cơ Bản" },
-        { idloai: "2", loaiDichVu: "Dịch Vụ An Ninh và Bảo Vệ" },
-        { idloai: "3", loaiDichVu: "Loại Dịch Vụ Gửi Xe và Đỗ Xe" },
-        { idloai: "4", loaiDichVu: "Dịch Vụ Giải Trí và Thể Thao" },
-        { idloai: "5", loaiDichVu: "Dịch Vụ Bảo Hiểm và An Toàn" },
-        { idloai: "6", loaiDichVu: "Dịch Vụ Bảo Dưỡng và Sửa Chữa" },
-        { idloai: "7", loaiDichVu: "Dịch vụ Khác" },
-        { idloai: "8", loaiDichVu: "Dịch vụ Mới" }
-    ];
-
-   var typeOptions = '<a class="dropdown-item" href="#" data-value="">Tất cả loại dịch vụ</a>';
-    serviceTypes.forEach(function (type) {
-        typeOptions += '<a class="dropdown-item" href="#" data-value="' + type.idloai + '">' + type.loaiDichVu + '</a>';
-    });
-
-    var typeDropdown = document.getElementById('typeDropdown');
-    if (typeDropdown) {
-        typeDropdown.innerHTML = typeOptions;
-
-        $('#typeDropdown').on('click', '.dropdown-item', function () {
-            var selectedValue = $(this).data('value');
-            typeButton.textContent = this.textContent;
-
-            // Chuyển đổi giá trị thành chuỗi nếu không phải là số
-            state.selectedTypeId = selectedValue ? selectedValue.toString() : null;
-
-            console.log('Clicked type:', state.selectedTypeId);
-            searchAndFilter();
-        });
-    } else {
-        console.error("Element with id 'typeDropdown' not found.");
-    }
 
 
 // Tạo dropdown chọn tháng
@@ -405,6 +395,28 @@ $('#yearDropdown').on('click', '.dropdown-item', function () {
     searchAndFilter(); // Gọi lại hàm lọc
 });
 
+    // Xử lý sự kiện chọn trạng thái
+    $('#choice').on('click', '.dropdown-item', function () {
+        var selectedStatus = this.getAttribute('value');
+        currentStatus = selectedStatus; // Lưu trữ giá trị trạng thái đã chọn
+        updateButtonText(selectedStatus); // Cập nhật nội dung của nút
+        searchAndFilter(); // Gọi lại hàm lọc
+    });
+function updateButtonText(text) {
+    // Lấy thẻ button và cập nhật nội dung của nó
+    var button = document.getElementById('choiceButton');
+    if (button) {
+        button.textContent = (text === 'dich-vu-co-ban') ? 'Dịch vụ cơ bản' : (text === 'dich-vu-an-ninh-va-bao-ve') ? 'Dịch Vụ An Ninh và Bảo Vệ' :  (text === 'dich-vu-gui-xe-va-do-xe') ? 'Loại Dịch Vụ Gửi Xe và Đỗ Xe' : (text === 'dich-vu-giai-tri-va-the-thao') ? 'Dịch Vụ Giải Trí và Thể Thao' :(text === 'dich-vu-bao-hiem-va-an-toan') ? 'Dịch Vụ Bảo Hiểm và An Toàn':(text === 'dich-vu-bao-duong-va-sua-chua') ? 'Dịch Vụ Bảo Dưỡng và Sửa Chữa':(text === 'dich-vu-khac') ? 'Dịch vụ Khác':(text === 'dich-vu-moi') ? 'Dịch vụ Mới' : 'Tất cả';
+    }
+}
+
+// ************storage******************
+function clearLocalStorage() {
+    localStorage.removeItem('tableData');
+}
+
+// Gọi hàm để xóa dữ liệu
+clearLocalStorage();
 // Event listener for radio buttons
 document.querySelectorAll('input[name="apartmentOptions"]').forEach(radio => {
     radio.addEventListener('change', function () {

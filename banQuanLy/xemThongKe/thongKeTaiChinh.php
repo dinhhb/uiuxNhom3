@@ -104,11 +104,9 @@
                                                      aria-labelledby="yearDropdownButton" id="yearDropdown">
                                                 </div>
                                             </div>
-                                            <script>
+                  
 
-                                            </script>
-
-                                            <div class="search-container" style="display: flex; align-items: center;">
+                                            <div class="search-container" style="display: flex; align-items: center;padding-left:450px;">
                                                 <div class="input-group custom-search-input">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="basic-addon1"><i
@@ -127,7 +125,7 @@
                             <div class="table-responsive" style="margin-left:10px;margin-right:10px;color: #667085;font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 12px;line-height: 18px;text-align: center;">
                                         <table class="table table-hover">
                                             <thead>
-                                                <p style="font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 16px;line-height: 24px;color: #000000;">Chi phí hàng tháng</p>
+    
                                             <tr>
                                                 <th>STT</th>
                                                 <th>Khoản thu</th>
@@ -153,7 +151,7 @@
                                         </ul>
                                     </nav>
                                     <div class="align-left">
-                                        <a href="Xemthongke.html"><button type="button" class="btn custom-btn d-inline-block ml-4 mb-3" style="padding: 10px 30px; background: #9BBEC8; color: white;">Quay lại</button></a>
+                                        <a href="Xemthongke.php"><button type="button" class="btn custom-btn d-inline-block ml-4 mb-3" style="padding: 10px 30px; background: #9BBEC8; color: white;">Quay lại</button></a>
                                     </div>
                             </div>
                             </div>

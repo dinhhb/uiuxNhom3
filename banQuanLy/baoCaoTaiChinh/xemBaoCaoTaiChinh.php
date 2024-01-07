@@ -59,10 +59,10 @@
                                 <div class="card" style="border-radius: 15px;">
                                     <div class="card-block">
 
-                                        <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
-                                            <h3>Xem báo cáo tài chính </h3>
-                                        </div>
-                                        <div class="mt-3 justify-content-between">
+                                            <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
+                                                <h3>Xem báo cáo tài chính </h3>
+                                            </div>
+                                            <div class="mt-3 justify-content-between">
 
                                         </div>
                                         <div class="toolbar-container d-flex justify-content-between" style="display: flex; align-items: center; justify-content: start; gap: 20px;">

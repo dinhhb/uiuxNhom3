@@ -61,17 +61,17 @@
                                         <div class="card-block">
 
                                             <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
-                                                <h3>Phản ánh </h3>
+                                                <h3 style="font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 36px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Ý kiến của cư dân </h3>
                                             </div>
                                             <div class="mt-3 justify-content-between">
 
                                             </div>
-                                            <div class="toolbar-container d-flex justify-content-between"
+                                            <div class="toolbar-container d-flex"
                                                 style="display: flex; align-items: center; justify-content: start; gap: 20px;">
                                                 <div class="btn-group dropdown custom-dropdown" id="choice">
                                                     <button class="btn btn-third dropdown-toggle" type="button"
                                                         data-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false" id="choiceButton" value="all">Lựa chọn
+                                                        aria-expanded="false" id="choiceButton" value="all">Tình trạng
                                                     </button>
                                                     <div class="dropdown-menu">
                                                         <a class="dropdown-item" value="all">Tất cả</a>
@@ -99,7 +99,7 @@
                                                 </div>
 
                                                 <div class="search-container"
-                                                    style="display: flex; align-items: center;">
+                                                    style="display: flex; align-items: center;padding-left:350px;">
                                                     <div class="input-group custom-search-input">
                                                         <div class="input-group-prepend">
                                                             <span class="input-group-text" id="basic-addon1"><i

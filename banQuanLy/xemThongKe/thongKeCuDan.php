@@ -86,7 +86,7 @@
         <label class="form-check-label-tttv" for="tamvangOption">Tạm vắng</label>
     </div>
 
-    <div class="search-container" style="display: flex; align-items: center; padding-left: 300px;">
+    <div class="search-container" style="display: flex; align-items: center; padding-left: 400px;">
         <div class="input-group custom-search-input">
             <div class="input-group-prepend">
                 <span class="input-group-text" id="basic-addon1"><i class="fa fa-search"></i></span>
@@ -122,7 +122,7 @@
                                             </ul>
                                         </nav>
                                     <div class="align-left">
-                                        <a href="xemThongKe.php"><button type="button" class="btn custom-btn d-inline-block ml-4 mb-3" style="padding: 10px 30px; background: #9BBEC8; color: white;">Quay lại</button></a>
+                                        <a href="Xemthongke.php"><button type="button" class="btn custom-btn d-inline-block ml-4 mb-3" style="padding: 10px 30px; background: #9BBEC8; color: white;">Quay lại</button></a>
                                     </div>
                             </div>
                             
