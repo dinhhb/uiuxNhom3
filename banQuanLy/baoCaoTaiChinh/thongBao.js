@@ -92,17 +92,13 @@ function buildTable() {
         titleElement.classList.add('title-require');
         titleElement.textContent = item.title;
 
-        var contentElement = document.createElement('div');
-        contentElement.classList.add('content-require');
-        contentElement.textContent = 'Gửi: Ông Mai Quốc Bảo, hộ gia đình số 1, căn hộ chung cư S2...';
-
         var dateElement = document.createElement('div');
         dateElement.classList.add('date-require');
         dateElement.textContent = item.date;
 
         var viewMoreButton = document.createElement('div');
         viewMoreButton.classList.add('detail-require');
-        viewMoreButton.textContent = 'Xem thêm';
+        viewMoreButton.textContent = 'Xem nội dung';
 
         // Create a closure to capture the current item
         (function (currentItem) {
@@ -114,7 +110,6 @@ function buildTable() {
 
         // Append child elements to thongBaoElement
         thongBaoElement.appendChild(titleElement);
-        thongBaoElement.appendChild(contentElement);
         thongBaoElement.appendChild(dateElement);
         thongBaoElement.appendChild(viewMoreButton);
 
@@ -125,29 +120,49 @@ function buildTable() {
     pageButtons(data.pages);
 }
 
+// function openInfoModal(selectedItem) {
+//     // Set the content of the modal based on the selected item
+//     document.getElementById('inforTitle').textContent = selectedItem.title;
+//     // document.getElementById('infornoiDung').textContent = selectedItem.noiDung;
+//     document.getElementById('infornoiDung').innerText = selectedItem.noiDung;
+
+//     // document.getElementById('inforimage').textContent = selectedItem.image;
+//     // Create an img element
+//     var imageElement = document.createElement('img');
+//     imageElement.src = `../../assets/images/cudan/${selectedItem.image}`;
+//     imageElement.alt = "Ảnh minh họa";
+//     imageElement.style.width = "550px";
+//     imageElement.style.height = "200px";
+
+//     // Get the container element and append the img element to it
+//     var imageContainer = document.getElementById('inforimage');
+//     imageContainer.innerHTML = ''; // Clear existing content
+//     imageContainer.appendChild(imageElement);
+//     // Set other modal content based on the selected item
+
+//     // Show the 'Xem thêm' modal
+//     $('#infoModal').modal('show');
+// }
+
 function openInfoModal(selectedItem) {
-    // Set the content of the modal based on the selected item
     document.getElementById('inforTitle').textContent = selectedItem.title;
-    // document.getElementById('infornoiDung').textContent = selectedItem.noiDung;
-    document.getElementById('infornoiDung').innerText = selectedItem.noiDung;
 
-    // document.getElementById('inforimage').textContent = selectedItem.image;
-    // Create an img element
-    var imageElement = document.createElement('img');
-    imageElement.src = `../../assets/images/cudan/${selectedItem.image}`;
-    imageElement.alt = "Ảnh minh họa";
-    imageElement.style.width = "550px";
-    imageElement.style.height = "200px";
+    // Tạo iframe để hiển thị PDF
+    var pdfIframe = document.createElement('iframe');
+    pdfIframe.src = selectedItem.pdfPath;
+    pdfIframe.style.width = '100%';
+    pdfIframe.style.height = '500px'; // Có thể điều chỉnh kích thước theo yêu cầu
 
-    // Get the container element and append the img element to it
-    var imageContainer = document.getElementById('inforimage');
-    imageContainer.innerHTML = ''; // Clear existing content
-    imageContainer.appendChild(imageElement);
-    // Set other modal content based on the selected item
+    // Thêm iframe vào modal
+    var modalBody = document.querySelector('#infoModal .modal-body');
+    modalBody.innerHTML = ''; // Xóa nội dung cũ
+    modalBody.appendChild(pdfIframe);
 
-    // Show the 'Xem thêm' modal
+    // Hiển thị modal
     $('#infoModal').modal('show');
 }
+
+
 
 // function clearLocalStorage() {
 //     localStorage.removeItem('tableData');
@@ -176,10 +191,16 @@ function searchAndFilter() {
         if (currentYear !== null && year !== currentYear) {
             return false;
         }
-        if (currentStatus === "notRead" && item.trangThai !== "Chưa đọc") {
+        if (currentStatus === "bang-can-doi-ke-toan" && item.loaiBaoCao !== "Bảng cân đối kế toán") {
             return false;
         }
-        if (currentStatus === "Read" && item.trangThai !== "Đã đọc") {
+        if (currentStatus === "bao-cao-ket-qua-kinh-doanh" && item.loaiBaoCao !== "Báo cáo kết quả hoạt động kinh doanh") {
+            return false;
+        }
+        if (currentStatus === "bao-cao-luu-chuyen-tien-te" && item.loaiBaoCao !== "Báo cáo lưu chuyển tiền tệ") {
+            return false;
+        }
+        if (currentStatus === "bang-can-doi-tai-khoan" && item.loaiBaoCao !== "Bảng cân đối tài khoản") {
             return false;
         }
         // Uncomment the line below if you want to include the search functionality
@@ -251,14 +272,14 @@ function updateButtonText(text) {
     // Lấy thẻ button và cập nhật nội dung của nó
     var button = document.getElementById('choiceButton');
     if (button) {
-        button.textContent = (text === 'notRead') ? 'Chưa đọc' : (text === 'Read') ? 'Đã đọc' : 'Tất cả';
+        button.textContent = (text === 'bang-can-doi-ke-toan') ? 'Bảng cân đối kế toán' : (text === 'bao-cao-ket-qua-kinh-doanh') ? 'Báo cáo kết quả hoạt động kinh doanh' :  (text === 'bao-cao-luu-chuyen-tien-te') ? 'Báo cáo lưu chuyển tiền tệ' : (text === 'bang-can-doi-tai-khoan') ? 'Bảng cân đối tài khoản' : 'Tất cả';
     }
 }
 
 // ************storage******************
 function clearLocalStorage() {
     localStorage.removeItem('tableData');
-  }
-  
-  // Gọi hàm để xóa dữ liệu
-  clearLocalStorage();
+}
+
+// Gọi hàm để xóa dữ liệu
+clearLocalStorage();

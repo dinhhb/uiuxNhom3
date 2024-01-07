@@ -72,12 +72,14 @@
                                                 <div class="btn-group dropdown custom-dropdown" id="choice">
                                                     <button class="btn btn-third dropdown-toggle" type="button"
                                                         data-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false" id="choiceButton" value="all">Lựa chọn
+                                                        aria-expanded="false" id="choiceButton" value="all">Tất cả
                                                     </button>
                                                     <div class="dropdown-menu">
                                                         <a class="dropdown-item" value="all">Tất cả</a>
-                                                        <a class="dropdown-item" value="notRead">Chưa đọc</a>
-                                                        <a class="dropdown-item" value="Read">Đã đọc</a>
+                                                        <a class="dropdown-item" value="bang-can-doi-ke-toan">Bảng cân đối kế toán</a>
+                                                        <a class="dropdown-item" value="bao-cao-ket-qua-kinh-doanh">Báo cáo kết quả hoạt động kinh doanh</a>
+                                                        <a class="dropdown-item" value="bao-cao-luu-chuyen-tien-te">Báo cáo lưu chuyển tiền tệ</a>
+                                                        <a class="dropdown-item" value="bang-can-doi-tai-khoan">Bảng cân đối tài khoản</a>
                                                     </div>
                                                 </div>
                                                 <div class="btn-group dropdown custom-dropdown" id="month">
