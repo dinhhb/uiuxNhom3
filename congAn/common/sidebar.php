@@ -15,7 +15,7 @@ $current_folder_name= $_SERVER['PHP_SELF'];
         <div class="menu-item active" style="    margin-top: 20px;">
             <a href="/banQuanLy/dashboard.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-home" style="color: #000000; width:30px;height:30px;"></i></span><span class="menu-options">Quản lý tạm trú/ tạm vắng </span></a>
         </div>
-        <div class="menu-item-logout" style="padding-top: 458px;" >
+        <div class="menu-item-logout" style="padding-top: 250px;" >
             <a id="logout" class="nav-link "><span class="pcoded-micon"><i class="fas fa-sign-out-alt" style="color: red; width:30px;height:30px;"></i></span><span class="menu-options-logout" style="color:red;">Đăng xuất</span></a>
         </div>
     </div>

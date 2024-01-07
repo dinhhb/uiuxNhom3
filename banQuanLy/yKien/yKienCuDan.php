@@ -60,9 +60,9 @@
                                     <div class="card" style="border-radius: 15px;">
                                         <div class="card-block">
 
-                                            <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
-                                                <h3 style="font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 36px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Ý kiến của cư dân </h3>
-                                            </div>
+                                        <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
+                                             <h3>Ý kiến của cư dân </h3>
+                                        </div>
                                             <div class="mt-3 justify-content-between">
 
                                             </div>

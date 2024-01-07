@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="../../template/assets/plugins/animation/css/animate.min.css">
     <!-- vendor css -->
     <link rel="stylesheet" href="../../template/assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
 
 
 
@@ -59,9 +61,9 @@
                                     <div class="card" style="border-radius: 15px;">
                                         <div class="card-block">
 
-                                            <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
-                                                <h3>Quản lý đóng phí</h3>
-                                            </div>
+                                        <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
+                                             <h3>Quản lý đóng phí </h3>
+                                        </div>
                                             <div class="mt-3 justify-content-between">
                                                 <form class="d-flex justify-content-between" style="display: flex; align-items: center; justify-content: start; gap: 20px;">
                                                     <div class="mb-3" style="display: flex; align-items: center; justify-content: start; gap: 20px;">

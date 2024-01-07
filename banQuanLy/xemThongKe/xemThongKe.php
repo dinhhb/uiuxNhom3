@@ -52,8 +52,8 @@
                             <div class="col-xl-12">
                                 <div class="card" style="border-radius: 15px;">
                                     <div class="card-block">
-                                        <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
-                                            <p style="font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 36px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Xem thống kê </p>
+                                    <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
+                                             <h3>Xem thống kê </h3>
                                         </div>
                                         <div class="mt-3 justify-content-between" >
                                             <br class="d-flex justify-content-between" style="display: flex; align-items: center; justify-content: start; gap: 20px;" action="dangKiTamVang.html">
@@ -80,7 +80,7 @@
                                                 </div>
                                             <br>
 <div class="thongke1" style="display: flex;">
-<div class="Thongkecudan" style="background-color:#E8EDF0;display:block;color:#000000;border:none;position:relative;width:600px;margin-left:10px; height:300px;border-radius: 15px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">
+<div class="Thongkecudan" style="background-color:#E8EDF0;display:block;color:#000000;border:none;position:relative;width:600px;margin-left:10px; height:300px;border-radius: 15px;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">
     <div style="position:absolute;top:15px;left:20px;">Thống kê cư dân</div>
         <ul style="list-style-type: none;position:absolute;top:80px;">
             <li style="display:flex;"><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="25" height="25" fill="#164863"/>
@@ -103,11 +103,11 @@
 </svg>
 </div>
 
-        <a href="thongKeCuDan.php" style="position:absolute;top:270px; right:35px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem chi tiết >></a>
+        <a href="thongKeCuDan.php" style="position:absolute;top:270px; right:35px;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem chi tiết >></a>
 
 
 </div>
-<div class="Thongketaichinh" style="background-color:#E8EDF0;color:#000000;border:none;margin-left:20px;width:600px;height:300px;position:relative;border-radius: 15px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">
+<div class="Thongketaichinh" style="background-color:#E8EDF0;color:#000000;border:none;margin-left:20px;width:600px;height:300px;position:relative;border-radius: 15px;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">
     <div style="position:absolute;top:15px;left:20px;">Thống kê tài chính</div>
     <ul style="list-style-type:none;display: flex;padding: 0;">
         <li style="padding-top:50px;margin-left:15px;"><svg width="27" height="4" viewBox="0 0 27 4" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -139,10 +139,10 @@ Lợi nhuận sơ bộ</li>
 </defs>
 </svg>
 </div>
-    <a href="thongKeTaiChinh.php" style="position:absolute;top:270px; right:35px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem chi tiết >></a>
+    <a href="thongKeTaiChinh.php" style="position:absolute;top:270px; right:35px;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem chi tiết >></a>
 </div>
 </div>
-<div class="Thongkedichvu" style="background-color:#E8EDF0;color:#000000;border:none;margin-left:10px;width:full;height:300px;position:relative;border-radius: 15px;margin-top:30px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">
+<div class="Thongkedichvu" style="background-color:#E8EDF0;color:#000000;border:none;margin-left:10px;width:full;height:300px;position:relative;border-radius: 15px;margin-top:30px;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">
     <div style="position:absolute;top:15px;left:20px;">Thống kê dịch vụ</div>
     <!-- Biểu đồ cột -->
     <div style="margin-left:100px;padding-top:30px;"><svg width="575" height="254" viewBox="0 0 575 254" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -194,7 +194,7 @@ Lợi nhuận sơ bộ</li>
         <li>7. Dịch vụ khác</li>
         <li>8. Dịch vụ mới</li>
     </ul>
-    <a href="thongKeDichVu.php" style="position:absolute;top:270px; right:35px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem chi tiết >></a>
+    <a href="thongKeDichVu.php" style="position:absolute;top:270px; right:35px;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem chi tiết >></a>
 </div>
 </div>
 
@@ -238,7 +238,7 @@ Lợi nhuận sơ bộ</li>
         right: 90px;
     }
     .user-info p {
-        font-family: 'Inter';
+        
         font-style: normal;
         font-weight: 600;
         font-size: 20px;
@@ -246,7 +246,7 @@ Lợi nhuận sơ bộ</li>
         margin: 0;
     }
     .user-info p.subtitle {
-        font-family: 'Inter';
+        
         font-style: normal;
         font-weight: 600;
         font-size: 16px;
@@ -263,7 +263,7 @@ Lợi nhuận sơ bộ</li>
         height: 18px;
         padding-left: 0px;
         padding-top:50px;
-        font-family: 'Inter';
+        
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
@@ -275,7 +275,7 @@ Lợi nhuận sơ bộ</li>
         height: 18px;
         padding-left: 0px;
         padding-top:50px;
-        font-family: 'Inter';
+        
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
