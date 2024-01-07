@@ -1,14 +1,19 @@
-var state = {
-    'querySet': tableTamTru,
 
-    'page': 1, 'rows': 5, 'window': 5,
+
+var state = {
+    'querySet': tableData,
+
+    'page': 1,
+    'rows': 5,
+    'window': 5,
 }
 
 buildTable(); // Xây dựng bảng ngay lập tức sau khi tải dữ liệu
 
 function saveToLocalStorage(data) {
-    localStorage.setItem('tableTamTru', JSON.stringify(data));
+    localStorage.setItem('tableData', JSON.stringify(data));
 }
+
 
 
 function pagination(querySet, page, rows) {
@@ -21,7 +26,8 @@ function pagination(querySet, page, rows) {
     var pages = Math.ceil(querySet.length / rows);
 
     return {
-        'querySet': trimmedData, 'pages': pages,
+        'querySet': trimmedData,
+        'pages': pages,
     }
 }
 
@@ -64,7 +70,7 @@ function pageButtons(pages) {
         wrapper.innerHTML = `<li class="page-item page" value=${1}><a class="page-link " ><i class="fa fa-arrow-left" aria-hidden="true"></i></i></a></li>` + wrapper.innerHTML
     }
 
-    if (state.page != pages && pages != 0) {
+    if (state.page != pages && pages!=0) {
         wrapper.innerHTML += `<li class="page-item page" value=${pages}><a class="page-link" href="#"><i class="fa fa-arrow-right" aria-hidden="true"></i></a></li>`
     }
 
@@ -88,7 +94,6 @@ function buildTable() {
 
     for (var i = 0; i < myList.length; i++) {
         var stt = (state.page - 1) * state.rows + parseInt(i) + 1;
-
         //Keep in mind we are using "Template Litterals to create rows"
         var row = `<tr>
                   <td>${stt}</td>
@@ -96,10 +101,6 @@ function buildTable() {
                   <td>${myList[i].hoTen}</td>
                   <td>${myList[i].gioiTinh}</td>
                   <td>${myList[i].DDThuongTru}</td>
-                  <td>
-                    <i class="fa fa-trash-o mr-2" style="font-size:20px" aria-hidden="true" ></i>
-                    <i class="fa fa-pencil" style="font-size:20px" aria-hidden="true" data-toggle="modal" data-target="#infoModalChange"></i>
-                    </td>
                     <td> <button type="button" class="custom-btn view-details-button" data-toggle="modal" data-id="${myList[i].id}">Xem thêm</button></td>
                                                             `
         table.append(row)
@@ -115,7 +116,7 @@ var currentApartment = 'all';
 // Search and filter function
 function searchAndFilter() {
     var search = document.getElementById('searchInput').value.toLowerCase();
-    var filteredData = tableTamTru.filter(item => {
+    var filteredData = tableData.filter(item => {
         // Thêm điều kiện lọc theo tháng và năm
         var dateParts = item.ngayBatDau.split('/'); // Tách ngày bắt đầu thành các phần
         var month = parseInt(dateParts[1], 10); // Lấy tháng và chuyển đổi thành số nguyên
@@ -130,7 +131,8 @@ function searchAndFilter() {
         if (currentApartment !== 'all' && item.canHo !== currentApartment) {
             return false;
         }
-        return Object.keys(item).some(key => item[key].toString().toLowerCase().includes(search));
+        return Object.keys(item).some(key =>
+            item[key].toString().toLowerCase().includes(search));
     });
     state.querySet = filteredData;
     state.page = 1;
@@ -146,10 +148,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var yearButton = document.getElementById('yearButton');
 
     // Tạo dropdown chọn tháng
-    var months = ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"];
+    var months = ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6",
+        "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"];
     // var monthOptions = '';
     var monthOptions = '<a class="dropdown-item" href="#" data-value="">Tất cả tháng </a>';
-    months.forEach(function (month, index) {
+    months.forEach(function(month, index) {
         monthOptions += '<a class="dropdown-item" href="#" data-value="' + (index + 1) + '">' + month + '</a>';
     });
     var monthDropdown = document.getElementById('monthDropdown');
@@ -167,14 +170,14 @@ document.addEventListener('DOMContentLoaded', function () {
     yearDropdown.innerHTML = yearOptions;
 
 // Xử lý sự kiện chọn tháng
-    $('#monthDropdown').on('click', '.dropdown-item', function () {
+    $('#monthDropdown').on('click', '.dropdown-item', function() {
         monthButton.textContent = this.textContent;
         currentMonth = $(this).data('value'); // Lưu trữ giá trị tháng đã chọn
         searchAndFilter(); // Gọi lại hàm lọc
     });
 
 // Xử lý sự kiện chọn năm
-    $('#yearDropdown').on('click', '.dropdown-item', function () {
+    $('#yearDropdown').on('click', '.dropdown-item', function() {
         yearButton.textContent = this.textContent;
         currentYear = $(this).data('value'); // Lưu trữ giá trị năm đã chọn
         searchAndFilter(); // Gọi lại hàm lọc
@@ -188,22 +191,20 @@ function formatDate(dateString) {
     var parts = dateString.split("/");
     return parts[2] + "-" + parts[1] + "-" + parts[0];
 }
-
 function showDetails(id) {
-    // Tìm kiếm thông tin dựa trên ID trong mảng tableTamTru
-    var person = tableTamTru.find(item => item.id === id);
+    // Tìm kiếm thông tin dựa trên ID trong mảng tableData
+    var person = tableData.find(item => item.id === id);
     if (person) {
-        console.log(person);
         // Cập nhật thông tin vào các trường trong modal
         document.getElementById('fullName').value = person.hoTen;
         document.getElementById('dob').value = formatDate(person.ngaySinh);
         document.getElementById('cccd').value = person.CCCD;
         document.getElementById('genderSelect').value = person.gioiTinh;
         document.getElementById('diaChiThuongTru').value = person.DDThuongTru;
-        document.getElementById('diaChiTamTru').value = person.DDTamTru;
+        document.getElementById('diaChiTamVang').value = person.DDTamVang;
         document.getElementById('soDienThoai').value = person.SDT;
         document.getElementById('ngheNghiep').value = person.ngheNghiep;
-        document.getElementById('ngayBatDau').value = formatDate(person.ngayBatDau);
+        document.getElementById('ngayBatDau').value =formatDate( person.ngayBatDau);
         document.getElementById('ngayKetThuc').value = formatDate(person.ngayKetThuc);
         document.getElementById('ChungCu').value = person.canHo;
 
@@ -222,9 +223,9 @@ function showDetails(id) {
 }
 
 // Gắn sự kiện click vào tất cả nút "Xem thêm" khi trang đã tải xong.
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     var tableBody = document.getElementById('table-body');
-    tableBody.addEventListener('click', function (event) {
+    tableBody.addEventListener('click', function(event) {
         var target = event.target;
         // Kiểm tra xem có phải là nút "Xem thêm" hay không
         if (target.classList.contains('view-details-button')) {
@@ -236,31 +237,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Thêm sự kiện lắng nghe cho các radio button của chung cư
 document.querySelectorAll('input[name="apartmentOptions"]').forEach(radio => {
-    radio.addEventListener('change', function () {
+    radio.addEventListener('change', function() {
         currentApartment = this.value; // Cập nhật lựa chọn chung cư
         searchAndFilter(); // Gọi lại hàm lọc
     });
 });
 
 
+
 // Biến toàn cục để lưu trữ ID của người dùng hiện tại đang được chỉnh sửa
 var currentEditingId = null;
-
 // Hàm này sẽ được gọi khi người dùng nhấn vào biểu tượng chỉnh sửa (fa fa-pencil).
 function showEditForm(id) {
-    var person = tableTamTru.find(item => item.id === id);
+    var person = tableData.find(item => item.id === id);
     if (person) {
-        currentEditingId = person.id
+        currentEditingId=person.id
         // Cập nhật thông tin vào các trường trong modal chỉnh sửa
         document.getElementById('fullName1').value = person.hoTen;
         document.getElementById('dob1').value = formatDate(person.ngaySinh);
         document.getElementById('cccd1').value = person.CCCD;
         document.getElementById('genderSelect1').value = person.gioiTinh;
         document.getElementById('diaChiThuongTru1').value = person.DDThuongTru;
-        document.getElementById('diaChiTamTru1').value = person.DDTamTru;
+        document.getElementById('diaChiTamVang1').value = person.DDTamVang;
         document.getElementById('soDienThoai1').value = person.SDT;
         document.getElementById('ngheNghiep1').value = person.ngheNghiep;
-        document.getElementById('ngayBatDau1').value = formatDate(person.ngayBatDau);
+        document.getElementById('ngayBatDau1').value =formatDate( person.ngayBatDau);
         document.getElementById('ngayKetThuc1').value = formatDate(person.ngayKetThuc);
         document.getElementById('ChungCu1').value = person.canHo;
         // Gán giá trị cho textarea
@@ -272,15 +273,16 @@ function showEditForm(id) {
         charNumDisplay.textContent = `${reasonTextarea.value.length} / 225`;
 
 
+
         // Hiển thị modal chỉnh sửa
         $('#infoModalChange').modal('show');
     }
 }
 
 // Gắn sự kiện click vào biểu tượng chỉnh sửa
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     var tableBody = document.getElementById('table-body');
-    tableBody.addEventListener('click', function (event) {
+    tableBody.addEventListener('click', function(event) {
         var target = event.target;
         // Kiểm tra xem có phải là biểu tượng chỉnh sửa hay không
         if (target.classList.contains('fa-pencil')) {
@@ -304,7 +306,7 @@ function confirmAndSaveChanges() {
         CCCD: document.getElementById('cccd1').value,
         gioiTinh: document.getElementById('genderSelect1').value,
         DDThuongTru: document.getElementById('diaChiThuongTru1').value,
-        DDTamTru: document.getElementById('diaChiTamTru1').value,
+        DDTamVang: document.getElementById('diaChiTamVang1').value,
         SDT: document.getElementById('soDienThoai1').value,
         ngheNghiep: document.getElementById('ngheNghiep1').value,
         ngayBatDau: formatDateReverse(document.getElementById('ngayBatDau1').value),
@@ -316,15 +318,15 @@ function confirmAndSaveChanges() {
     // Hiển thị modal xác nhận trước khi lưu
     $('#confirmationModal').modal('show');
     // Tìm vị trí của người dùng trong mảng và cập nhật thông tin
-    var index = tableTamTru.findIndex(item => item.id === currentEditingId);
+    var index = tableData.findIndex(item => item.id === currentEditingId);
     if (index !== -1) {
-        tableTamTru[index] = editedPerson;
+        tableData[index] = editedPerson;
     }
     // Đóng modal chỉnh sửa và modal xác nhận
     $('#infoModalChange').modal('hide');
     $('#confirmationModal').modal('hide');
     // Lưu dữ liệu vào localStorage
-    saveToLocalStorage(tableTamTru);
+    saveToLocalStorage(tableData);
 
     // Xây dựng lại bảng với dữ liệu đã cập nhật
     buildTable();
@@ -332,46 +334,14 @@ function confirmAndSaveChanges() {
     // Gọi lại hàm lọc
     searchAndFilter();
 }
-
 document.getElementById('btn-xac-nhan').addEventListener('click', confirmAndSaveChanges);
-
-
-// Hàm này sẽ được gọi khi nhấn nút "Save changes"
-function saveChanges() {
-    var editedPerson = {
-        id: currentEditingId,
-        hoTen: document.getElementById('fullName1').value,
-        ngaySinh: formatDateReverse(document.getElementById('dob1').value),
-        CCCD: document.getElementById('cccd1').value,
-        gioiTinh: document.getElementById('genderSelect1').value,
-        DDThuongTru: document.getElementById('diaChiThuongTru1').value,
-        DDTamTru: document.getElementById('diaChiTamTru1').value,
-        SDT: document.getElementById('soDienThoai1').value,
-        ngheNghiep: document.getElementById('ngheNghiep1').value,
-        ngayBatDau: formatDateReverse(document.getElementById('ngayBatDau1').value),
-        ngayKetThuc: formatDateReverse(document.getElementById('ngayKetThuc1').value),
-        lyDo: document.getElementById('reason1').value
-    };
-    // Hiển thị modal xác nhận trước khi lưu
-    $('#confirmationModal').modal('show');
-    // Tìm vị trí của người dùng trong mảng và cập nhật thông tin
-    var index = tableTamTru.findIndex(item => item.id === currentEditingId);
-    if (index !== -1) {
-        tableTamTru[index] = editedPerson;
-    }
-    // Đóng modal chỉnh sửa và modal xác nhận
-    $('#infoModalChange').modal('hide');
-    $('#confirmationModal').modal('hide');
-    buildTable();
-}
 
 // Chuyển đổi ngày tháng từ dạng YYYY-MM-DD sang DD/MM/YYYY
 function formatDateReverse(dateString) {
     var parts = dateString.split("-");
     return parts[2] + "/" + parts[1] + "/" + parts[0];
 }
-
-document.getElementById('saveChangesButton').addEventListener('click', function () {
+document.getElementById('saveChangesButton').addEventListener('click', function() {
     $('#confirmationModal').modal('show');
 });
 
@@ -386,9 +356,9 @@ function confirmDelete(id) {
 }
 
 // Thêm sự kiện click vào biểu tượng thùng rác
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     var tableBody = document.getElementById('table-body');
-    tableBody.addEventListener('click', function (event) {
+    tableBody.addEventListener('click', function(event) {
         var target = event.target;
         if (target.classList.contains('fa-trash-o')) {
             var id = target.closest('tr').querySelector('.view-details-button').getAttribute('data-id');
@@ -398,29 +368,27 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // Xử lý sự kiện xác nhận xóa
-document.getElementById('confirmDeleteButton').addEventListener('click', function () {
-    // Xóa dữ liệu từ mảng tableTamTru và state.querySet
-    tableTamTru = tableTamTru.filter(item => item.id !== currentDeletingId);
+document.getElementById('confirmDeleteButton').addEventListener('click', function() {
+    // Xóa dữ liệu từ mảng tableData và state.querySet
+    tableData = tableData.filter(item => item.id !== currentDeletingId);
     state.querySet = state.querySet.filter(item => item.id !== currentDeletingId);
 
     // Lưu dữ liệu đã cập nhật vào localStorage
-    saveToLocalStorage(tableTamTru);
-
+    saveToLocalStorage(tableData);
+    // Kiểm tra số lượng trang còn lại
+    var newTotalPages = Math.ceil(state.querySet.length / state.rows);
+    if (state.page > newTotalPages) {
+        // Cập nhật trang hiện tại nếu trang hiện tại không còn tồn tại
+        state.page = newTotalPages || 1; // Đảm bảo rằng trang không bao giờ là 0
+    }
 
 
     // Đóng modal xác nhận xóa
     $('#deleteConfirmationModal').modal('hide');
-    // Kiểm tra xem trang hiện tại có còn mục nào không
-    var currentPageItems = tableTamTru.slice((state.page - 1) * state.rows, state.page * state.rows);
-    if (currentPageItems.length === 0 && state.page > 1) {
-        // Nếu không, chuyển đến trang trước đó
-        state.page--;
-        buildTable();
-    }else {
+
     // Xây dựng lại bảng với dữ liệu đã cập nhật
     // Đặt buildTable để chạy ngay sau tất cả các tác vụ hiện tại trong call stack
     setTimeout(buildTable, 0);
-    }
-    console.log("Deleted item. New data:", tableTamTru);
+    console.log("Deleted item. New data:", tableData);
 });
 
