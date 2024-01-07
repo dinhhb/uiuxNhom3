@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="../../template/assets/plugins/animation/css/animate.min.css">
     <!-- vendor css -->
     <link rel="stylesheet" href="../../template/assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
 </head>
 
 <body>
@@ -52,8 +54,8 @@
                             <div class="col-xl-12">
                                 <div class="card" style="border-radius: 15px;">
                                     <div class="card-block">
-                                        <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
-                                            <p style="font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 36px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Thống kê tài chính </p>
+                                    <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
+                                             <h3>Thống kê tài chính </h3>
                                         </div>
                                         <div class="mb-3"
                                                      style="display: flex; align-items: center; justify-content: start; gap: 20px;">
@@ -122,7 +124,7 @@
 
 
                         <div class="table-taichinh" style="display:flex;width:100%;">
-                            <div class="table-responsive" style="margin-left:10px;margin-right:10px;color: #667085;font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 12px;line-height: 18px;text-align: center;">
+                            <div class="table-responsive" style="margin-left:10px;margin-right:10px;color: #667085;font-style: normal;font-weight: 500;font-size: 12px;line-height: 18px;text-align: center;">
                                         <table class="table table-hover">
                                             <thead>
     
@@ -208,7 +210,7 @@
     }
 
     .user-info p {
-        font-family: 'Inter';
+        
         font-style: normal;
         font-weight: 600;
         font-size: 20px;
@@ -217,7 +219,7 @@
     }
 
     .user-info p.subtitle {
-        font-family: 'Inter';
+        
         font-style: normal;
         font-weight: 600;
         font-size: 16px;
@@ -236,7 +238,7 @@
         padding-left: 0px;
         padding-top:50px;
 
-        font-family: 'Inter';
+        
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
@@ -253,7 +255,7 @@
         padding-left: 0px;
         padding-top:50px;
 
-        font-family: 'Inter';
+        
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
@@ -271,7 +273,7 @@
             background-color: #FFFFFF; /* White background */
             border: 1px solid #D0D5DD; /* Border color */
             border-radius: 0.5rem;
-            font-family: 'Inter';
+            
             font-style: normal;
             width:150px;
             color:#667085 /* Rounded corners */
@@ -281,7 +283,7 @@
         .custom-dropdown .dropdown-menu {
             border-color: #D0D5DD;
             border-radius: 0.5rem;
-            font-family: 'Inter';
+            
             font-style: normal;/* Rounded corners for the dropdown menu */
         }
 
@@ -339,7 +341,7 @@
             border-bottom-right-radius: .25rem;
         }
         .form-check-label-tttv{
-            font-family: 'Inter';
+            
             font-style: normal;
             font-weight: 500;
             font-size: 14px;

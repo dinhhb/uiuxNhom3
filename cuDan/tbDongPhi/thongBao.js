@@ -149,12 +149,6 @@ function openInfoModal(selectedItem) {
     $('#infoModal').modal('show');
 }
 
-// function clearLocalStorage() {
-//     localStorage.removeItem('tableData');
-// }
-
-// // Gọi hàm để xóa dữ liệu
-// clearLocalStorage();
 
 // **************************************************************Filer***********************************
 var currentMonth = null;
@@ -256,9 +250,9 @@ function updateButtonText(text) {
 }
 
 // ************storage******************
-function clearLocalStorage() {
-    localStorage.removeItem('tableData');
-  }
+// function clearLocalStorage() {
+//     localStorage.removeItem('tableData3');
+//   }
   
-  // Gọi hàm để xóa dữ liệu
-  clearLocalStorage();
+//   // Gọi hàm để xóa dữ liệu
+//   clearLocalStorage();

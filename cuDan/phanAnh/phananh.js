@@ -278,10 +278,10 @@ function confirmSubmission(event) {
 }
 
 // ************storage******************
-function clearLocalStorage() {
-    localStorage.removeItem('tableData1');
-}
+// function clearLocalStorage() {
+//     localStorage.removeItem('tableData1');
+// }
 
-// Gọi hàm để xóa dữ liệu
-clearLocalStorage();
+// // Gọi hàm để xóa dữ liệu
+// clearLocalStorage();
 
