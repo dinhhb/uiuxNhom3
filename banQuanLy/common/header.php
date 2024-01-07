@@ -8,6 +8,7 @@
         </div>
     </a>
 </div>
+<<<<<<< Updated upstream
 
 <style>
     .header {
@@ -59,3 +60,5 @@
         margin: 0;
     }
 </style>
+=======
+>>>>>>> Stashed changes

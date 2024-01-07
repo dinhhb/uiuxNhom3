@@ -142,33 +142,27 @@
                                                     <a class="dropdown-item" href="#!">Something else here</a>
                                                 </div>
                                             </div>
+                                            <div class="btn-group dropdown custom-dropdown">
+                                                <button class="btn btn-third dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tình trạng phản ánh</button>
+                                                <div class="dropdown-menu">
+                                                    <a class="dropdown-item" href="#!">Action</a>
+                                                    <a class="dropdown-item" href="#!">Another action</a>
+                                                    <a class="dropdown-item" href="#!">Something else here</a>
+                                                </div>
+                                            </div>
                                 </div>
                             </div>
-                            <div class="list-require">
-                                <a href=""><div class="require" style="position:relative; margin-left:60px;margin-bottom:20px; margin-top:10px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; width:1000px; height:120px; color: #090909;">
-                                        <div class="title-require" style="padding-top:10px;padding-left:15px;font-family: 'Inter';font-style: Bold;font-weight: 700;font-size: 20px;line-height: 26px;color:#000000">Phản ánh hàng xóm ồn ào</div>
-                                        <div class="content-require" style="padding-top:20px;padding-left:20px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Từ: Nguyễn Văn An, hộ gia đình số 3, địa chỉ Sóc Sơn, Hà Nội...</div>
-                                        <div class="date-require" style="position:absolute;top:15px;right:30px;color: #164863;">25/11/2023</div>
-                                        <a href=""><div class="detail-require" style="position:absolute;top:80px;right:50px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem thêm</div></a>
-                                    </div></a>
-                                <a href=><div class="require" style="position:relative; margin-left:60px;margin-bottom:20px; margin-top:10px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; width:1000px; height:120px; color: #090909;">
-                                        <div class="title-require" style="padding-top:10px;padding-left:15px;font-family: 'Inter';font-style: Bold;font-weight: 700;font-size: 20px;line-height: 26px;color:#000000">Phản ánh hàng xóm ồn ào</div>
-                                        <div class="content-require" style="padding-top:20px;padding-left:20px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Từ: Nguyễn Văn An, hộ gia đình số 3, địa chỉ Sóc Sơn, Hà Nội...</div>
-                                        <div class="date-require" style="position:absolute;top:15px;right:30px;color: #164863;">25/11/2023</div>
-                                        <a href=""><div class="detail-require" style="position:absolute;top:80px;right:50px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem thêm</div></a>
-                                    </div></a>
-
-                            </div>
+                            <div class="list-require" id="list-require-container"></div>
 
 
                              <nav aria-label="Page navigation example">
                                         <ul class="pagination pagination-custom" id="pagination-wrapper">
 
                                         </ul>
-                                    </nav>
-                                    <div class="align-left">
-                                        <a href="Xemthongke.html"><button type="button" class="btn custom-btn d-inline-block ml-4 mb-3" style="padding: 10px 30px; background: #9BBEC8; color: white;">Quay lại</button></a>
-                                    </div>
+                            </nav>
+                                    <!-- <div class="align-left">
+                                        <a href="Ykiencudan.html"><button type="button" class="btn custom-btn d-inline-block ml-4 mb-3" style="padding: 10px 30px; background: #9BBEC8; color: white;">Quay lại</button></a>
+                                    </div> -->
                             </div>
                             
                             </div>
@@ -181,12 +175,43 @@
             </div>
         </div>
     </div>
+    <div id="myModal" class="modal">
+    <div class="modal-content" style="position:relative;width:1110px;height:600px;">
+        <!-- Content of the modal goes here -->
+        <span class="close" id="modalCloseBtn">&times;</span>
+    </div>
+</div>
 
+    <!-- <div id="myModal" class="modal">
+        <div class="modal-content" style="position:relative;width:1110px;height:600px;">
+            <p style="text-align:center;font-family: 'Inter';font-style: normal;font-weight: 700;font-size: 36px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Phản ánh về vệ sinh</p>
+            <span class="close" style="position:absolute;right:20px;top:20px;">&times;</span>
+            <div class="message" style="position:absolute;top:100px;left:30px;right:450px;">
+                <ul style="list-style-type:none;font-family: 'Inter';font-style: normal;font-weight: 500;font-size: 20px;line-height: 26px;color:#000000">
+                    <li>Từ ông/bà: Đỗ Văn Đức</li>
+                    <li>Hộ gia đình số: 31</li>
+                    <li>Chung cư: S1</li>
+                    <li>Nội dung phản ánh: Cần lưu ý về việc có một số cư dân vẫn thường xuyên vứt rác bừa bãi tại khu vực cổng A của tòa nhà S1. Tình trạng này không chỉ tạo ra một cảnh quan xấu mắt mà còn ảnh hưởng đến môi trường sống chung của chúng ta. Xin Ban Quản Lý chú ý và có những biện pháp cần thiết để ngăn chặn hành vi vứt rác không đúng quy tắc tại khu vực này. </li>
+                </ul>
+            </div>
+            <div class="img-descript" style="position:absolute;right:30px;top:100px;"><img src="assets/images/image 4.png"></div>
+            <div class="reason" style="position:absolute;top:450px;left:100px;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 16px;line-height: 24px;">
+                Lý do từ chối:   
+                <input id="rejectReason" placeholder="Điền lý do từ chối!" style="width:200px;background: #F8FAFC;border-radius: 4px;text-align:center;border:#615959;">
+                <div id="rejectError" style="color: red; font-size: 14px; margin-top: 5px;margin-left:100px; display: none;">Cần điền lý do trước khi từ chối.</div>
+            </div>
+           <div style="margin-top:460px;display:flex;position:relative">
+                <a href="#"><button onclick="rejectClick()" class="reject-button" style="position:absolute;width:215px;height:44px;border:none;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 16px;line-height: 24px;box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);border-radius: 8px;justify-content: center;align-items: center;border-radius: 8px;background-color:red;color:#FFFFFF;left:150px;">Từ chối</button></a>
+                <a href="#"><button onclick="acceptClick()" class="accept-button" style="position:absolute;width:215px;height:44px;border:none;font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 16px;line-height: 24px;box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);border-radius: 8px;justify-content: center;align-items: center;border-radius: 8px;background-color:#164863;color:#FFFFFF;right:100px;;">Chấp nhận và xem xét</button></a>
+            </div>
+        </div>
+    </div> -->
 <!-- Required Js -->
+<script src="Ykiencudan.json"></script>
 <script src="assets/js/vendor-all.min.js"></script>
 <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- Phần này bắt buộc -->
-    <style>
+<style>
     body {
         margin: 0; /* Loại bỏ margin mặc định của body */
     }
@@ -380,6 +405,346 @@
         color: #164863; /* Màu xanh cho icon và chữ khi active */
     }
 </style>
+<style>
+    /* CSS cho modal */
+.modal {
+  display: none; /* Ẩn modal ban đầu */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7); /* Tạo một overlay mờ */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* Đóng modal */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#myModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 1200px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+</style>
+<script>
+// Lấy modal và nút đóng
+var modal = document.getElementById("myModal");
+var span = document.getElementsByClassName("close")[0];
+
+// Ẩn modal khi ấn nút đóng hoặc click bên ngoài modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Hiển thị modal khi ấn vào "Xem thêm"
+function openModal() {
+  modal.style.display = "block";
+}
+</script>
+<script>
+function displayRejectionMessage() {
+    // Create a new element for the rejection message
+    var rejectionMessage = document.createElement('div');
+    rejectionMessage.innerHTML = 'Đã từ chối';
+    rejectionMessage.style.color = 'red';
+    rejectionMessage.style.paddingTop = '50px';
+    rejectionMessage.style.fontSize = '20px';
+    rejectionMessage.style.marginLeft = '100px';
+
+    // Append the rejection message to the same location
+    var parentElement = document.querySelector('.reason');
+    parentElement.appendChild(rejectionMessage);
+}
+
+function rejectClick() {
+    var reasonInput = document.getElementById('rejectReason');
+    var rejectError = document.getElementById('rejectError');
+    var acceptButton = document.querySelector('.accept-button');
+
+    // Check if the reason is not filled
+    if (!reasonInput.value.trim()) {
+        // Display an error message
+        rejectError.style.display = 'block';
+
+        // Disable the "Chấp nhận và xem xét" button
+        acceptButton.disabled = true;
+
+        // Remove the rejection message if it exists
+        removeRejectionMessage();
+    } else {
+        // Hide the error message
+        rejectError.style.display = 'none';
+
+        // Enable the "Chấp nhận và xem xét" button
+        acceptButton.disabled = false;
+
+        // Remove the "Từ chối" button
+        var rejectButton = document.querySelector('.reject-button');
+        rejectButton.remove();
+
+        // Display the rejection message
+        displayRejectionMessage();
+    }
+}
+
+// Function to remove the rejection message
+function removeRejectionMessage() {
+    var rejectionMessage = document.querySelector('.rejection-message');
+    if (rejectionMessage) {
+        rejectionMessage.remove();
+    }
+}
+function displayAcceptanceMessage() {
+    // Create a new element for the acceptance message
+    var acceptanceMessage = document.createElement('div');
+    acceptanceMessage.innerHTML = 'Đã chấp nhận và đang xem xét';
+    acceptanceMessage.style.color = 'green';
+    acceptanceMessage.style.marginLeft = '600px';
+    acceptanceMessage.style.marginTop = '50px';
+    acceptanceMessage.style.fontSize= '20px';
+
+    // Append the acceptance message to the same location
+    var parentElement = document.querySelector('.reason');
+    parentElement.appendChild(acceptanceMessage);
+}
+
+function acceptClick() {
+    // Remove the "Chấp nhận và xem xét" button
+    var acceptButton = document.querySelector('.accept-button');
+    acceptButton.remove();
+
+    // Display the acceptance message
+    displayAcceptanceMessage();
+}
+</script>
+<script>
+    var data = [
+        {
+    "title": "Phản ánh hàng xóm ồn ào",
+    "content": "Cần nhắc nhở các hộ cư dân phòng 24 tòa S1 vào dêmd ngày...",
+    "date": "25/11/2023",
+    "category": "vệ sinh",
+    "apartment": "S1",
+    "household": "31",
+    "author": "Đỗ Văn Đức"
+  },
+  {
+    "title": "Phản ánh về dịch vụ điện nước",
+    "content": "Dịch vụ cung cấp điện và nước tại địa phương của chúng tôi gặp vấn đề thường xuyên, đặc biệt là mất điện đột ngột...",
+    "date": "12/01/2024",
+    "category": "dịch vụ",
+    "apartment": "S1",
+    "household": "15",
+    "author": "Nguyễn Thị Mai"
+  },
+  {
+    "title": "An ninh kém tại khu vực số 5",
+    "content": "Chúng tôi lo lắng về tình trạng an ninh kém tại khu vực số 5. Đã có nhiều vụ trộm xảy ra trong thời gian gần đây.",
+    "date": "15/01/2024",
+    "category": "an ninh",
+    "apartment": "B1",
+    "household": "22",
+    "author": "Trần Văn Hùng"
+  },
+  {
+    "title": "Yêu cầu bảo trì cho đèn đường",
+    "content": "Một số đèn đường tại các ngã tư chính của khu vực cần được bảo trì sớm để đảm bảo an toàn giao thông.",
+    "date": "20/01/2024",
+    "category": "bảo trì và sửa chữa",
+    "apartment": "C3",
+    "household": "45",
+    "author": "Lê Thị Hương"
+  },
+  {
+    "title": "Thiếu thông tin về quy định cộng đồng",
+    "content": "Chúng tôi cần thông tin chi tiết hơn về các quy định cộng đồng hiện hành để đảm bảo sự hiểu biết và tuân thủ đầy đủ.",
+    "date": "25/01/2024",
+    "category": "quy định cộng đồng",
+    "apartment": "D4",
+    "household": "12",
+    "author": "Nguyễn Văn Hoàng"
+  },
+  {
+    "title": "Góp ý về vệ sinh môi trường xanh",
+    "content": "Hãy xem xét các biện pháp để thúc đẩy vệ sinh môi trường xanh trong khu vực, bao gồm cả việc giữ gìn cây xanh và không gian xanh.",
+    "date": "02/02/2024",
+    "category": "vệ sinh",
+    "apartment": "E5",
+    "household": "18",
+    "author": "Phạm Thị Hà"
+  },
+  {
+    "title": "Cần cải thiện dịch vụ thu gom rác",
+    "content": "Dịch vụ thu gom rác cần được cải thiện để giảm thiểu mùi khó chịu và bảo vệ môi trường xung quanh.",
+    "date": "05/02/2024",
+    "category": "dịch vụ",
+    "apartment": "S1",
+    "household": "27",
+    "author": "Nguyễn Đình Tâm"
+  },
+  {
+    "title": "Đề xuất tăng cường đèn đường",
+    "content": "Tăng cường đèn đường sẽ làm tăng cường an ninh và giảm nguy cơ xảy ra các vụ cướp tại khu vực chúng tôi.",
+    "date": "10/02/2024",
+    "category": "an ninh",
+    "apartment": "S1",
+    "household": "33",
+    "author": "Phan Thị Thủy"
+  },
+  {
+    "title": "Bảo trì kết cấu đường sá",
+    "content": "Lê Văn Tuấn Đề xuất bảo trì kết cấu đường sá để tránh tình trạng hư hại và nguy cơ tai nạn giao thông.",
+    "date": "15/02/2024",
+    "category": "bảo trì và sửa chữa",
+    "apartment": "S1",
+    "household": "19",
+    "author": "Lê Văn Tuấn"
+  },
+  {
+    "title": "Đề xuất tổ chức buổi họp thông tin cộng đồng",
+    "content": "Đề xuất tổ chức buổi họp để thông báo và thảo luận về các quy định cộng đồng mới và cập nhật.",
+    "date": "20/02/2024",
+    "category": "quy định cộng đồng",
+    "apartment": "S1",
+    "household": "7",
+    "author": "Trương Thị Ngọc"
+  }
+    ];
+    for (var i = 0; i < data.length; i++) {
+    var requireContainer = document.getElementById('list-require-container');
+
+    // Tạo các phần tử HTML
+    var requireDiv = document.createElement('div');
+    requireDiv.className = 'require';
+    requireDiv.style = 'position:relative; margin-left:60px;margin-bottom:20px; margin-top:10px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; width:1000px; height:120px; color: #090909;';
+
+    var titleDiv = document.createElement('div');
+    titleDiv.className = 'title-require';
+    titleDiv.style = 'padding-top:10px;padding-left:15px;font-family: \'Inter\';font-style: Bold;font-weight: 700;font-size: 20px;line-height: 26px;color:#000000';
+    titleDiv.innerHTML = data[i].title;
+
+    var contentDiv = document.createElement('div');
+    contentDiv.className = 'content-require';
+    contentDiv.style = 'padding-top:15px;padding-left:20px;font-family: \'Inter\';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;';
+
+// Include information in contentDiv
+    contentDiv.innerHTML = 'Từ: ' + data[i].author + ', căn hộ số ' + data[i].household + ', tòa ' + data[i].apartment + '<br>' + data[i].content;
+
+
+    var dateDiv = document.createElement('div');
+    dateDiv.className = 'date-require';
+    dateDiv.style = 'position:absolute;top:15px;right:30px;color: #164863;';
+    dateDiv.innerHTML = data[i].date;
+
+    var detailLink = document.createElement('a');
+    detailLink.href = '#';
+    detailLink.onclick = (function (index) {
+        return function () {
+            openModal(data[index]);
+        };
+    })(i);
+
+    var detailDiv = document.createElement('div');
+    detailDiv.className = 'detail-require';
+    detailDiv.style = 'position:absolute;top:80px;right:50px;font-family: \'Inter\';font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;';
+    detailDiv.innerHTML = 'Xem thêm';
+
+    // Gắn các phần tử con vào div "require"
+    detailLink.appendChild(detailDiv);
+    requireDiv.appendChild(titleDiv);
+    requireDiv.appendChild(contentDiv);
+    requireDiv.appendChild(dateDiv);
+    requireDiv.appendChild(detailLink);
+
+    // Gắn div "require" vào container chính
+    requireContainer.appendChild(requireDiv);
+}
+
+// Hàm mẫu để mở modal
+function openModal(index) {
+        var feedback = data[index]; // Assuming "data" is accessible in this context
+
+        // Update modal content with feedback information
+        document.getElementById('modalTitle').innerText = feedback.title;
+        document.getElementById('modalAuthor').innerText = 'Từ ông/bà: ' + feedback.author;
+        document.getElementById('modalHousehold').innerText = 'Hộ gia đình số: ' + feedback.household;
+        document.getElementById('modalApartment').innerText = 'Chung cư: ' + feedback.apartment;
+        document.getElementById('modalContent').innerText = feedback.content;
+        document.getElementById('modalDate').innerText = 'Ngày phản ánh: ' + feedback.date;
+
+        // Display the modal
+        var modal = document.getElementById('myModal');
+        modal.style.display = 'block';
+
+        // Set up event listener for the close button
+        var closeButton = document.getElementById('modalCloseBtn');
+        closeButton.onclick = function () {
+            modal.style.display = 'none';
+        };
+
+        // Set up event listener to close the modal if clicked outside the modal
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        };
+    }
+</script>
+
+
+
 </body>
 
 </html>
