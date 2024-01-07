@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Datta Able Free Bootstrap 4 Admin Template</title>
+    <title>Dashboard Tạm trú tạm vắng</title>
     <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 11]>
@@ -24,8 +24,6 @@
     <!-- fontawesome icon -->
     <link rel="stylesheet" href="../../template/assets/fonts/fontawesome/css/fontawesome-all.min.css">
 <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- animation css -->
     <link rel="stylesheet" href="../../template/assets/plugins/animation/css/animate.min.css">
     <!-- vendor css -->
@@ -243,11 +241,12 @@
 
                                             <div class="card-body row">
                                                 <div class=" col-md-0">
-                                                    <i class="fa-solid fa-person-walking-arrow-loop-left "style="font-size:30px"></i>
+<!--                                                    <i class="fa-solid fa-person-walking-arrow-loop-left "style="font-size:30px"></i>-->
+                                                    <i class="fa fa-user-plus" aria-hidden="true" style="font-size:30px"></i>
 
                                                 </div>
                                                 <div class="col-md-11">
-                                                    <h5 class="">Đơn khai báo tạm trú</h5>
+                                                    <h5  style="font-size: 16px" class="">Đơn khai báo tạm trú</h5>
                                                     <div style="display: flex;justify-content: space-between;/* align-items: center; *//* justify-items: stretch; */">
                                                         <span id="status-text-tru">Cần xác nhận </span>    <span id="progress-count-tru">Đã xác nhận 10/15</span></div>
                                                     <div class="progress my-2">
@@ -262,10 +261,10 @@
 
                                             <div class="card-body row">
                                                 <div class=" col-md-0">
-                                                    <i class="fa-solid fa-person-walking-arrow-right "style="font-size:30px"></i>
+                                                    <i class="fa fa-user-times" aria-hidden="true" style="font-size:30px"></i>
                                                 </div>
                                                 <div class="col-md-11">
-                                                    <h5 class="">Đơn khai báo tạm vắng</h5>
+                                                    <h6 style="font-size: 16px" class="">Đơn khai báo tạm vắng</h6>
                                                     <div style="display: flex;justify-content: space-between;/* align-items: center; *//* justify-items: stretch; */">
                                                         <span id="status-text-vang">Cần xác nhận </span>    <span id="progress-count-vang">Đã xác nhận 10/15</span></div>
                                                     <div class="progress my-2">
@@ -301,7 +300,7 @@
 <!-- Required Js -->
 <script src="../../template/assets/js/vendor-all.min.js"></script>
 <script src="../../template/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-<script src="../../template/assets/js/pcoded.min.js"></script>
+<!--<script src="../../template/assets/js/pcoded.min.js"></script>-->
 <script src="Js/loadData.js"></script>
 <script src="Js/dbTamTruTamVang.js"></script>
 

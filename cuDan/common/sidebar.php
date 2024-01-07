@@ -7,6 +7,7 @@ function get_current_file_name()
 
 // Call the function and store the current file name
 $current_file_name = get_current_file_name();
+$current_folder_name= $_SERVER['PHP_SELF'];
 ?>
 
 <div class="containeri" style="display:flex; width:100%; ">
@@ -23,7 +24,7 @@ $current_file_name = get_current_file_name();
         <div class="menu-item <?php echo ($current_file_name == 'tbDongphi.php') ? 'active' : ''; ?>">
             <a href="/cuDan/tbDongPhi/tbDongphi.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-bell" style="color: #000000; width:30px;height:30px;"></i></span><span class="menu-options">Thông báo đóng phí</span></a>
         </div>
-        <div class="menu-item <?php echo ($current_file_name == 'tamTrutamVang.php') ? 'active' : ''; ?>">
+        <div class="menu-item <?php echo (strpos($current_folder_name, '/TamTruTamVang/') !== false) ? 'active' : ''; ?>">
             <a href="/cuDan/TamTruTamVang/tamTrutamVang.php" class="nav-link "><span class="pcoded-micon"><i class="fas fa-user-cog" style="color: #000000; width:30px;height:30px;"></i></span><span class="menu-options">Tạm trú tạm vắng</span></a>
         </div>
         <div class="menu-item <?php echo ($current_file_name == 'phananh.php') ? 'active' : ''; ?>">

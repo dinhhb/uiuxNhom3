@@ -5,7 +5,7 @@ function confirmAndSaveChanges() {
 
     // Tạo bản ghi mới từ thông tin nhập vào
     var newRecord = {
-        id: tableData.length + 1, // Tạo ID mới dựa trên độ dài mảng hiện tại
+        id: tableDonTamVang.length + 1, // Tạo ID mới dựa trên độ dài mảng hiện tại
         hoTen: document.getElementById('fullName').value,
         ngaySinh: formatDateReverse(document.getElementById('dob').value),
         CCCD: document.getElementById('cccd').value,
@@ -17,23 +17,23 @@ function confirmAndSaveChanges() {
         ngayBatDau: formatDateReverse(document.getElementById('ngayBatDau').value),
         ngayKetThuc: formatDateReverse(document.getElementById('ngayKetThuc').value),
         canHo:document.getElementById('ChungCu').value,
-        lyDo: document.getElementById('reason').value
+        lyDo: document.getElementById('reason').value,
+        trangThai:0
     };
     // Thêm bản ghi mới vào mảng
-    tableData.push(newRecord);
+    tableDonTamVang.push(newRecord);
 
     // Cập nhật bảng và lưu vào localStorage
     // buildTable();
-    saveToLocalStorage(tableData);
+    saveToLocalStorage(tableDonTamVang);
     $('#confirmationModal').modal('hide');
     // Hiển thị modal
     $('#successModal').modal('show');
     // Xác định sự kiện khi modal được đóng
     $('#successModal').on('hidden.bs.modal', function () {
         // Chạy chuyển hướng trang sau khi modal đã được đóng
-        window.location="quanLyTamVang.php";
+        window.location = "tamTrutamVang.php";
     });
-
 };
 
 // Chuyển đổi ngày tháng từ dạng YYYY-MM-DD sang DD/MM/YYYY
@@ -42,7 +42,7 @@ function formatDateReverse(dateString) {
     return parts[2] + "/" + parts[1] + "/" + parts[0];
 }
 function saveToLocalStorage(data) {
-    localStorage.setItem('tableData', JSON.stringify(data));
+    localStorage.setItem('tableDonTamVang', JSON.stringify(data));
 }
 document.getElementById('registrationForm').addEventListener('submit', function(event) {
     // Ngăn form thực hiện hành động mặc định
