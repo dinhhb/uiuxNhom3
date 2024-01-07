@@ -42,6 +42,9 @@ Xây dựng phần mềm quản lý thu phí và hộ khẩu của 1 toà chung 
 - Công an:
     - Xem thông tin tạm trú, tạm vắng
 
+## Demo
+[socSonPlaza.com](https://cookiesnetflix1199911.000webhostapp.com/)
+
 ## Cài Đặt và Sử Dụng
 
 [//]: # (Cung cấp các bước cài đặt và sử dụng dự án.)
