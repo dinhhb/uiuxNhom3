@@ -4,7 +4,7 @@
     <a href=""><img src="../../assets/images/avatar.png" class="avatar">
         <div class="user-info">
             <p>Văn Thanh</p>
-            <p class="subtitle">Ban quản lý</p>
+            <p class="subtitle">Công An</p>
         </div>
     </a>
 </div>
@@ -41,7 +41,7 @@
     }
 
     .user-info p {
-        
+
         font-style: normal;
         font-weight: 600;
         font-size: 20px;
@@ -50,7 +50,7 @@
     }
 
     .user-info p.subtitle {
-        
+
         font-style: normal;
         font-weight: 600;
         font-size: 16px;

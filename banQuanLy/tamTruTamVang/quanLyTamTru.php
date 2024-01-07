@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>BQL-Xem thống kê</title>
+    <title>Quản lý tạm trú</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="../../template/assets/plugins/animation/css/animate.min.css">
     <!-- vendor css -->
     <link rel="stylesheet" href="../../template/assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
 
 </head>
 

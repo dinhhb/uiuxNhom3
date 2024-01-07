@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Đơn xin cấp tạm vắng</title>
+    <title>Quản lý tạm trú</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -15,19 +15,15 @@
     <!-- Favicon icon -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-zkRf1z1uPbXpFZV4KTMEH7PVB7ZlDdjw0EhMf7ueExUqMW+0vWuAHR4/j5qoHw1NvMyO4tDw9HZmpyKiCyr/D3A==" crossorigin="anonymous" /> -->
     <!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-zkRf1z1uPbXpFZV4KTMEH7PVB7ZlDdjw0EhMf7ueExUqMW+0vWuAHR4/j5qoHw1NvMyO4tDw9HZmpyKiCyr/D3A==" crossorigin="anonymous" />-->
-    <link rel="icon" href="../../template/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../template/assets/images/favicon.ico" type="image/x-icon">
     <!-- fontawesome icon -->
 
-    <link rel="stylesheet" href="../../template/assets/fonts/fontawesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="../template/assets/fonts/fontawesome/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- animation css -->
-    <link rel="stylesheet" href="../../template/assets/plugins/animation/css/animate.min.css">
+    <link rel="stylesheet" href="../template/assets/plugins/animation/css/animate.min.css">
     <!-- vendor css -->
-    <link rel="stylesheet" href="../../template/assets/css/style.css">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-
-
-
+    <link rel="stylesheet" href="../template/assets/css/style.css">
 
 </head>
 
@@ -41,11 +37,11 @@
 <!-- [ Pre-loader ] End -->
 
 <!-- Header -->
-<?php include '../common/header.php'; ?>
+<?php include 'common/header.php'; ?>
 <!-- End-header -->
 <div class="containeri" style="display:flex; width:100%; ">
     <!-- [ menu ] start -->
-    <?php include '../common/sidebar.php'; ?>
+    <?php include 'common/sidebar.php'; ?>
     <!-- End menu -->
 
     <!-- Phần của mọi người -->
@@ -64,7 +60,7 @@
                                     <div class="card-block">
 
                                         <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
-                                            <h3>Quản lý đơn xin cấp tạm vắng</h3>
+                                            <h3>Quản lý tạm trú </h3>
                                         </div>
                                         <div class="mt-3 justify-content-between">
                                             <form class="d-flex justify-content-between"
@@ -107,10 +103,10 @@
                                             <div class="btn-group dropdown custom-dropdown">
                                                 <button class="btn btn-third dropdown-toggle" type="button"
                                                         data-toggle="dropdown" aria-haspopup="true"
-                                                        aria-expanded="false">Đơn xin cấp tạm vắng
+                                                        aria-expanded="false">Quản lý tạm trú
                                                 </button>
                                                 <div class="dropdown-menu ">
-                                                    <a class="dropdown-item" href="./donXinCapTamTru.php">Đơn xin cấp tạm trú</a>
+                                                    <a style="font-size: 14px;" class="dropdown-item" href="./quanLyTamVang.php">Quản lý tạm vắng</a>
                                                 </div>
                                             </div>
                                             <div class="btn-group dropdown custom-dropdown">
@@ -139,7 +135,7 @@
                                                 <div class="input-group custom-search-input">
                                                     <div class="input-group-prepend">
                                                         <span class="input-group-text" id="basic-addon1"><i
-                                                                class="fa fa-search"></i></span>
+                                                                    class="fa fa-search"></i></span>
                                                     </div>
                                                     <input type="text" id="searchInput" class="form-control"
                                                            placeholder="Tìm kiếm..." aria-label="Search"
@@ -179,11 +175,6 @@
 
                                         </ul>
                                     </nav>
-                                    <div class="align-left" onclick="window.location.href='dashboard_TamTruTamVang.php'">
-                                        <button type="button" class="btn custom-btn d-inline-block ml-4 mb-3"
-                                                style="padding: 10px 30px; background: #9BBEC8; color: white;">Quay lại
-                                        </button>
-                                    </div>
                                 </div>
 
                             </div>
@@ -241,8 +232,8 @@
                                    value="" disabled>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="diaChiTamVang">Địa chỉ tạm vắng </label>
-                            <input type="text" class="form-control" id="diaChiTamVang" placeholder=""
+                            <label for="diaChiTamTru">Địa chỉ tạm trú </label>
+                            <input type="text" class="form-control" id="diaChiTamTru" placeholder=""
                                    value="" disabled>
                         </div>
                         <div class="form-group col-md-6">
@@ -391,7 +382,7 @@
             <div class="modal-footer">
                 <!-- Add any footer buttons if necessary -->
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="saveChangesButton">Xác nhận</button>
+                <button type="button" class="btn btn-xac-nhan" id="saveChangesButton">Xác nhận</button>
             </div>
         </div>
     </div>
@@ -400,13 +391,8 @@
 <!-- [popup] cònfirm  -->
 <!-- Modal -->
 <?php
-$modalContent = 'Bạn có chắc chắn muốn duyệt  không ?';
-include '../../common/modal/confirmationModal.php';
-?>
-<!-- Success Modal -->
-<?php
-$modalContent = 'Đơn xin cấp tạm vắng đã được duyệt thành công';
-include '../../common/modal/successModal.php';
+$modalContent = 'Bạn có chắc chắn muốn xác nhận chỉnh sửa không ?';
+include '../common/modal/confirmationModal.php';
 ?>
 
 <!-- Modal Xác Nhận Xóa -->
@@ -432,11 +418,11 @@ include '../../common/modal/successModal.php';
 </div>
 
 <!-- Required Js -->
-<script src="../../template/assets/js/vendor-all.min.js"></script>
-<script src="../../template/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+<script src="../template/assets/js/vendor-all.min.js"></script>
+<script src="../template/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
 <!--<script src="assets/js/pcoded.min.js"></script>-->
 <script src="Js/loadData.js"></script>
-<script src="Js/donXinCapTamVang.js"></script>
+<script src="Js/quanLyTamTru.js"></script>
 <!--<script src="assets/plugins/chart-morris/js/raphael.min.js"></script>-->
 <!--<script src="assets/plugins/chart-morris/js/morris.min.js"></script>-->
 <!-- Phần này bắt buộc -->
@@ -520,11 +506,6 @@ include '../../common/modal/successModal.php';
         max-height: 150px; /* Chiều cao tối đa cho phép scroll */
         overflow-y: auto; /* Cho phép scroll nếu nội dung vượt quá chiều cao tối đa */
     }
-     .no-outline:focus {
-         outline: none !important;
-         /*box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5); !* Example of a subtle box shadow focus style *!*/
-     }
-
 </style>
 </body>
 

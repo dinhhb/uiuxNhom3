@@ -87,10 +87,11 @@ function buildTable() {
 
     for (var i = 0; i < myList.length; i++) {
 
+        var stt = (state.page - 1) * state.rows + parseInt(i) + 1;
         if (myList[i].trangThai == 0) {
             //Keep in mind we are using "Template Litterals to create rows"
             var row = `<tr>
-                  <td>${myList[i].id}</td>
+                  <td>${stt}</td>
                   <td>${myList[i].CCCD}</td>
                   <td>${myList[i].hoTen}</td>
                   <td>${myList[i].gioiTinh}</td>

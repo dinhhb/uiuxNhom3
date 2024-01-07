@@ -87,9 +87,11 @@ function buildTable() {
     var myList = data.querySet
 
     for (var i = 0; i < myList.length; i++) {
+        var stt = (state.page - 1) * state.rows + parseInt(i) + 1;
+
         //Keep in mind we are using "Template Litterals to create rows"
         var row = `<tr>
-                  <td>${myList[i].id}</td>
+                  <td>${stt}</td>
                   <td>${myList[i].CCCD}</td>
                   <td>${myList[i].hoTen}</td>
                   <td>${myList[i].gioiTinh}</td>
@@ -198,7 +200,7 @@ function showDetails(id) {
         document.getElementById('cccd').value = person.CCCD;
         document.getElementById('genderSelect').value = person.gioiTinh;
         document.getElementById('diaChiThuongTru').value = person.DDThuongTru;
-        document.getElementById('diaChiTamVang').value = person.DDTamTru;
+        document.getElementById('diaChiTamTru').value = person.DDTamTru;
         document.getElementById('soDienThoai').value = person.SDT;
         document.getElementById('ngheNghiep').value = person.ngheNghiep;
         document.getElementById('ngayBatDau').value = formatDate(person.ngayBatDau);

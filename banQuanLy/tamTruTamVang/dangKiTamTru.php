@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Datta Able Free Bootstrap 4 Admin Template</title>
+    <title>Đăng kí tạm trú</title>
     <!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 11]>
@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="../../template/assets/plugins/animation/css/animate.min.css">
     <!-- vendor css -->
     <link rel="stylesheet" href="../../template/assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+
 
     <style>
         .custom-dropdown .btn {
@@ -290,8 +292,16 @@
                                                     </button>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <button type="submit" class="btn btn-primary float-right">Xác nhận
+                                                    <button type="submit" class="btn btn-gui float-right">Xác nhận
                                                     </button>
+                                                    <style>    .btn-gui {
+                                                            background-color: #28a745;
+                                                            /* Bootstrap green color */
+                                                            border-color: #28a745;
+                                                            color: #fff;
+                                                            /* White text */
+
+                                                        }</style>
                                                 </div>
                                             </div>
                                         </form>
@@ -312,35 +322,22 @@
 </div>
 <!-- [ Main Content ] end -->
 <!-- Modal Confirmation -->
-<div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="confirmationModalLabel"
-     aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="confirmationModalLabel">Xác nhận</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Bạn có chắc chắn muốn gửi?
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
-                <button type="button" class="btn btn-primary" id="confirmSaveChanges">Xác nhận</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
+<?php
+$modalContent = 'Bạn có chắc chắn muốn xác nhận  không ?';
+include '../../common/modal/confirmationModal.php';
+?>
+<!-- Success Modal -->
+<?php
+$modalContent = 'Đơn tạm trú đã được tạo thành công';
+include '../../common/modal/successModal.php';
+?>
 <!-- Required Js -->
 
 <script src="Js/loadData.js"></script>
 <script src="Js/dangKiTamTru.js"></script>
 <script src="../../template/assets/js/vendor-all.min.js"></script>
 <script src="../../template/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-<script src="../../template/assets/js/pcoded.min.js"></script>
+<!--<script src="../../template/assets/js/pcoded.min.js"></script>-->
 <script>
     // JavaScript for character counter
     document.addEventListener('DOMContentLoaded', function () {

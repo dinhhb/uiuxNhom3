@@ -59,7 +59,7 @@ $current_folder_name= $_SERVER['PHP_SELF'];
             padding-left: 0px;
             padding-top: 50px;
 
-            font-family: 'Inter';
+            
             font-style: normal;
             font-weight: 600;
             font-size: 14px;
@@ -76,7 +76,7 @@ $current_folder_name= $_SERVER['PHP_SELF'];
             padding-left: 0px;
             padding-top: 50px;
 
-            font-family: 'Inter';
+            
             font-style: normal;
             font-weight: 600;
             font-size: 14px;

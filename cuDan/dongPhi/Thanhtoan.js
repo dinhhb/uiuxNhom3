@@ -136,8 +136,9 @@ function buildTable() {
                 <td>${myList[i].maGiaoDich}</td>
                 <td>${myList[i].soTien}</td>
                 <td style="text-align: center">${myList[i].phuongThucThanhToan}</td>
-                <td>${myList[i].thoiGian}</td>
                 <td id="idInput" style="display: none;">${myList[i].id}</td>
+                <td>${myList[i].thoiGian}</td>
+                
              </tr>`;
             table.append(row);
         }
@@ -222,10 +223,10 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ************storage******************
-function clearLocalStorage() {
-    localStorage.removeItem('tableData');
-}
+// function clearLocalStorage() {
+//     localStorage.removeItem('tableData');
+// }
 
-// Gọi hàm để xóa dữ liệu
-clearLocalStorage();
+// // Gọi hàm để xóa dữ liệu
+// clearLocalStorage();
 

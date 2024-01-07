@@ -17,7 +17,8 @@ function confirmAndSaveChanges() {
         ngayBatDau: formatDateReverse(document.getElementById('ngayBatDau').value),
         ngayKetThuc: formatDateReverse(document.getElementById('ngayKetThuc').value),
         canHo:document.getElementById('ChungCu').value,
-        lyDo: document.getElementById('reason').value
+        lyDo: document.getElementById('reason').value,
+        trangThai:0
     };
     // Thêm bản ghi mới vào mảng
     tableTamTru.push(newRecord);
@@ -26,7 +27,15 @@ function confirmAndSaveChanges() {
     // buildTable();
     saveToLocalStorage(tableTamTru);
     $('#confirmationModal').modal('hide');
-    window.location="quanLyTamTru.php";
+    // Hiển thị modal
+    $('#successModal').modal('show');
+    // Xác định sự kiện khi modal được đóng
+    $('#successModal').on('hidden.bs.modal', function () {
+        // Chạy chuyển hướng trang sau khi modal đã được đóng
+        window.location="quanLyTamTru.php";
+    });
+
+
 };
 
 // Chuyển đổi ngày tháng từ dạng YYYY-MM-DD sang DD/MM/YYYY
@@ -43,4 +52,4 @@ document.getElementById('registrationForm').addEventListener('submit', function(
     $('#confirmationModal').modal('show');
 });
 
-document.getElementById('confirmSaveChanges').addEventListener('click', confirmAndSaveChanges);
+document.getElementById('btn-xac-nhan').addEventListener('click', confirmAndSaveChanges);
