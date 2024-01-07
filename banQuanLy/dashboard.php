@@ -111,7 +111,7 @@
                                             </defs>
                                         </svg>
                                         <div style="padding-top:10px;padding-left:10px;">Ý kiến của cư dân</div>
-                                        <a href="">
+                                        <a href="yKien/yKienCuDan.php">
                                             <div style="padding-top:7px;padding-left:10px;font-style: normal;font-weight: 700;font-size: 12px;line-height: 26px;text-decoration-line: underline;color: #164863;">Xem chi tiết >></div>
                                         </a>
                                     </div>
@@ -121,17 +121,16 @@
                                             <div class="content-require" style="padding-top:20px;padding-left:20px;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Từ: Nguyễn Văn An, hộ gia đình số 3, địa chỉ Sóc Sơn, Hà Nội...</div>
                                             <div class="date-require" style="position:absolute;top:15px;right:30px;color: #164863;font-size: 16px;">25/11/2023</div>
                                             <a href="">
-                                                <div class="detail-require" style="position:absolute;top:80px;right:50px;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem thêm</div>
+
                                             </a>
                                         </div>
                                     </a>
-                                    <a href="yKienCuDan.php">
+                                    <a href="yKien/yKienCuDan.php">
                                         <div class="require" style="position:relative; margin-left:100px;margin-bottom:20px; margin-top:10px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; width:1000px; height:120px; color: #090909;">
                                             <div class="title-require" style="padding-top:10px;padding-left:5px;font-style: Bold;font-weight: 700;font-size: 20px;line-height: 26px;color:#000000">Phản ánh hàng xóm ồn ào</div>
                                             <div class="content-require" style="padding-top:20px;padding-left:20px;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">Từ: Nguyễn Văn An, hộ gia đình số 3, địa chỉ Sóc Sơn, Hà Nội...</div>
                                             <div class="date-require" style="position:absolute;top:15px;right:30px;color: #164863;font-size: 16px;">25/11/2023</div>
                                             <a href="">
-                                                <div class="detail-require" style="position:absolute;top:80px;right:50px;font-style: normal;font-weight: 600;font-size: 14px;line-height: 21px;letter-spacing: 0.1px;color: #164863;">Xem thêm</div>
                                             </a>
                                         </div>
                                     </a>
