@@ -158,10 +158,10 @@
 
                                             </ul>
                                         </nav>
-                                        <div class="align-left" onclick="window.location.href='dashboard_TamTruTamVang.php'">
+                                        <!-- <div class="align-left" onclick="window.location.href='dashboard_TamTruTamVang.php'">
                                             <button type="button" class="btn custom-btn d-inline-block ml-4 mb-3" style="padding: 10px 30px; background: #9BBEC8; color: white;">Quay lại
                                             </button>
-                                        </div>
+                                        </div> -->
                                     </div>
 
                                 </div>

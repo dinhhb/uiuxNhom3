@@ -90,7 +90,7 @@
                                         });
                                     </script>
                                     <div class="align-left" style="padding-top: 5px;">
-                                        <a href="Xemthongke.html"><button type="button" class="btn custom-btn d-inline-block ml-4 mb-3" style="padding: 10px 30px; background: #6c757d; color: white;">Quay lại</button></a>
+                                        <a href="xemBaoCaoTaiChinh.php"><button type="button" class="btn custom-btn d-inline-block ml-4 mb-3" style="padding: 10px 30px; background: #6c757d; color: white;">Quay lại</button></a>
                                     </div>
                                 </div>
                             </div>
