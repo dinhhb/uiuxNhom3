@@ -96,10 +96,6 @@ function buildTable() {
                   <td>${myList[i].hoTen}</td>
                   <td>${myList[i].gioiTinh}</td>
                   <td>${myList[i].DDThuongTru}</td>
-                  <td>
-                    <i class="fa fa-trash-o mr-2" style="font-size:20px" aria-hidden="true" ></i>
-                    <i class="fa fa-pencil" style="font-size:20px" aria-hidden="true" data-toggle="modal" data-target="#infoModalChange"></i>
-                    </td>
                     <td> <button type="button" class="custom-btn view-details-button" data-toggle="modal" data-id="${myList[i].id}">Xem thêm</button></td>
                                                             `
         table.append(row)

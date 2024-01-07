@@ -63,8 +63,7 @@
                             <div class="card" style="border-radius: 15px;">
                                 <div class="card-block">
                                     <div style="text-align: center; font-weight: bold; padding-bottom: 20px;">
-                                        <p style="font-family: 'Inter';font-style: normal;font-weight: 600;font-size: 36px;line-height: 21px;letter-spacing: 0.1px;color: #000000;">
-                                            Khai báo tạm trú / tạm vắng </p>
+                                         <h3>Khai báo tạm trú / tạm vắng </h3>
                                     </div>
                                 </div>
                                 <div>
@@ -80,18 +79,18 @@
                                      style="">
                                     <div class="row">
                                         <div class="form-group col-md-6">
-                                            <div class="thongtinchungcu" style="width: 200px; height: 140px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; margin-top: 50px; margin-left: 250px; display: flex; justify-content: center; align-items: center;" onclick="window.location.href='khaiBaoTamVang.php'">
+                                            <div class="thongtinchungcu" style="width: 200px; height: 140px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; margin-top: 50px; margin-left: 250px;margin-bottom: 100px; display: flex; justify-content: center; align-items: center;" onclick="window.location.href='khaiBaoTamVang.php'">
                                                 <div style="text-align: center;">
                                                     <img src="../../assets/images/cudan/tamVang.png" style="height: 50px; width: 50px;"/>
-                                                    <p style="font-family: 'Inter'; font-style: normal; font-weight: 600; font-size: 14px; letter-spacing: 0.1px; color: #000000; margin-top: 10px;">Khai báo tạm vắng</p>
+                                                    <p style=" font-style: normal; font-weight: 600; font-size: 14px; letter-spacing: 0.1px; color: #000000; margin-top: 10px;">Khai báo tạm vắng</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <div class="thongtinchungcu" style="width: 200px; height: 140px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; margin-top: 50px; margin-left: 100px; display: flex; justify-content: center; align-items: center;" onclick="window.location.href='khaiBaoTamTru.php'">
+                                            <div class="thongtinchungcu" style="width: 200px; height: 140px; background-color: #E8EDF0; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); border-radius: 15px; margin-top: 50px; margin-left: 100px;margin-bottom: 100px; display: flex; justify-content: center; align-items: center;" onclick="window.location.href='khaiBaoTamTru.php'">
                                                 <div style="text-align: center;">
                                                     <img src="../../assets/images/cudan/tamTru.png" style="height: 50px; width: 50px;"/>
-                                                    <p style="font-family: 'Inter'; font-style: normal; font-weight: 600; font-size: 14px; letter-spacing: 0.1px; color: #000000; margin-top: 10px;">Khai báo tạm trú</p>
+                                                    <p style=" font-style: normal; font-weight: 600; font-size: 14px; letter-spacing: 0.1px; color: #000000; margin-top: 10px;">Khai báo tạm trú</p>
                                                 </div>
                                             </div>
                                         </div>

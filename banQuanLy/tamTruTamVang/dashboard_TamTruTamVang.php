@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="../../template/assets/plugins/animation/css/animate.min.css">
     <!-- vendor css -->
     <link rel="stylesheet" href="../../template/assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.0.0/dist/chart.min.js"></script>
     <!-- Make sure to include the datalabels plugin -->
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
@@ -294,7 +295,10 @@
 
 </div>
 <!-- [ Main Content ] end -->
-
+<?php
+$modalContent = 'Bạn có chắc chắn muốn duyệt  không ?';
+include '../../common/modal/confirmationModal.php';
+?>
 
 
 <!-- Required Js -->

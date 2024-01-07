@@ -212,10 +212,14 @@ function showPaymentSuccessModal(tenDV, loaiDV, soTien, phuongThucThanhToan, han
   $('#paymentSuccessPhuongThuc').text(phuongThucThanhToan);
 
   // Hiển thị mã giao dịch ngẫu nhiên
-  $('#paymentSuccessMaGiaoDich').text(generateRandomCode());
+  const maGiaoDich = generateRandomCode();
+  $('#paymentSuccessMaGiaoDich').text(maGiaoDich);
+  globalMaGiaoDich = maGiaoDich;
 
   // Hiển thị thời gian ngẫu nhiên
-  $('#paymentSuccessThoiGian').text(`${hanDong} ${generateRandomTime()}`);
+  const randomTime = generateRandomTime();
+  $('#paymentSuccessThoiGian').text(`${hanDong} ${randomTime}`);
+  globalThoiGian = `${hanDong} ${randomTime}`;
 
   // Show the payment success modal
   $('#paymentSuccessModal').modal('show');
@@ -227,9 +231,7 @@ function showPaymentSuccessModal(tenDV, loaiDV, soTien, phuongThucThanhToan, han
   let id = $('#idInput').text();
   id = parseInt(id, 10);
   updateStatus(id, originalTableData);
-  // location.reload();
 }
-
 
 
 function generateRandomCode() {
@@ -358,9 +360,9 @@ function updateButtonText(text) {
 }
 
 // ************storage******************
-function clearLocalStorage() {
-  localStorage.removeItem('tableData');
-}
+// function clearLocalStorage() {
+//   localStorage.removeItem('tableData');
+// }
 
-// Gọi hàm để xóa dữ liệu
-clearLocalStorage();
+// // Gọi hàm để xóa dữ liệu
+// clearLocalStorage();

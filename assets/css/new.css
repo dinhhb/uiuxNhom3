@@ -34,7 +34,7 @@
     }
 
     .user-info p {
-        font-family: 'Inter';
+        
         font-style: normal;
         font-weight: 600;
         font-size: 20px;
@@ -43,7 +43,7 @@
     }
 
     .user-info p.subtitle {
-        font-family: 'Inter';
+        
         font-style: normal;
         font-weight: 600;
         font-size: 16px;
@@ -63,7 +63,7 @@
         padding-left: 0px;
         padding-top: 50px;
 
-        font-family: 'Inter';
+        
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
@@ -80,7 +80,7 @@
         padding-left: 0px;
         padding-top: 50px;
 
-        font-family: 'Inter';
+        
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
