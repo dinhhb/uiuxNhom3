@@ -84,7 +84,9 @@ function buildTable() {
     table.empty();
     var data = pagination(state.querySet, state.page, state.rows)
     var myList = data.querySet
-
+    var buttonColor;
+    var buttonLabel;
+    var buttonTextColor;
     for (var i = 0; i < myList.length; i++) {
 
         if (myList[i].tinhTrang === "Chưa đóng") {
