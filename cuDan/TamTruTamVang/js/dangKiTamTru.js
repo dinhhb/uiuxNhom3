@@ -5,13 +5,13 @@ function confirmAndSaveChanges() {
 
     // Tạo bản ghi mới từ thông tin nhập vào
     var newRecord = {
-        id: tableData.length + 1, // Tạo ID mới dựa trên độ dài mảng hiện tại
+        id: tableDonTamTru.length + 1, // Tạo ID mới dựa trên độ dài mảng hiện tại
         hoTen: document.getElementById('fullName').value,
         ngaySinh: formatDateReverse(document.getElementById('dob').value),
         CCCD: document.getElementById('cccd').value,
         gioiTinh: document.getElementById('genderSelect').value,
         DDThuongTru: document.getElementById('diaChiThuongTru').value,
-        DDTamVang: document.getElementById('diaChiTamVang').value,
+        DDTamTru: document.getElementById('diaChiTamTru').value,
         SDT: document.getElementById('soDienThoai').value,
         ngheNghiep: document.getElementById('ngheNghiep').value,
         ngayBatDau: formatDateReverse(document.getElementById('ngayBatDau').value),
@@ -20,20 +20,19 @@ function confirmAndSaveChanges() {
         lyDo: document.getElementById('reason').value
     };
     // Thêm bản ghi mới vào mảng
-    tableData.push(newRecord);
+    tableDonTamTru.push(newRecord);
 
     // Cập nhật bảng và lưu vào localStorage
     // buildTable();
-    saveToLocalStorage(tableData);
+    saveToLocalStorage(tableDonTamTru);
     $('#confirmationModal').modal('hide');
     // Hiển thị modal
     $('#successModal').modal('show');
     // Xác định sự kiện khi modal được đóng
     $('#successModal').on('hidden.bs.modal', function () {
         // Chạy chuyển hướng trang sau khi modal đã được đóng
-        window.location="quanLyTamVang.php";
+        window.location = "tamTrutamVang.php";
     });
-
 };
 
 // Chuyển đổi ngày tháng từ dạng YYYY-MM-DD sang DD/MM/YYYY
@@ -42,7 +41,7 @@ function formatDateReverse(dateString) {
     return parts[2] + "/" + parts[1] + "/" + parts[0];
 }
 function saveToLocalStorage(data) {
-    localStorage.setItem('tableData', JSON.stringify(data));
+    localStorage.setItem('tableDonTamTru', JSON.stringify(data));
 }
 document.getElementById('registrationForm').addEventListener('submit', function(event) {
     // Ngăn form thực hiện hành động mặc định
