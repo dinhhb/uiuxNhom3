@@ -128,7 +128,7 @@
     }
 
     .user-info p {
-        
+
         font-style: normal;
         font-weight: 600;
         font-size: 20px;
@@ -137,7 +137,7 @@
     }
 
     .user-info p.subtitle {
-        
+
         font-style: normal;
         font-weight: 600;
         font-size: 16px;
@@ -157,7 +157,7 @@
         padding-left: 0px;
         padding-top: 50px;
 
-        
+
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
@@ -172,7 +172,7 @@
         padding-left: 0px;
         padding-top: 50px;
 
-        
+
         font-style: normal;
         font-weight: 600;
         font-size: 14px;
@@ -193,7 +193,7 @@
         border: 1px solid #D0D5DD;
         /* Border color */
         border-radius: 0.5rem;
-        
+
         font-style: normal;
         color: #667085
             /* Rounded corners */
@@ -203,7 +203,7 @@
     .custom-dropdown .dropdown-menu {
         border-color: #D0D5DD;
         border-radius: 0.5rem;
-        
+
         font-style: normal;
         /* Rounded corners for the dropdown menu */
     }
@@ -320,7 +320,9 @@
         } else if (username === 'cuDan' && password === '1234') {
             window.location.href = 'cuDan/dashboard.php'; // Redirect to dashboardBQT.html
             window.location.href = 'cudan/dashboard.php'; // Redirect to dashboardBQT.html
-        } else {
+        } else if(username === 'congAn' && password === '1234'){
+            window.location.href = 'congAn/quanLyTamTru.php'; // Redirect to dashboardBQT.html
+        }else {
             errorMessage.innerHTML = 'Tên đăng nhập hoặc mật khẩu không đúng'; // Show error message
         }
     }

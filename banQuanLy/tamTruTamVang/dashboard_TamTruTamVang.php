@@ -295,7 +295,10 @@
 
 </div>
 <!-- [ Main Content ] end -->
-
+<?php
+$modalContent = 'Bạn có chắc chắn muốn duyệt  không ?';
+include '../../common/modal/confirmationModal.php';
+?>
 
 
 <!-- Required Js -->
