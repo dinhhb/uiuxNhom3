@@ -11,6 +11,8 @@
     <meta name="keywords" content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, datta able, datta able bootstrap admin template, free admin theme, free dashboard template" />
     <meta name="author" content="CodedThemes" />
     <link rel="import" href="header.html">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
     <!-- Favicon icon -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-zkRf1z1uPbXpFZV4KTMEH7PVB7ZlDdjw0EhMf7ueExUqMW+0vWuAHR4/j5qoHw1NvMyO4tDw9HZmpyKiCyr/D3A==" crossorigin="anonymous" /> -->
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-zkRf1z1uPbXpFZV4KTMEH7PVB7ZlDdjw0EhMf7ueExUqMW+0vWuAHR4/j5qoHw1NvMyO4tDw9HZmpyKiCyr/D3A==" crossorigin="anonymous" /> -->
@@ -23,7 +25,6 @@
     <!-- vendor css -->
     <link rel="stylesheet" href="../../assets/css/style.css">
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
 
 </head>
 
@@ -64,10 +65,13 @@
                                                 <div class="dropdown-menu dropdown-style" aria-labelledby="loaiBaoCaoDropdownButton" id="loaiBaoCaoDropdown">
                                                 </div>
                                             </div>
-                                            <button type="button" class="btn btn-primary1 btn-group">Xem báo cáo đã gửi
+                                            <!-- <button type="button" class="btn btn-primary1 btn-group">Xem báo cáo đã gửi -->
                                             </button>
-                                            <button id="baoCaoSubmit" type="submit" class="btn btn-primary btn-group">Gửi báo cáo
-                                            </button>
+                                            <!-- Thêm phần upload file mới -->
+
+                                            <button id="baoCaoSubmit" type="submit" class="btn btn-primary btn-group">Tải xuống báo cáo</button>
+                                            <input type="file" id="fileUpload" accept=".pdf" />
+                                            <button id="uploadBtn" class="btn btn-success">Gửi báo cáo</button>
                                         </div>
 
                                     </div>
@@ -77,6 +81,7 @@
                                     <script>
                                         tinymce.init({
                                             selector: '#mytextarea',
+                                            plugins: 'print',
                                             setup: function(editor) {
                                                 editor.on('init', function() {
                                                     editor.setContent('<?php echo include("bangCanDoiKeToan.php"); ?>');
@@ -84,9 +89,8 @@
                                             }
                                         });
                                     </script>
-                                    <div class="align-left" style="padding-top: 10px;">
-                                        <a href="Xemthongke.html"><button type="button" class="btn custom-btn d-inline-block ml-4 mb-3" style="padding: 10px 30px; background: #6c757d; color: white;">Quay
-                                                lại</button></a>
+                                    <div class="align-left" style="padding-top: 5px;">
+                                        <a href="Xemthongke.html"><button type="button" class="btn custom-btn d-inline-block ml-4 mb-3" style="padding: 10px 30px; background: #6c757d; color: white;">Quay lại</button></a>
                                     </div>
                                 </div>
                             </div>
@@ -355,14 +359,17 @@
         document.getElementById('baoCaoSubmit').addEventListener('click', function(event) {
             // Ngăn form thực hiện hành động mặc định
             event.preventDefault();
-            $('#confirmationModal').modal('show');
+            baoCaoSubmit.addEventListener('click', function() {
+                console.log("abc");
+                tinymce.activeEditor.execCommand('mcePrint');
+            })
         });
 
         document.addEventListener('DOMContentLoaded', function() {
             var loaiBaoCaoButton = document.getElementById('loaiBaoCaoButton');
 
             // Tạo dropdown chọn tháng
-            var loaiBaoCaos = ["Báo cáo kết quả hoạt động kinh doanh", "Báo cáo lưu chuyển tiền tệ", "Thuyết minh báo cáo tài chính"];
+            var loaiBaoCaos = ["Báo cáo kết quả hoạt động kinh doanh", "Báo cáo lưu chuyển tiền tệ", "Bảng cân đối tài khoản"];
             var loaiBaoCaoOptions = '';
             // var loaiBaoCaoOptions = '<a class="dropdown-item" href="#" data-value="">Tất cả tháng </a>';
             loaiBaoCaos.forEach(function(loaiBaoCao, index) {
@@ -370,33 +377,78 @@
             });
             var loaiBaoCaoDropdown = document.getElementById('loaiBaoCaoDropdown');
             loaiBaoCaoDropdown.innerHTML = loaiBaoCaoOptions;
+
+            // Event listener for dropdown change
+            loaiBaoCaoDropdown.addEventListener('click', function(e) {
+                if (e.target && e.target.matches("a.dropdown-item")) {
+                    var selectedValue = e.target.getAttribute('data-value');
+                    // Update the dropdown button text
+                    loaiBaoCaoButton.textContent = e.target.textContent;
+
+                    switch (selectedValue) {
+                        case '1':
+                            tinymce.get('mytextarea').setContent('<?php echo include("baoCaoKetQuaKinhDoanh.php"); ?>');
+                            break;
+                        case '2':
+                            tinymce.get('mytextarea').setContent('<?php echo include("baoCaoLuuChuyenTienTe.php"); ?>');
+                            break;
+                        case '3':
+                            tinymce.get('mytextarea').setContent('<?php echo include("bangCanDoiTaiKhoan.php"); ?>');
+                            break;
+                        default:
+                            tinymce.get('mytextarea').setContent('<?php echo include("bangCanDoiKeToan.php"); ?>');
+                    }
+                }
+            });
         });
 
-        function submitForm() {
-            console.log("abc");            // Lấy nội dung báo cáo
-            var reportContent = tinymce.get('mytextarea').getContent();
+        // document.getElementById('uploadBtn').addEventListener('click', function() {
+        // var fileInput = document.getElementById('fileUpload');
+        // var file = fileInput.files[0];
+        // var formData = new FormData();
+        // formData.append('uploadedFile', file);
 
-            // Chuyển đổi nội dung sang PDF (giả sử sử dụng jsPDF)
-            var doc = new jsPDF();
-            doc.text(reportContent, 10, 10);
-            var pdf = doc.output('blob');
+        // fetch('./upload.php', {
+        //         method: 'POST',
+        //         body: formData
+        //     })
+        //     .then(response => {
+        //         console.log(response); // Kiểm tra phản hồi
+        //         return response.json();
+        //     })
+        //     .then(data => {
+        //         console.log('Success:', data);
+        //     })
+        //     .catch((error) => {
+        //         console.error('Error:', error);
+        //     });
 
-            // Gửi PDF tới server sử dụng AJAX
-            var formData = new FormData();
-            formData.append('pdf', pdf, 'report.pdf');
+        // });
 
-            fetch('savePDF.php', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data.message);
-                })
-                .catch(error => {
-                    console.error(error);
-                });
+        function updateModalContent(modalId, newContent) {
+            // Find the element that holds the content in the modal
+            var modalContentElement = document.querySelector(modalId + ' .modal-body');
+            if (modalContentElement) {
+                // Update the content of the modal
+                modalContentElement.innerHTML = newContent;
+            }
         }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Event listener for the 'Thêm dịch vụ' button in addServiceModal
+            document.getElementById('uploadBtn').addEventListener('click', function() {
+                updateModalContent('#confirmationModal', 'Bạn có chắc chắn muốn gửi báo cáo này không?'); // Show the confirmationModal
+                $('#confirmationModal').modal('show');
+            });
+
+            // Event listener for the 'Xác nhận' button in confirmationModal
+            document.getElementById('btn-xac-nhan').addEventListener('click', function() {
+                updateModalContent('#successModal', 'Báo cáo đã được gửi thành công');
+                // Close the confirmationModal and show the successModal
+                $('#confirmationModal').modal('hide');
+                $('#successModal').modal('show');
+            });
+        });
     </script>
 
     <style>
@@ -612,12 +664,6 @@
     <?php
     $modalContent = 'Báo cáo đã được gửi thành công';
     include '../../common/modal/successModal.php';
-    ?>
-
-
-    <!-- Modal -->
-    <?php
-    $modalContent = 'Bạn có chắc chắn muốn gửi báo cáo này không?';
     include '../../common/modal/confirmationModal.php';
     ?>
 
